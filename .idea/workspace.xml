@@ -1,27 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/leetCode/PalindromeNumber.java" line="40" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9de920c-37e9-488b-9ce3-19273d31e03c" name="Default" comment="" />
+    <list default="true" id="f9de920c-37e9-488b-9ce3-19273d31e03c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/demo/excelDemoSXSSFdemo/testSXSSFWorkbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/demo/excelDemoSXSSFdemo/testSXSSFWorkbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/MD5Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/MD5Encoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/twoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/twoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Tuple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/boContribute/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/boContribute/testDeom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/excelDemoSXSSFdemo/ExcelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/excelDemoSXSSFdemo/testSXSSFWorkbook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/test02$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/test02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/test03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/test04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/testMessageStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/demo/testTuple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/annotation/PasswordUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/annotation/UseCaseTracker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/annotation/UserCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/array/BankAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/array/TestArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/date/TimeStampTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/BinaryObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/HexaObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/ObserverPatternDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/OctalObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ObserverPattern/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/dynamicProxy/DynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/dynamicProxy/DynamicSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/dynamicProxy/RealDynamicSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/dynamicProxy/RealDynamicSubject2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/dynamicProxy/testDynamic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/staticProxy/ProxySubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/staticProxy/RealSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/staticProxy/RealSubject2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/staticProxy/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/design/ProxyPattern/staticProxy/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/ChildException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/ParentException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/TestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graph/test01/Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graph/test01/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graph/test01/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graph/test01/test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hashCode/TestHash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/AddBinary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/DeleteDuplicatesInSortedArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/EffectiveParentheses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/IntegerInversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/LengthOfLastWord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/LongestCommonPrefix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/MaximumSubordinateSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/MergeTwoOrderedLists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/MySqrt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/NumberOff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/PalindromeNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/PlusOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/RealizeStrStr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/RemovingDuplicateElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/RomanNumeralToInteger$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/RomanNumeralToInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/SearchForInsertionLocation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/FindJudgeSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/SumOfTwoLinks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/tiny_url/HashMapStoreUrl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/tiny_url/MD5Encoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/tiny_url/SymmetricEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/middle/tiny_url/TinyURL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetCode/twoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/list/TestSublist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mood/testRegular.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/multiThread/CountDownLatchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/multiThread/StaticClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stream/Female.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stream/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stream/test_stream_map/TestStreamMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/string/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/string/TestEquals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/string/testEscapeCharater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/timeStampDateCalender/test01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/timeStampDateCalender/test02.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/mmbJava$MaximumSubordinateSum.ic" NAME="MaximumSubordinateSum Coverage Results" MODIFIED="1559976259888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>leetCode.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/mmbJava$SumOfTwoLinks.ic" NAME="SumOfTwoLinks Coverage Results" MODIFIED="1567599339657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>leetCode.middle.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/mmbJava$IntegerInversion.ic" NAME="IntegerInversion Coverage Results" MODIFIED="1556546321839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>leetCode.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/mmbJava$MaximumSubordinateSum.ic" NAME="MaximumSubordinateSum Coverage Results" MODIFIED="1559976259888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>leetCode.*</FILTER>
     </SUITE>
   </component>
@@ -29,7 +112,7 @@
     <favorites_list name="mmbJava" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,17 +148,12 @@
       <replace>&quot;</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/staticProxy/RealSubject2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/staticProxy/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/staticProxy/Subject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/dynamicProxy/DynamicSubject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/dynamicProxy/RealDynamicSubject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/dynamicProxy/RealDynamicSubject2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/dynamicProxy/DynamicProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ProxyPattern/dynamicProxy/testDynamic.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/demo/boContribute/testDeom.java" />
         <option value="$PROJECT_DIR$/src/main/java/mood/testRegular.java" />
         <option value="$PROJECT_DIR$/src/main/java/date/TimeStamp.java" />
@@ -93,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/TinyURL.java" />
         <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/AES.java" />
         <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/SymmetricEncoder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/MD5Encoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/TinyURL.java" />
         <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/HashMapStoreUrl.java" />
         <option value="$PROJECT_DIR$/src/main/java/graph/test01/Edge.java" />
@@ -119,6 +196,15 @@
         <option value="$PROJECT_DIR$/src/main/java/string/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/string/testEscapeCharater.java" />
         <option value="$PROJECT_DIR$/src/main/java/string/TestEscapeCharater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/TwoSameTreeSolution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/tree/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/tree/TwoSameTreeSolution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/tree/binary_tree/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/tree/binary_tree/TreeSearch.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/MD5Encoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/demo/excelDemoSXSSFdemo/testSXSSFWorkbook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leetCode/twoSum.java" />
       </list>
     </option>
   </component>
@@ -132,8 +218,8 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\repository" />
-        <option name="mavenHome" value="D:/dev software/maven/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="D:\dev software\maven\apache-maven-3.5.0\conf\settings.xml" />
+        <option name="mavenHome" value="/usr/local/install/maven/apache-maven-3.5.4/apache-maven" />
+        <option name="userSettingsFile" value="/usr/local/install/maven/apache-maven-3.5.4/apache-maven/src/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -142,14 +228,30 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mmbJava" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mmbJava" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="58" />
-    <option name="y" value="10" />
-    <option name="width" value="1641" />
-    <option name="height" value="946" />
+    <option name="x" value="1366" />
+    <option name="y" value="764" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -302,253 +404,93 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="array" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hashCode" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leetCode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="middle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="middle" type="462c0819:PsiDirectoryNode" />
+              <item name="tiny_url" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="tree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="tree" type="462c0819:PsiDirectoryNode" />
+              <item name="binary_tree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="string" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="timeStampDateCalender" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mmbJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="codec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-codec:commons-codec:1.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-codec-1.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="codec" type="462c0819:PsiDirectoryNode" />
-              <item name="digest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-lang-2.4.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-lang-2.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-lang-2.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-lang-2.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mmbJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: commons-lang:commons-lang:2.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-lang-2.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,13 +503,14 @@
     <property name="SearchEverywhereHistoryKey" value="Inherited&#9;PSI&#9;JAVA://java.lang.annotation.Inherited&#10;anno&#9;FILE&#9;jar://D:/install/jdk/src.zip!/java/text/Annotation.java&#10;annotation&#9;PSI&#9;JAVA://java.text.Annotation&#10;Override&#9;PSI&#9;JAVA://java.lang.Override" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568633380567" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32905984" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -591,9 +534,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration default="true" type="Applet" factoryName="Applet">
+  <component name="RunManager" selected="Application.TreeSearch">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="string.Test" />
@@ -605,6 +551,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TestArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="array.TestArray" />
@@ -616,6 +565,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TestEquals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="string.TestEquals" />
@@ -627,17 +579,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration name="TestStreamMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stream.test_stream_map.TestStreamMap" />
-      <module name="mmbJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stream.test_stream_map.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TestSublist" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="list.TestSublist" />
@@ -649,62 +593,59 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetCode.tree.binary_tree.TreeSearch" />
+      <module name="test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetCode.tree.binary_tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TestStreamMap" />
+      <item itemvalue="Application.TestArray" />
       <item itemvalue="Application.TestEquals" />
       <item itemvalue="Application.TestSublist" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.TestArray" />
+      <item itemvalue="Application.TreeSearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeSearch" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.TestArray" />
         <item itemvalue="Application.TestSublist" />
         <item itemvalue="Application.TestEquals" />
-        <item itemvalue="Application.TestStreamMap" />
       </list>
     </recent_temporary>
   </component>
@@ -832,50 +773,48 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.31490386" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3293011" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28125" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.48317307" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.25161988" />
-      <window_info anchor="bottom" id="Tail" order="10" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.26479515" />
       <window_info id="Structure" order="1" sideWeight="0.5006935" side_tool="true" weight="0.23185012" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" sideWeight="0.50340134" side_tool="true" weight="0.26022804" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28125" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.421875" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.32871014" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.48317307" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Tail" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32919255" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3136646" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3288337" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+      <window_info anchor="right" id="Maven" order="11" weight="0.32928678" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1057,430 +996,158 @@
           <option name="timeStamp" value="119" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="137" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/install/jdk/src.zip!/java/lang/annotation/Target.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/multiThread/CountDownLatchTest.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/regex/Matcher.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/timeStampDateCalender/test02.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/test1.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/Objects.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/HashMap.java" />
+    <entry file="jar://E:/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar!/org/apache/commons/codec/digest/DigestUtils.class" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/security/MessageDigest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/SymmetricEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/TinyURL.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/SumOfTwoLinks.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/FindJudgeSolution.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Edge.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Graph.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Node.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/function/Consumer.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/ReferencePipeline.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/Collector.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/Collectors.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/stream/Person.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/stream/Female.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/stream/test_stream_map/TestStreamMap.java" />
+    <entry file="jar://E:/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar!/org/apache/commons/lang/StringUtils.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/TestException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashCode/TestHash.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/MySqrt.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/lang/IndexOutOfBoundsException.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/ArrayList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/list/TestSublist.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/lang/String.java" />
+    <entry file="jar://D:/install/jdk/src.zip!/java/util/Formatter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/array/BankAccount.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/array/TestArray.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/string/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/demo/testTuple.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/demo/testMessageStore.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Tuple.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/string/TestEscapeCharater.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/timeStampDateCalender/test01.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/tree/binary_tree/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/lang/Override.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/tree/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="139">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/tree/TwoSameTreeSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/annotation/UseCaseTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/annotation/UserCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/annotation/PasswordUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="26" lean-forward="true" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/date/TimeStampTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multiThread/StaticClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/concurrent/CountDownLatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4750">
-          <caret line="289" column="16" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multiThread/CountDownLatchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="703" column="42" lean-forward="true" selection-start-line="703" selection-start-column="42" selection-end-line="703" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/timeStampDateCalender/test02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="475" column="17" lean-forward="true" selection-start-line="475" selection-start-column="17" selection-end-line="475" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar!/org/apache/commons/codec/digest/DigestUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/security/MessageDigest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="163" column="37" lean-forward="true" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/SymmetricEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="139" column="60" selection-start-line="139" selection-start-column="60" selection-end-line="139" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/HashMapStoreUrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#185#201#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/TinyURL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+        <state relative-caret-position="135">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/tiny_url/MD5Encoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="30">
+          <caret line="2" column="40" selection-end-line="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/SumOfTwoLinks.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/middle/FindJudgeSolution.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/demo/excelDemoSXSSFdemo/testSXSSFWorkbook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/twoSum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="267">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/tree/binary_tree/TreeSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/graph/test01/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/ReferencePipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="488" column="37" selection-start-line="488" selection-start-column="37" selection-end-line="488" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/Collector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="196" column="17" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        <state relative-caret-position="192">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream/Female.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
-          <folding>
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/stream/test_stream_map/TestStreamMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar!/org/apache/commons/lang/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="158" column="52" lean-forward="true" selection-start-line="158" selection-start-column="52" selection-end-line="158" selection-end-column="52" />
-          <folding>
-            <element signature="e#4210#4211#0" expanded="true" />
-            <element signature="e#4280#4281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/TestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashCode/TestHash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetCode/MySqrt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/lang/IndexOutOfBoundsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-          <folding>
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="998" column="11" selection-start-line="998" selection-start-column="11" selection-end-line="998" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/list/TestSublist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/string/TestEquals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="2938" column="25" selection-start-line="2938" selection-start-column="25" selection-end-line="2938" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/install/jdk/src.zip!/java/util/Formatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="1912" column="11" selection-start-line="1912" selection-start-column="11" selection-end-line="1912" selection-end-column="11" />
-          <folding>
-            <element signature="e#81177#81178#0" expanded="true" />
-            <element signature="e#81261#81262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/BankAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/array/TestArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/string/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/demo/testTuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/demo/testMessageStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/string/TestEscapeCharater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/timeStampDateCalender/test01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
