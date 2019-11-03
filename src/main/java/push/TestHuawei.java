@@ -35,8 +35,10 @@ public class TestHuawei {
 	private static String tokenUrl_v2 = "https://login.cloud.huawei.com/oauth2/v2/token";
 	private static String apiUrl_v2 = "https://push-api.cloud.huawei.com/v1/{0}/messages:send";
 
-	private static String appId = "100691289";
-	private static String appSecret = "8b3e887d5228ca92538033eb9e7208dd";
+//	private static String appId = "100691289";
+//	private static String appSecret = "8b3e887d5228ca92538033eb9e7208dd";
+	private static String appId = "100729469";
+	private static String appSecret = "767b00c9446d3e4771ccc12d9d3ca20d4cef45db5df2b6dee9459874c29f1294";
 	private static String appPkgName = "com.everhomes.android.yinchuanzhongguancun";
 	private static String accessToken;     //下发通知消息的认证Token
 	private static long tokenExpiredTime = 0;  //accessToken的过期时间
