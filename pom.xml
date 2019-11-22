@@ -78,7 +78,6 @@
             <artifactId>commons-codec</artifactId>
             <version>1.9</version>
         </dependency>
-
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -89,7 +88,6 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.6</version>
         </dependency>
-
         <dependency>
             <groupId>com.xiaomi.mipush.sdk</groupId>
             <artifactId>mipush</artifactId>
@@ -100,7 +98,11 @@
             <artifactId>spring-web</artifactId>
             <version>5.0.8.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.aliyun.openservices.tablestore</groupId>
+            <artifactId>Timeline</artifactId>
+            <version>2.0.0</version>
+        </dependency>
     </dependencies>
 
 </project>
