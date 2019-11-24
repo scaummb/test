@@ -13,8 +13,8 @@ public class ZeroEvenOdd {
 	private int n;
 	private static volatile Integer num = 0;
 	private static Semaphore semaphoreA = new Semaphore(1);
-	private static Semaphore semaphoreB = new Semaphore(1);
-	private static Semaphore semaphoreC = new Semaphore(1);
+	private static Semaphore semaphoreB = new Semaphore(0);
+	private static Semaphore semaphoreC = new Semaphore(0);
 
 	public ZeroEvenOdd(int n) {
 		this.n = n;
@@ -23,31 +23,35 @@ public class ZeroEvenOdd {
 	// printNumber.accept(x) outputs "x", where x is an integer.
 	public void zero(IntConsumer printNumber) throws InterruptedException {
 		for (int i=0; i<n; i++){
-
-		}
-		semaphoreA.acquire();
-		if (num <= n+1){
+			semaphoreA.acquire();
 			printNumber.accept(0);
-			num++;
+			if (i%2 == 0){
+				semaphoreB.release();
+
+			} else {
+				semaphoreC.release();
+			}
 		}
-		semaphoreB.release();
-		semaphoreC.release();
 	}
 
 	public void even(IntConsumer printNumber) throws InterruptedException {
-		semaphoreB.acquire();
-		if (num <= n){
-			printNumber.accept(num);
+		for (int i=2; i<=n; i+=2){
+			semaphoreB.acquire();
+			if (i <= n && i%2 == 0){
+				printNumber.accept(num);
+				semaphoreA.release();
+			}
 		}
-		semaphoreA.release();
 	}
 
 	public void odd(IntConsumer printNumber) throws InterruptedException {
-		semaphoreC.acquire();
-		if (num <= n){
-			printNumber.accept(num);
+		for (int i=1; i<=n; i+=2){
+			semaphoreC.acquire();
+			if (i <= n && i%2 != 0){
+				printNumber.accept(num);
+				semaphoreA.release();
+			}
 		}
-		semaphoreA.release();
 	}
 
 	public static void main(String[] args) {
