@@ -1,34 +1,37 @@
 package leetCode.middle;
 
-import java.util.concurrent.Semaphore;
 import java.util.function.IntConsumer;
 
 /**
- * 错在哪里知道了吗？这是因为线程直接跑一次就没了，缺少轮询和线程间通信！
- * 凡是可以用信号量解决的问题，都可以用管程模型来解决!
+ * 使用线程休眠与唤醒解决线程执行调度
  * @author moubin.mo
  * @date: 2019/11/21 20:43
  */
 
-public class ZeroEvenOdd {
+public class ZeroEvenOddV2 {
 	private int n;
-	private static Semaphore z = new Semaphore(1);
-	private static Semaphore e = new Semaphore(0);
-	private static Semaphore o = new Semaphore(0);
+	private volatile boolean zeroFlag = false;
+	private volatile boolean flag;
 
-	public ZeroEvenOdd(int n) {
+	public ZeroEvenOddV2(int n) {
 		this.n = n;
 	}
 
 	// printNumber.accept(x) outputs "x", where x is an integer.
 	public void zero(IntConsumer printNumber) throws InterruptedException {
-		for (int i=0; i<n; i++){
-			z.acquire();
-			printNumber.accept(0);
-			if ((i&1)==0){
-				e.release();
-			} else {
-				o.release();
+		synchronized (this){
+			for (int i=1; i<=n; i++){
+				while (zeroFlag){
+					this.wait();
+				};
+				printNumber.accept(0);
+				if (n%2 == 0){
+					flag = true;
+				} else {
+					flag = false;
+				}
+				zeroFlag = true;
+				notifyAll();
 			}
 		}
 	}
@@ -37,10 +40,16 @@ public class ZeroEvenOdd {
 	 * 输出偶数
 	 */
 	public void even(IntConsumer printNumber) throws InterruptedException {
-		for (int i=2; i<=n; i+=2){
-			e.acquire();
-			printNumber.accept(i);
-			z.release();
+		synchronized (this){
+			for (int i=2; i<=n; i+=2){
+				while (!flag){
+					this.wait();
+				}
+				printNumber.accept(i);
+				zeroFlag = false;
+				notifyAll();
+			}
+
 		}
 	}
 
@@ -48,15 +57,20 @@ public class ZeroEvenOdd {
 	 * 输出奇数
 	 */
 	public void odd(IntConsumer printNumber) throws InterruptedException {
-		for (int i=1; i<=n; i+=2){
-			o.acquire();
-			printNumber.accept(i);
-			z.release();
+		synchronized (this){
+			for (int i=1; i<=n; i+=2){
+				while (flag){
+					this.wait();
+				}
+				printNumber.accept(i);
+				zeroFlag = false;
+				notifyAll();
+			}
 		}
 	}
 
 	public static void main(String[] args) {
-		ZeroEvenOdd zeroEvenOdd = new ZeroEvenOdd(2);
+		ZeroEvenOddV2 zeroEvenOdd = new ZeroEvenOddV2(2);
 
 		Runnable runnable1 = new Runnable() {
 			@Override
@@ -81,7 +95,6 @@ public class ZeroEvenOdd {
 				}
 			}
 		};
-
 		Runnable runnable3 = new Runnable() {
 			@Override
 			public void run() {
