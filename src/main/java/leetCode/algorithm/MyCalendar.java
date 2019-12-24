@@ -1,24 +1,26 @@
 package leetCode.algorithm;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * REMARK leetcode 729. 我的日程安排表 I
+ * 本地调试通过，但是上机测试结果失败，原因：多线程环境。
  *
  * @author: mmb
  * @date: 19-12-23
  */
 class MyCalendar {
 
-    private static HashMap<Integer, Integer[]> startTime = new HashMap<>(101);
-    private static HashMap<Integer, Boolean> endTime = new HashMap<>(101);
+    private  Map<Integer, Integer[]> startTime = new ConcurrentHashMap<>(101);
+    private  Map<Integer, Boolean> endTime = new ConcurrentHashMap<>(101);
 
     public MyCalendar() {
 
     }
 
-    public static boolean book(int start, int end) {
+    public synchronized boolean book(int start, int end) {
         end = end-1;
         if (startTime.get(start) == null && endTime.get(end) == null
             && start >= 0 && end >= 0 && start <= end){
@@ -31,11 +33,10 @@ class MyCalendar {
                     return false;
                 }
             }
-            startTime.put(start, new Integer[]{start, end-1});
+            startTime.put(start, new Integer[]{start, end});
             endTime.put(end, false);
             return true;
         }
-
         return false;
     }
 
@@ -45,8 +46,14 @@ class MyCalendar {
 //        print(book(10, 20));
 //        print(book(15, 25));
 //        print(book(20, 30));
+
         // testcase 2
-//[[],[47,50],[33,41],[39,45],[33,42],[25,32],[26,35],[19,25],[3,8],[8,13],[18,27]]
+//                [[],[47,50],[33,41],[39,45],[33,42],   [25,32],     [26,35],[19,25],[3,8],[8,13],[18,27]]
+//        输出
+//                [null,true,true,false,false,   false,   false,false,true,false,false]
+//                [null,true true false false    true     false true true true false]
+//        预期结果
+//                [null,true,true,false,false,   true,    false,true,true,true,false]
         print(book(47,50));
         print(book(33,41));
         print(book(39,45));
@@ -60,6 +67,6 @@ class MyCalendar {
     }
 
     private static void print(Object object){
-        System.out.println(object);
+        System.out.print(object + " ");
     }
 }
