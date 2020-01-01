@@ -54,16 +54,16 @@ class MyCalendar {
 //                [null,true true false false    true     false true true true false]
 //        预期结果
 //                [null,true,true,false,false,   true,    false,true,true,true,false]
-        print(book(47,50));
-        print(book(33,41));
-        print(book(39,45));
-        print(book(33,42));
-        print(book(25,32));// error
-        print(book(26,35));
-        print(book(19,25));// error
-        print(book(3,8));
-        print(book(8,13));
-        print(book(18,27));
+//        print(book(47,50));
+//        print(book(33,41));
+//        print(book(39,45));
+//        print(book(33,42));
+//        print(book(25,32));// error
+//        print(book(26,35));
+//        print(book(19,25));// error
+//        print(book(3,8));
+//        print(book(8,13));
+//        print(book(18,27));
     }
 
     private static void print(Object object){
