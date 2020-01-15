@@ -39,5 +39,7 @@ public class RemindContants {
 	public final static String REMIND_BROWSING_LOGS_SHOW_COUNT = "remind.browsing.logs.show.count";
 	/** 日程配置项之同事日程历史查看记录数量数值 **/
 	public final static Integer REMIND_BROWSING_LOGS_SHOW_COUNT_DEFAULT_VALUE = 5;
+	/** DATE日期格式化0时0分0秒后缀 **/
+	public final static String FORMAT_DATE_STRING_SUFFIX = " 00:00:00";
 }
 

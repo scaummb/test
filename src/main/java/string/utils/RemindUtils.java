@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -118,5 +119,34 @@ public class RemindUtils {
 	public static String praseTimeStamp(Timestamp planDate) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(RemindContants.SIMPLE_DATE_FORMATTER);
 		return simpleDateFormat.format(planDate);
+	}
+
+	/**
+	 * 转换为格式化日期字符串
+	 * @param planDate
+	 * @return dateTimeString（格式化日期字符串：yyyy-MM-dd）
+	 */
+	public static Timestamp praseFormatStringToTimeStamp(String planDate) {
+		return Timestamp.valueOf(planDate);
+	}
+
+	/**
+	 * 根据日期获取下一天的日期字符串 {yyyy-MM-dd}
+	 * @param dateEndTime
+	 * @return  下一天的日期字符串{yyyy-MM-dd}
+	 */
+	public static String getNextDayStringTime(String dateEndTime) {
+		SimpleDateFormat sdf = new SimpleDateFormat(RemindContants.SIMPLE_DATE_FORMATTER);
+		Boolean isLegal = false;
+		try {
+			Date endDate = sdf.parse(dateEndTime);
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(endDate);
+			calendar.add(Calendar.DATE, 1);
+			return sdf.format(calendar.getTime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return dateEndTime;
 	}
 }
