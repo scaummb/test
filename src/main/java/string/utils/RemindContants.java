@@ -23,6 +23,8 @@ public class RemindContants {
 	public final static DateTimeFormatter DEFAULT_LOCAL_DATE_TIME_FORMATTER =  DateTimeFormatter.ISO_DATE;
 	/** DATE日期格式化 **/
 	public final static String SIMPLE_DATE_FORMATTER = "yyyy-MM-dd";
+	/** DATE日期格式化 **/
+	public final static String NORMAL_DATE_FORMATTER = "yyyy-MM-dd HH:mm:ss";
 	/** 一天毫秒数值 **/
 	public final static Long ONE_DAY_MILLIS_TIME_COUNT = 86400000L;
 	/** 地址哈希字符串count **/

@@ -90,6 +90,33 @@ public class RemindUtils {
 	}
 
 	/**
+	 * 获取两个日期间的全部日期列表
+	 * @param dateStartTime
+	 * @param dateEndTime
+	 * @return List<String> {2020-01-01, 2020-01-02, 2020-01-03, 2020-01-04, 2020-01-05}
+	 */
+	public static List<String> getDateListV2(String dateStartTime, String dateEndTime) {
+		List<String> dateStringList = new ArrayList<>();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(RemindContants.SIMPLE_DATE_FORMATTER);
+		try {
+			Date startDate = simpleDateFormat.parse(dateStartTime);
+			Date endDate = simpleDateFormat.parse(dateEndTime);
+			LocalDate date = new LocalDate(startDate);;
+			LocalDate localDate = new LocalDate(endDate);;
+			do {
+				//按日期结算数据
+				String dateString = simpleDateFormat.format(date);
+				dateStringList.add(dateString);
+				date = date.plusDays(1);
+			} while (date.isBefore(localDate));
+
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return dateStringList;
+	}
+
+	/**
 	 * 获取两个日期间的全部日期数量
 	 * @param dateStartTime
 	 * @param dateEndTime
@@ -138,6 +165,25 @@ public class RemindUtils {
 	public static String getNextDayStringTime(String dateEndTime) {
 		SimpleDateFormat sdf = new SimpleDateFormat(RemindContants.SIMPLE_DATE_FORMATTER);
 		Boolean isLegal = false;
+		try {
+			Date endDate = sdf.parse(dateEndTime);
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(endDate);
+			calendar.add(Calendar.DATE, 1);
+			return sdf.format(calendar.getTime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return dateEndTime;
+	}
+
+	/**
+	 * 根据日期获取下一天的日期字符串 {yyyy-MM-dd}
+	 * @param dateEndTime
+	 * @return  下一天的日期字符串{yyyy-MM-dd HH:mm:ss}
+	 */
+	public static String getNextDayStringTimeOfNormalFormatter(String dateEndTime) {
+		SimpleDateFormat sdf = new SimpleDateFormat(RemindContants.NORMAL_DATE_FORMATTER);
 		try {
 			Date endDate = sdf.parse(dateEndTime);
 			Calendar calendar = Calendar.getInstance();
