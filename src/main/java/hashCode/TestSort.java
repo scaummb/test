@@ -9,7 +9,7 @@ import java.util.Collections;
  * @author moubin.mo
  */
 
-public class TestHash {
+public class TestSort {
     public static void main(String [] args){
         RemindDTO remindDTO1 = new RemindDTO(1L, 2L);
         RemindDTO remindDTO2 = new RemindDTO(2L, 2L);
@@ -32,7 +32,7 @@ public class TestHash {
 
         System.out.println("------------");
 
-        Collections.sort(list);
+        Collections.sort(list, new RemindComparator());
         list.stream().forEach(
                 remindDTO -> System.out.println(remindDTO)
         );

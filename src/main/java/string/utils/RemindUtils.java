@@ -195,4 +195,17 @@ public class RemindUtils {
 		}
 		return dateEndTime;
 	}
+
+
+	/**
+	 * <p>检查开始时间一年后的时间戳与结束日期</p>
+	 */
+	public static boolean checkRemindSpanOverOneYear(Long planStartTime, Long planEndDate) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date(planStartTime));
+		calendar.add(Calendar.YEAR, 1);
+		return (calendar.getTime().getTime() <= (planEndDate));
+	}
+
+
 }
