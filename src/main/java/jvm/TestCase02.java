@@ -7,7 +7,7 @@ package jvm;
  * @date: 2019/12/18 09:06
  */
 
-public class TestCase02 {
+class Case02 {
 	public static void main(String[] args) {
 		Integer a = 1;
 		Integer b = 2;

@@ -19,7 +19,6 @@ public class DataStructure {
 		//Convert to byte[]
 		byte[] bytes = string.getBytes();
 		String s = new String(bytes);
-		log.info("string = {}, bytes = {}", string, bytes);
 
 		//2.通过Base64 将String转换成byte[]或者byte[]转换成String[Java 8]
 		byte[] bytesFromString = string.getBytes();
@@ -27,7 +26,6 @@ public class DataStructure {
 		String encoded = Base64.getEncoder().encodeToString(bytes);
 		//Base64 Decoded
 		byte[] decoded = Base64.getDecoder().decode(encoded);
-		log.info("string = {}, bytesFromString = {}, encoded = {}, decoded = {}", string, bytesFromString, encoded, decoded);
 		//Verify original content
 		System.out.println( new String(decoded) );
 	}
