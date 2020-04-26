@@ -3,10 +3,11 @@ package date.bean;
 import java.sql.Timestamp;
 
 /**
- * @author moubin.mo
- * @date: 2020/3/13 10:44
+ * <ul>
+ * <li>startTime: startTime</li>
+ * <li>endTime: endTime</li>
+ * </ul>
  */
-
 public class RemindDate {
 	private Timestamp startTime;
 	private Timestamp endTime;
