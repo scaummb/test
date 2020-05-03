@@ -40,6 +40,8 @@ public class HttpTestCase01 {
 			connection.setReadTimeout(60000);
 			// 发送请求
 			connection.connect();
+
+
 			// 通过connection连接，获取输入流
 			if (connection.getResponseCode() == 200 ){
 				is = connection.getInputStream();

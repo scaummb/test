@@ -42,7 +42,7 @@ public class Test {
 		 ii2 = Integer.valueOf(ii2.intValue() + 200); //自动拆箱， 再自动装箱
 		 System.out.println((new StringBuilder("ii2:")).append(ii2).toString());
 
-//		 NullPointerException
+//		 erException
 		Integer iii = null;
 		if (iii != null) { iii += 1000; System.out.println(iii); }
 
