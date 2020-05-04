@@ -23,7 +23,7 @@ public class Person {
 	String selfIntroduction(){
 		return "Hello!My name is '"+name+"'";
 	}
-	void say(String something){
+	public void say(String something){
 		System.out.println(name+"说："+something);
 	}
 	boolean wasDead(){
@@ -32,4 +32,12 @@ public class Person {
 	public String getName(){
 		return name;
 	}
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
