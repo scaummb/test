@@ -70,7 +70,7 @@ public class RomanNumeralToInteger {
 
     public static Integer getIntegerValue(Character... characters){
         StringBuilder sb = new StringBuilder();
-        characters).forEach(
+        Arrays.stream(characters).forEach(
             (r) -> {
                 sb.append(r);
             }
