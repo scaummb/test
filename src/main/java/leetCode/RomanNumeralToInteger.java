@@ -1,6 +1,5 @@
 package leetCode;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -70,11 +69,6 @@ public class RomanNumeralToInteger {
 
     public static Integer getIntegerValue(Character... characters){
         StringBuilder sb = new StringBuilder();
-        Arrays.stream(characters).forEach(
-            (r) -> {
-                sb.append(r);
-            }
-        );
         return romanNumberToIntegerMap.get(sb.toString());
     }
 
