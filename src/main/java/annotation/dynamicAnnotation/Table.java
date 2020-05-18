@@ -1,4 +1,4 @@
-package annotation.database.annotation;
+package annotation.dynamicAnnotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,5 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface DBTable {
-    String name() default "blank";
+public @interface Table {
 }
