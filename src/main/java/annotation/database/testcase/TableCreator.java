@@ -69,7 +69,7 @@ public class TableCreator {
 
 
             }
-            StringBuilder stringBuilder = new StringBuilder("Create Table " + tableName + "(");
+            StringBuilder stringBuilder = new StringBuilder("Create OpcLogData " + tableName + "(");
             for (String column : columnDefs){
                 stringBuilder.append("\n " + column + ", ");
             }

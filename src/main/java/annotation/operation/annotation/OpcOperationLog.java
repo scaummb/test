@@ -1,5 +1,7 @@
 package annotation.operation.annotation;
 
+import annotation.dynamicAnnotation.log.OperationBusinessType;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -9,7 +11,6 @@ import java.lang.annotation.Target;
  * <p>
  *     OPC操作日志注解
  *          operationBusinessType:业务类型 {@link OperationBusinessType}
- *          operationType:操作类型 {@link OperationType}
  *          operator:操作者
  *          operatorObjectName:对象类型
  *          previousObject:操作前数据
