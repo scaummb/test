@@ -1,9 +1,9 @@
 package annotation.dynamicAnnotation.business.zone;
 
 
-import annotation.dynamicAnnotation.log.annotation.OpcLogMethodHandler;
 import annotation.dynamicAnnotation.log.handler.OperationLogBaseHandler;
-import annotation.dynamicAnnotation.log.logger.OperationLogger;
+import annotation.dynamicAnnotation.log.logger.OpcLog;
+import annotation.dynamicAnnotation.log.logger.OperationBaseLogger;
 
 /**
  * @author moubin.mo
@@ -14,19 +14,17 @@ public class ZoneOperationLogHandler implements OperationLogBaseHandler {
 
 
 	@Override
-	@OpcLogMethodHandler(byClass = ZoneCreateLogger.class)
-	public void createLog(OperationLogger logger) {
-
+	public OpcLog createOrEnableLog(OperationBaseLogger logger) {
+		return null;
 	}
 
 	@Override
-	public void updateLog(OperationLogger logger) {
-
+	public OpcLog updateLog(OperationBaseLogger logger) {
+		return null;
 	}
 
 	@Override
-	@OpcLogMethodHandler(byClass = ZoneDeleteLogger.class)
-	public void deleteLog(OperationLogger logger) {
-
+	public OpcLog deleteOrDisableLog(OperationBaseLogger logger) {
+		return null;
 	}
 }

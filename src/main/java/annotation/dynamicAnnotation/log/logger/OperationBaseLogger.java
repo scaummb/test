@@ -1,22 +1,27 @@
 package annotation.dynamicAnnotation.log.logger;
 
 /**
- * <p>操作日志基类</p>
- * @author momoubin
- * @date 2020/5/18
+ * <ul>
+ * <li>operationTime: operationTime</li>
+ * <li>operatorName: operatorName</li>
+ * <li>operatorUid: operatorUid</li>
+ * <li>logTemplate: logTemplate</li>
+ * <li>previousObject: previousObject</li>
+ * <li>followedObject: followedObject</li>
+ * </ul>
  */
-public class OperationLogger {
+public class OperationBaseLogger {
     // 操作时间
     private Long operationTime;
     // 操作者名称
-    private String operatorObjectName;
+    private String operatorName;
     // 操作者Uid
     private Long operatorUid;
     // 日志模板
     private String logTemplate;
-    // 前期数据
+    // 业务数据修改前
     private Object previousObject;
-    // 后期数据
+    // 业务数据修改后
     private Object followedObject;
 
     public String getLogTemplate() {
@@ -43,6 +48,15 @@ public class OperationLogger {
         this.followedObject = followedObject;
     }
 
+    public void setPreviousObject(String previousObject) {
+        this.previousObject = previousObject;
+    }
+
+
+    public void setFollowedObject(String followedObject) {
+        this.followedObject = followedObject;
+    }
+
     public Long getOperationTime() {
         return operationTime;
     }
@@ -51,12 +65,12 @@ public class OperationLogger {
         this.operationTime = operationTime;
     }
 
-    public String getOperatorObjectName() {
-        return operatorObjectName;
+    public String getOperatorName() {
+        return operatorName;
     }
 
-    public void setOperatorObjectName(String operatorObjectName) {
-        this.operatorObjectName = operatorObjectName;
+    public void setOperatorName(String operatorName) {
+        this.operatorName = operatorName;
     }
 
     public Long getOperatorUid() {
