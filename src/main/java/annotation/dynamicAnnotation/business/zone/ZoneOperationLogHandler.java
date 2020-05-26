@@ -1,6 +1,7 @@
 package annotation.dynamicAnnotation.business.zone;
 
 
+import annotation.dynamicAnnotation.log.annotation.OpcLogMethodHandler;
 import annotation.dynamicAnnotation.log.handler.OperationLogBaseHandler;
 import annotation.dynamicAnnotation.log.logger.OpcLog;
 import annotation.dynamicAnnotation.log.logger.OperationBaseLogger;
@@ -27,4 +28,12 @@ public class ZoneOperationLogHandler implements OperationLogBaseHandler {
 	public OpcLog deleteOrDisableLog(OperationBaseLogger logger) {
 		return null;
 	}
+
+
+	@OpcLogMethodHandler(methodName = "exportZone")
+	public OpcLog exportZone(OperationBaseLogger logger) {
+		return null;
+	}
+
+
 }
