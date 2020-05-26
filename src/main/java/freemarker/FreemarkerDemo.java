@@ -1,15 +1,16 @@
 package freemarker;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import freemarker.bean.ContactUser;
+import freemarker.bean.OrganizationCustomer;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
-import freemarker.template.TemplateExceptionHandler;
 
 import java.io.IOException;
-import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author moubin.mo
@@ -22,51 +23,81 @@ public class FreemarkerDemo {
 	private StringTemplateLoader templateLoader;
 
 	public static void main(String[] args) throws IOException, TemplateException {
-		/*Person a = new Person("a", 1);
-		HashMap<String, String> map = new HashMap<>();
-		map.put("name", a.getName());
-		map.put("age", a.getAge().toString());
+		test01();
+	}
 
-		FreemarkerDemo freemarkerDemo = new FreemarkerDemo();
-		String result = freemarkerDemo.getLocaleTemplateString(map, FreemarkerTemplate.templateText_with_flt_instruments, "defaultValue");
-		System.out.println(result);*/
-
-		/* ------------------------------------------------------------------------ */
-		/* You should do this ONLY ONCE in the whole application life-cycle:        */
-
-		/* Create and adjust the configuration singleton */
-		Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
-//		cfg.setDirectoryForTemplateLoading(new File("/templates"));
-		// Recommended settings for new projects:
-		cfg.setDefaultEncoding("UTF-8");
-		cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
-		cfg.setLogTemplateExceptions(false);
-		cfg.setWrapUncheckedExceptions(true);
-		cfg.setFallbackOnNullLoopVariable(false);
-
-		/* ------------------------------------------------------------------------ */
-		/* You usually do these for MULTIPLE TIMES in the application life-cycle:   */
-
-		/* Create a data-model */
-		Map root = new HashMap();
-		root.put("before", new HashMap<String,String>(){{
-			put("name", "abc");put("age", null);}});
-		root.put("after", new HashMap<String,String>(){{
-			put("name", "abc");put("age", null);}});
-//		Product latest = new Product();
-//		latest.setUrl("products/greenmouse.html");
-//		latest.setName("green mouse");
-//		root.put("latestProduct", latest);
-
-		/* Get the template (uses cache internally) */
-		Template temp = new Template("a", FreemarkerTemplate.templateText_test,
+	public static void test01() throws IOException, TemplateException {
+		OrganizationCustomer organizationCustomer = buildCustomer();
+		Map root = convertObjectToMap(organizationCustomer);
+		System.out.println(root);
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_2,
 				templateConfig);
-
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
+	}
 
-		/* Merge data-model with template */
-//		Writer out = new OutputStreamWriter(System.out);
-//		temp.process(root, out);
+	/**
+	 * <p>处理传入对象</p>
+	 */
+	private static Map convertObjectToMap(Object obj) {
+		if (obj == null || obj instanceof String || obj instanceof Number
+		|| obj instanceof java.util.Date || obj instanceof java.sql.Date ||obj instanceof java.sql.Time
+		|| obj instanceof java.sql.Timestamp || obj instanceof Collection || obj instanceof Map
+		|| obj instanceof Boolean || obj instanceof Iterator || obj instanceof Enumeration || obj instanceof Iterable) {
+			return new HashMap<>();
+		}
+		return handleUnknownType(obj);
+	}
+
+	/**
+	 * <p>处理未知类型对象</p>
+	 */
+	private static Map handleUnknownType(Object obj) {
+		JSONObject json = (JSONObject) JSON.toJSON(obj);
+		return json;
+//		HashMap<String, Object> map = new HashMap<>();
+//		final Class<?> objClass = obj.getClass();
+//		Field[] declaredFields = objClass.getDeclaredFields();
+//		if (declaredFields.length > 0){
+//			for (Field field : declaredFields){
+//				field.setAccessible(true);
+//				try {
+//					map.put(field.getName(), field.get(obj));
+//				} catch (IllegalAccessException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+//		return map;
+	}
+
+	private static OrganizationCustomer buildCustomer() {
+		OrganizationCustomer organizationCustomer = new OrganizationCustomer();
+		organizationCustomer.setId(1L);
+		organizationCustomer.setDescription("description");
+		organizationCustomer.setName("name");
+		ContactUser user = new ContactUser();
+		user.setAge(25);
+		user.setName("test");
+		user.setToken("1234356456");
+		organizationCustomer.setUser(user);
+
+		ArrayList<String> list = new ArrayList(){{add("1123");add("123123123");add("54489798");}};
+		organizationCustomer.setAddress(list);
+
+		List<ContactUser> members = new ArrayList(){{
+			add(new ContactUser("a", 1, "111"));
+			add(new ContactUser("b", 2, "222"));
+			add(new ContactUser("c", 3, "333"));
+		}};
+		organizationCustomer.setMembers(members);
+
+		List<OrganizationCustomer> customers = new ArrayList(){{
+			add(new OrganizationCustomer(2L,"test02","description02"));
+			add(new OrganizationCustomer(3L,"test03","description03"));
+			add(new OrganizationCustomer(4L,"test04","description04"));
+		}};
+		organizationCustomer.setCustomers(customers);
+		return organizationCustomer;
 	}
 
 	public FreemarkerDemo() {
@@ -86,99 +117,4 @@ public class FreemarkerDemo {
 		return defaultValue;
 	}
 
-}
-
-abstract class FreeMarkerTemplateUtils {
-	public FreeMarkerTemplateUtils() {
-	}
-
-	public static String processTemplateIntoString(Template template, Object model) throws IOException, TemplateException {
-		StringWriter result = new StringWriter();
-		template.process(model, result);
-		return result.toString();
-	}
-
-}
-
-class SuperMan{
-	private String name;
-	private Integer age;
-	private String ability;
-
-	public SuperMan(String name, Integer age, String ability) {
-		this.name = name;
-		this.age = age;
-		this.ability = ability;
-	}
-
-	public String getAbility() {
-		return ability;
-	}
-
-	public void setAbility(String ability) {
-		this.ability = ability;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-}
-
-class Person {
-	private String name;
-	private Integer age;
-
-	public Person(String name, Integer age) {
-		this.name = name;
-		this.age = age;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-}
-
-class Monkey{
-	private String name;
-	private Integer age;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
 }
