@@ -5,7 +5,6 @@ import annotation.database.annotation.DBTable;
 import annotation.database.annotation.SQLInteger;
 import annotation.database.annotation.SQLString;
 import annotation.database.bean.Member;
-import org.junit.Test;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

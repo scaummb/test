@@ -58,5 +58,50 @@ public class FreemarkerTemplate {
 			"</#if>"
 			;
 
+	public final static String TEMPLATE_TEST_3 =
+			"<#if name ?? >" +
+					"客户名称为  ${name}"+
+					"</#if>" +
+					"<#if description?? >" +
+					"客户描述为 ${description}"+
+					"</#if>" +
+					"<#if id?? >" +
+					"客户id为 ${id} "+
+					"</#if>" ;
 
+	public final static String TEMPLATE_TEST_4 =
+			"域空间为:${namespaceId}" +
+ 			"<#if organizationCustomer.name ?? >" +
+					"客户名称为  ${organizationCustomer.name}"+
+					"</#if>" +
+					"<#if organizationCustomer.description?? >" +
+					"客户描述为 ${organizationCustomer.description}"+
+					"</#if>" +
+					"<#if organizationCustomer.id?? >" +
+					"客户id为 ${organizationCustomer.id} "+
+					"</#if>" ;
+	public static final String TEMPLATE_TEST_5 =
+			"域空间为:${namespaceId}" +
+			"<#if macro.name ?? >" +
+			"客户名称为 ${macro.name}"+
+			"</#if>" +
+			"<#if macro.age?? >" +
+				"客户描述为 ${macro.age}"+
+			"</#if>"+
+			"<#if macro.dtos?? >" +
+				"<#list macro.dtos as item>"+
+					"<#if item ??>"+
+						"<@explain_macro item />"+
+					"</#if>"+
+				"</#list>"+
+			"</#if>"+
+			"<#macro explain_macro dto>" +
+				"<#if dto.name ?? >" +
+				"客户名称为  ${dto.name}"+
+				"</#if>" +
+				"<#if dto.age?? >" +
+				"客户描述为 ${dto.age}"+
+				"</#if>"+
+			"</#macro>"
+			;
 }

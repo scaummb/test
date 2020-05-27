@@ -1,7 +1,5 @@
 package introspect;
 
-import org.junit.Before;
-import org.junit.Test;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -14,7 +12,6 @@ import java.util.Map;
 public class MyBeanUtilsTest {
     private User user ;
 
-    @Before
     public void init() {
         user = new User() ;
         user.setName("张三") ;
@@ -24,7 +21,6 @@ public class MyBeanUtilsTest {
         user.setAddress("北京丰台") ;
     }
 
-    @Test
     public void testSetPropertyValue() {
         System.out.println(user);
         //设置String类型数据
@@ -38,7 +34,6 @@ public class MyBeanUtilsTest {
         System.out.println(user);
     }
 
-    @Test
     public void testGetPropertyValue() {
         //获取String类型属性
         String name = (String) MyBeanUtils.getPropertyValue("name", user) ;
@@ -51,7 +46,6 @@ public class MyBeanUtilsTest {
         System.out.println(name + "," + age  + "," + gender  + "," + birthday  + ".");
     }
 
-    @Test
     public void testPopulate() {
         //向Map集合中封装数据，适用于request.getParameterMap() ;
         Map<String, Object> map = new HashMap<String, Object>() ;

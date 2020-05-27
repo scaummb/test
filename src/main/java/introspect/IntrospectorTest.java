@@ -1,8 +1,5 @@
 package introspect;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
@@ -17,7 +14,6 @@ public class IntrospectorTest {
 
     private User user ;
 
-    @Before
     public void init() {
         user = new User() ;
         user.setName("张三") ;
@@ -36,7 +32,6 @@ public class IntrospectorTest {
      * @Parameters: @throws Exception
      * @Return: void
      */
-    @Test
     public void getBeanPropertyInfo() throws Exception {
         //获取User-BeanInfo对象：beanInfo是对一个Bean的描述，可以通过它取得Bean内部的信息
         /**
@@ -68,7 +63,6 @@ public class IntrospectorTest {
      * @Parameters:
      * @Return: void
      */
-    @Test
     public void getBeanPropertyByName() throws Exception {
         //获取name属性的属性描述器
         PropertyDescriptor pd = new PropertyDescriptor("name", user.getClass()) ;

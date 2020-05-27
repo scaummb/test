@@ -3,6 +3,7 @@ package freemarker;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import freemarker.bean.ContactUser;
+import freemarker.bean.Macro;
 import freemarker.bean.OrganizationCustomer;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
@@ -23,7 +24,10 @@ public class FreemarkerDemo {
 	private StringTemplateLoader templateLoader;
 
 	public static void main(String[] args) throws IOException, TemplateException {
-		test01();
+//		test01();
+//		test02();
+//		test03();
+		test04();
 	}
 
 	public static void test01() throws IOException, TemplateException {
@@ -33,6 +37,54 @@ public class FreemarkerDemo {
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_2,
 				templateConfig);
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
+	}
+
+	public static void test02() throws IOException, TemplateException {
+		OrganizationCustomer organizationCustomer = buildCustomer();
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_3,
+				templateConfig);
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, organizationCustomer));
+	}
+
+	public static void test03() throws IOException, TemplateException {
+		OrganizationCustomer organizationCustomer = buildCustomer();
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("organizationCustomer", organizationCustomer);
+		map.put("namespaceId", 11);
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_4,
+				templateConfig);
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, map));
+	}
+
+	public static void test04() throws IOException, TemplateException {
+		Macro macro = buildMacro();
+		HashMap<String, Object> map = new HashMap(){{put("macro", macro);put("namespaceId", 11);}};
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_5,
+				templateConfig);
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, map));
+	}
+
+	private static Macro buildMacro() {
+		//循环嵌套
+		Macro macro = new Macro();
+		macro.setAge(1);
+		macro.setName("1");
+		List<Macro> objects = new ArrayList<Macro>(){{add(macro);}};
+
+		Macro macro2 = new Macro();
+		macro2.setAge(2);
+		macro2.setName("2");
+		macro.setDtos(objects);
+		Macro macro4 = new Macro();
+		macro4.setAge(4);
+		macro4.setName("4");
+		List<Macro> objects2 = new ArrayList<Macro>(){{add(macro2);add(macro4);}};
+
+		Macro macro3 = new Macro();
+		macro3.setAge(2);
+		macro3.setName("2");
+		macro3.setDtos(objects2);
+		return macro3;
 	}
 
 	/**
@@ -54,6 +106,7 @@ public class FreemarkerDemo {
 	private static Map handleUnknownType(Object obj) {
 		JSONObject json = (JSONObject) JSON.toJSON(obj);
 		return json;
+
 //		HashMap<String, Object> map = new HashMap<>();
 //		final Class<?> objClass = obj.getClass();
 //		Field[] declaredFields = objClass.getDeclaredFields();
