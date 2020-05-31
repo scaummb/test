@@ -1,6 +1,7 @@
 package freemarker.bean;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author moubin.mo
@@ -20,6 +21,8 @@ public class OrganizationCustomer {
 	private List<ContactUser> members;
 	// 容器+嵌套
 	private List<OrganizationCustomer> customers;
+	// 容器+普通数值
+	private Map<String, String> books;
 
 	public OrganizationCustomer() {
 	}
@@ -28,6 +31,14 @@ public class OrganizationCustomer {
 		this.id = id;
 		this.name = name;
 		this.description = description;
+	}
+
+	public Map<String, String> getBooks() {
+		return books;
+	}
+
+	public void setBooks(Map<String, String> books) {
+		this.books = books;
 	}
 
 	public List<OrganizationCustomer> getCustomers() {

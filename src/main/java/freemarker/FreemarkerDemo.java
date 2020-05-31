@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import freemarker.bean.ContactUser;
 import freemarker.bean.Macro;
+import freemarker.bean.Namespace;
 import freemarker.bean.OrganizationCustomer;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
@@ -24,19 +25,39 @@ public class FreemarkerDemo {
 	private StringTemplateLoader templateLoader;
 
 	public static void main(String[] args) throws IOException, TemplateException {
+//		test00();
 //		test01();
 //		test02();
 //		test03();
-		test04();
+//		test04();
+		test06();
+	}
+
+	public static void test06() throws IOException, TemplateException {
+		Namespace previousNamespace = new Namespace(1L, "深圳湾1","homeUrl1","pcHomeUrl1","contentServerUrl1","opServerUrl1", "smsHeader1");
+		Namespace afterNamespace = new Namespace(2L, "深圳湾2","homeUrl2","pcHomeUrl2","contentServerUrl2","opServerUrl1", "smsHeader1");
+		Map root = new HashMap(){{
+			put("namespaceName","深圳湾");
+			put("previousNamespace",previousNamespace);
+			put("afterNamespace",afterNamespace);}};
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.UPDATE_NAMESPACE_TEMPLATE,
+				templateConfig);
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
+
+	}
+
+	public static void test00() throws IOException, TemplateException {
+		Map root = new HashMap(){{put("name","zuolin");put("age",null);}};
+		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_1,
+				templateConfig);
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
 	}
 
 	public static void test01() throws IOException, TemplateException {
 		OrganizationCustomer organizationCustomer = buildCustomer();
-		Map root = convertObjectToMap(organizationCustomer);
-		System.out.println(root);
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_2,
 				templateConfig);
-		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
+		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, organizationCustomer));
 	}
 
 	public static void test02() throws IOException, TemplateException {
@@ -62,6 +83,10 @@ public class FreemarkerDemo {
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_5,
 				templateConfig);
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, map));
+	}
+
+	public static void test05() throws IOException, TemplateException {
+
 	}
 
 	private static Macro buildMacro() {
