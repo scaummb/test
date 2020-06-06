@@ -1,7 +1,5 @@
 package freemarker.template;
 
-import java.util.Map;
-
 /**
  * <ul>
  * <li>description: 普通文案模板</li>
@@ -10,7 +8,7 @@ import java.util.Map;
  */
 public class LogTemplate {
 	private String description;
-	private Map<String, LogTemplateObject> data;
+	private LogTemplateObject dataObject;
 
 	public String getDescription() {
 		return description;
@@ -20,11 +18,12 @@ public class LogTemplate {
 		this.description = description;
 	}
 
-	public Map<String, LogTemplateObject> getData() {
-		return data;
+	public LogTemplateObject getDataObject() {
+		return dataObject;
 	}
 
-	public void setData(Map<String, LogTemplateObject> data) {
-		this.data = data;
+	public void setDataObject(LogTemplateObject dataObject) {
+		this.dataObject = dataObject;
 	}
+
 }

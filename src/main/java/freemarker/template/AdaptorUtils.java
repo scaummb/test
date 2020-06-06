@@ -1,10 +1,13 @@
 package freemarker.template;
 
-import org.springframework.util.CollectionUtils;
+import convert.ConvertHelper;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.mortbay.util.ajax.JSON;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -32,59 +35,78 @@ public class AdaptorUtils {
 
 	/**
 	 * <p>
-	 *     设置data的特殊字段数据
-	 *     {fromObject:{{field:xx,value:xx,prefix:xx,hideFlag:xx,hideText:xx}},
-	 *     toObject:{{field:xx,value:xx,prefix:xx,hideFlag:xx,hideText:xx}}}
+	 *     解释设置data的字段数据
+	 *     {fromObject:{{field:xx,value:xx,text:xx,mode:xx}},
+	 *     toObject:{{field:xx,value:xx,text:xx,mode:xx}}}
 	 * </p>
+	 * @param templateObject 业务模板数据
+	 * @param fromObject 操作后数据对象
+	 * @param toObject 操作前数据对象
+	 * @param data 模板数据Map，是给freemarker处理准备的map
 	 */
-	public static void handleDataMap(Map<String,LogTemplateObject> templateObjects, Object fromObject, Object toObject, Map<String,Object> data) {
-		if (CollectionUtils.isEmpty(templateObjects)){
+	public static void handleDataMap(LogTemplateObject templateObject, Object fromObject, Object toObject, Map<String,Object> data) {
+		if (ObjectUtils.isEmpty(templateObject)){
 			return;
 		}
 
-		if (!ObjectUtils.isEmpty(templateObjects.get(TemplateConstants.FROM_OBJECT))){
-			LogTemplateObject fromObjectFormatter = templateObjects.get(TemplateConstants.FROM_OBJECT);
-			Field[] declaredFields = fromObject.getClass().getDeclaredFields();
-			for (Field field : declaredFields) {
+		// 设置 fromTemplateObject 进 freemarker 数据解析模板
+		if (!ObjectUtils.isEmpty(fromObject)){
+			LogTemplateObject fromTemplateObject = ConvertHelper.convert(templateObject, LogTemplateObject.class);
+			ArrayList<LogTemplateObjectField> fieldArrayList = new ArrayList();
+			Field[] allFields = FieldUtils.getAllFields(fromObject.getClass());
+			for (Field field : allFields) {
 				field.setAccessible(true);
-				for (LogTemplateObjectField objectField :fromObjectFormatter.getFields()){
+				for (LogTemplateObjectField objectField :fromTemplateObject.getFields()){
 					if (objectField.getField().equals(field.getName())){
 						try {
-							objectField.setValue(String.valueOf(field.get(fromObject)));
+							LogTemplateObjectField newField = ConvertHelper.convert(objectField, LogTemplateObjectField.class);
+							newField.setValue(String.valueOf(field.get(fromObject)));
+							fieldArrayList.add(newField);
 						} catch (IllegalAccessException e) {
 							e.printStackTrace();
 						}
 					}
 				}
 			}
-			data.putIfAbsent(TemplateConstants.FROM_OBJECT, fromObjectFormatter);
+			fromTemplateObject.setFields(fieldArrayList);
+			data.putIfAbsent(TemplateConstants.FROM_OBJECT, fromTemplateObject);
 		}
 
-		if (!ObjectUtils.isEmpty(templateObjects.get(TemplateConstants.TO_OBJECT))){
-			LogTemplateObject toObjectFormatter = templateObjects.get(TemplateConstants.TO_OBJECT);
-			Field[] declaredFields = toObject.getClass().getDeclaredFields();
-			for (Field field : declaredFields) {
+		System.out.println(JSON.toString(data));
+
+		// 设置 toTemplateObject 进 freemarker 数据解析模板
+		if (!ObjectUtils.isEmpty(toObject)){
+			LogTemplateObject toTemplateObject = ConvertHelper.convert(templateObject, LogTemplateObject.class);
+			ArrayList<LogTemplateObjectField> fieldArrayList = new ArrayList();
+			Field[] allFields = FieldUtils.getAllFields(toObject.getClass());
+			for (Field field : allFields) {
 				field.setAccessible(true);
-				for (LogTemplateObjectField objectField :toObjectFormatter.getFields()){
+				for (LogTemplateObjectField objectField :toTemplateObject.getFields()){
 					if (objectField.getField().equals(field.getName())){
 						try {
-							objectField.setValue(String.valueOf(field.get(toObject)));
+							LogTemplateObjectField newField = ConvertHelper.convert(objectField, LogTemplateObjectField.class);
+							newField.setValue(String.valueOf(field.get(toObject)));
+							fieldArrayList.add(newField);
 						} catch (IllegalAccessException e) {
 							e.printStackTrace();
 						}
 					}
 				}
 			}
-			data.putIfAbsent(TemplateConstants.TO_OBJECT, toObjectFormatter);
+
+			toTemplateObject.setFields(fieldArrayList);
+			data.putIfAbsent(TemplateConstants.TO_OBJECT, toTemplateObject);
 		}
+
+		System.out.println(JSON.toString(data));
 	}
 
 	public static String getTemplateSourceCode(String description, String templateFields) {
 		StringBuffer stringBuffer = new StringBuffer();
-		if (StringUtils.isEmpty(description)){
+		if (!StringUtils.isEmpty(description)){
 			stringBuffer.append(description);
 		}
-		if (StringUtils.isEmpty(templateFields)){
+		if (!StringUtils.isEmpty(templateFields)){
 			stringBuffer.append(templateFields);
 		}
 		return stringBuffer.toString();

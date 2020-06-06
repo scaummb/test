@@ -279,4 +279,45 @@ UPDATE_NAMESPACE_TEMPLATE =
 					"</#if>" +
 					"</#macro>"
 			;
+
+	public final static String TEMPLATE = "{ \"description\" : \"编辑了“${name}”的信息\", \"dataObject\" :{ \"fields\" :[{ \"text\" : \"功能套餐名称\", \"field\" : \"name\" },{ \"text\" : \"功能套餐描述\", \"field\" : \"description\" }]}}\n";
+
+	public final static String TEMPLATE_WITH_DOUBLE_OBJECTS_COMPARISON =
+			"<#if fromObject?? && toObject?? >" +
+				"<#list fromObject.fields as field1>"+
+					"<#list toObject.fields as field2>"+
+						"<#if field1.field==field2.field>"+
+							"<@compareObjectField field1 field2 />"+
+						"</#if>"+
+					"</#list>"+
+				"</#list>"+
+			"</#if>"+
+			"<#macro compareObjectField field1, field2>" +
+				"<#if field1.field==field2.field>" +
+					"<#if field2.value??>"+
+						"<#if field1.value!=field2.value>"+
+								"<#if field1.mode?? && field1.mode==1 >"+
+									"变更了：${field1.field} \n"+
+								"<#else>"+
+									"${field1.text} 从 ${field1.value} 变更为 ${field2.value} \n"+
+								"</#if>"+
+							"</#if>"+
+						"<#else>"+
+						"<#if field1.mode?? && field1.mode==1 >"+
+						"变更了：${field1.field} \n"+
+						"<#else>"+
+						"{field1.text} 从 ${field1.value} 变更为 无\n"+
+						"</#if>"+
+						"</#if>"+
+				"<#else>"+
+					"<#if field2.value??>"+
+						"<#if field2.mode?? && field2.mode==1 >"+
+								"变更了：${field2.field} \n"+
+						"<#else>"+
+							"{field2.text} 修改为 ${field2.value} \n"+
+						"</#if>"+
+						"</#if>"+
+						"</#if>" +
+					"</#macro>"
+			;
 }
