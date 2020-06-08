@@ -1,20 +1,19 @@
 package freemarker.template;
 
+
 /**
  * <ul>
- * <li>prefixText: 字段描述文本</li>
+ * <li>text: 字段描述文本</li>
  * <li>field: 字段属性名</li>
  * <li>value: 字段值</li>
- * <li>hideFlag: 字段隐藏标识</li>
- * <li>hideText: 字段隐藏展示文本</li>
+ * <li>mode: 字段展示模式 </li>
  * </ul>
  */
 public class LogTemplateObjectField {
-	private String prefixText;
+	private String text;
 	private String field;
 	private String value;
-	private Byte hideFlag;
-	private String hideText;
+	private Byte mode;
 
 	public String getValue() {
 		return value;
@@ -24,12 +23,12 @@ public class LogTemplateObjectField {
 		this.value = value;
 	}
 
-	public String getPrefixText() {
-		return prefixText;
+	public String getText() {
+		return text;
 	}
 
-	public void setPrefixText(String prefixText) {
-		this.prefixText = prefixText;
+	public void setText(String text) {
+		this.text = text;
 	}
 
 	public String getField() {
@@ -40,19 +39,11 @@ public class LogTemplateObjectField {
 		this.field = field;
 	}
 
-	public Byte getHideFlag() {
-		return hideFlag;
+	public Byte getMode() {
+		return mode;
 	}
 
-	public void setHideFlag(Byte hideFlag) {
-		this.hideFlag = hideFlag;
-	}
-
-	public String getHideText() {
-		return hideText;
-	}
-
-	public void setHideText(String hideText) {
-		this.hideText = hideText;
+	public void setMode(Byte mode) {
+		this.mode = mode;
 	}
 }

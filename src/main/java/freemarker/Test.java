@@ -2,7 +2,6 @@ package freemarker;
 
 import com.alibaba.fastjson.JSON;
 import freemarker.bean.Zones;
-import freemarker.template.AdaptorUtils;
 import freemarker.template.LogTemplate;
 import freemarker.template.LogTemplateObject;
 import freemarker.template.LogTemplateObjectField;
@@ -24,10 +23,10 @@ public class Test {
 		LogTemplateObject toObject = new LogTemplateObject();
 		LogTemplateObjectField nameField = new LogTemplateObjectField();
 		nameField.setField("name");
-		nameField.setPrefixText("Zone名称");
+//		nameField.setPrefixText("Zone名称");
 		LogTemplateObjectField expireTimeField = new LogTemplateObjectField();
 		expireTimeField.setField("licenseEndDate");
-		expireTimeField.setPrefixText("Zone有效期");
+//		expireTimeField.setPrefixText("Zone有效期");
 		List<LogTemplateObjectField> fromObjectFields = new ArrayList(){{
 			add(nameField);
 			add(expireTimeField);
@@ -44,7 +43,7 @@ public class Test {
 
 		LogTemplate logTemplate = new LogTemplate();
 		logTemplate.setDescription("编辑了“${name}”的信息");
-		logTemplate.setData(data);
+//		logTemplate.setData(data);
 
 		System.out.println(JSON.toJSON(logTemplate));
 
@@ -56,8 +55,8 @@ public class Test {
 		newzones.setName("he2");
 		newzones.setLicenseEndDate(new Timestamp(1585577262000L));
 		HashMap hashMap = new HashMap(){{put("fromObject", zones);put("toObject", newzones);}};
-		AdaptorUtils.handleDataMap(logTemplate.getData(), zones, newzones, hashMap);
-		System.out.println(JSON.toJSON(logTemplate.getData()));
+//		AdaptorUtils.handleDataMap(logTemplate.getData(), zones, newzones, hashMap);
+//		System.out.println(JSON.toJSON(logTemplate.getData()));
 	}
 
 
