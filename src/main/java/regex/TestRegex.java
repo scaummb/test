@@ -21,5 +21,8 @@ public class TestRegex {
 		// 调用匹配器对象的功能
 		boolean b = m.matches();
 		System.out.println(b);
+
+		String a = "1234356";
+		System.out.println(a.substring(a.length()-4));
 	}
 }
