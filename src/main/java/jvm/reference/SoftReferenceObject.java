@@ -1,7 +1,6 @@
 package jvm.reference;
 
 import java.lang.ref.SoftReference;
-import java.util.ArrayList;
 
 /**
  * <p>
@@ -14,15 +13,11 @@ import java.util.ArrayList;
 
 public class SoftReferenceObject {
 	public static void main(String[] args) {
-		SoftReference<SoftReferenceObject> softReference = new SoftReference<>(new SoftReferenceObject());
-		System.out.println(softReference);
+		SoftReference<byte[]> softReference = new SoftReference<byte[]>(new byte[1024*1024*10]);
+		System.out.println(softReference.get());
 		System.gc();
-		System.out.println(softReference);
-		ArrayList<Object> objects = new ArrayList<>();
-		for (int i=0; i<10; i++){
-			objects.add(new SoftReferenceObject());
-		}
-		System.gc();
-		System.out.println(softReference);
+		System.out.println("一次GC后，内存充足，" + softReference);
+		byte[] bytes = new byte[1024 * 1024 * 5];
+		System.out.println("重新分配10M内存后，堆内存不充足了，会触发软引用的对象被回收，" + softReference);
 	}
 }
