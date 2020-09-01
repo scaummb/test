@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.internal.bind.ObjectTypeAdapter;
-import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
@@ -26,13 +25,15 @@ public class TestGson {
 		newApprovalLogDTO.setGroupName("123123");
 		newApprovalLogDTO.setSortNum(1);
 		String s = gson.toJson(newApprovalLogDTO);
-		Map map = gson.fromJson(s, Map.class);
-		System.out.println(map);
 
 		Gson gson1 = new GsonBuilder().create();
 		Gson gson2 = getGson();
-		System.out.println("gson1: "+gson1.fromJson(s,new TypeToken<Map<String,Object>>(){}.getType()));
-		System.out.println("gson2: "+gson2.fromJson(s,new TypeToken<Map<String,Object>>(){}.getType()));
+		// 使用默认类型解析器
+		Map map1 = gson1.fromJson(s, Map.class);
+		// 使用自定义类型解析器
+		Map map2 = gson2.fromJson(s, Map.class);
+		System.out.println(map1);
+		System.out.println(map2);
 	}
 
 	public static Gson getGson() {
