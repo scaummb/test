@@ -6,46 +6,57 @@ import java.util.Arrays;
  * @author moubin.mo
  * @date: 2020/9/28 22:24
  */
-
 public class HeapSort {
-	public static void main(String[] args) {
-		int i = 0;
-		int a[] = {5,4,9,8,7,6,0,1,3,2};
-		int len = a.length;
-		myMinHeapSort(a);
-		System.out.println(Arrays.toString(a));
+	public static void main(String []args){
+		int []arr = {9,8,7,6,5,4,3,2,1};
+		sort(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	public static void sort(int []arr){
+		//1.构建大顶堆
+		for(int i=arr.length/2-1;i>=0;i--){
+			//从第一个非叶子结点从下至上，从右至左调整结构
+			adjustHeap(arr,i,arr.length);
+		}
+		//2.调整堆结构+交换堆顶元素与末尾元素
+		for(int j=arr.length-1;j>0;j--){
+			swap(arr,0,j);//将堆顶元素与末尾元素进行交换
+			adjustHeap(arr,0,j);//重新对堆进行调整
+		}
+
 	}
 
-	private static void myMinHeapSort(int[] array){
-		int i;
-		int len = array.length;
-		for (i = len/2-1; i>=0; i--){
-			adjustMinHeap(array, i, len-1);
-		}
-		for (i = len -1; i>=0; i--){
-			int tmp = array[0];
-			array[0] = array[i];
-			array[i] = tmp;
-			adjustMinHeap(array, 0, i-1);
-		}
-	}
-
-	private static void adjustMinHeap(int[] array, int pos, int len) {
-		int temp = 0;
-		int child = 0;
-		for (temp = array[pos]; 2 * pos + 1 <= len; pos = child){
-			child = 2 * pos + 1;
-			if (child < len && array[child] <= array[child+1]){
-				child++;
+	/**
+	 * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）
+	 * @param arr
+	 * @param i
+	 * @param length
+	 */
+	public static void adjustHeap(int []arr,int i,int length){
+		int temp = arr[i];//先取出当前元素i
+		for(int k=i*2+1;k<length;k=k*2+1){//从i结点的左子结点开始，也就是2i+1处开始
+			if(k+1<length && arr[k]<arr[k+1]){//如果左子结点小于右子结点，k指向右子结点
+				k++;
 			}
-			if (array[child] < temp){
-				array[pos] = array[child];
-			} else {
+			if(arr[k] >temp){//如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）
+				arr[i] = arr[k];
+				i = k;
+			}else{
 				break;
 			}
 		}
-		array[pos] = temp;
+		arr[i] = temp;//将temp值放到最终的位置
 	}
 
-
+	/**
+	 * 交换元素
+	 * @param arr
+	 * @param a
+	 * @param b
+	 */
+	public static void swap(int []arr,int a ,int b){
+		int temp=arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+	}
 }
