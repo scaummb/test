@@ -4,6 +4,7 @@ import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,11 +17,44 @@ public class TestBase64 {
 	final static BASE64Encoder encoder = new BASE64Encoder();
 	final static BASE64Decoder decoder = new BASE64Decoder();
 	public static void main(String[] args) throws IOException {
-		Base64Decode();
+		testBase64EnCode2();
+		testDeCodeSmartQrCode();
+	}
+
+	/**
+	 * <p>Base64重复编码结果</p>
+	 */
+	private static void testBase64EnCodeDouble() throws IOException {
+		String string = "51";
+		byte[] bytes1 = decoder.decodeBuffer(string);
+
+		String string2 = "51";
+		byte[] bytes2 = decoder.decodeBuffer(string2);
+
+
+		String string3 = "5151";
+		byte[] bytes3 = decoder.decodeBuffer(string3);
+
+		System.out.println(Arrays.asList(bytes1));
+		System.out.println(Arrays.asList(bytes2));
+		System.out.println(Arrays.asList(bytes3));
+		System.out.println(Arrays.asList(bytes3));
+	}
+
+	private static void testBase64EnCode2() {
+		byte[] bytes = new byte[]{-4,18,1,1, 0,0,0,0, 0,0,3,-24, 95,62,-79,-18, -33,-3,-62,7};
+		String encode = encoder.encode(bytes);
+		System.out.println(encode);
 	}
 
 	private static void testDeCodeSmartQrCode() {
-		String encodeCode = "NTEBETAwMDQ1MzE1MDAwMDExNDk5AocBAYBXtXWZJWCYXTqDZWShpYqbCvt4ySidK8a6aTcbYuwbtDcaqXtbdp5H3Q9HAAZS9cn/qxQxGwBPihHaccUNJ/dcGQDXsKvpI0RW/w9AIS3FDbzJw7MSqQM1VZVEuF2CB87+tHTIHJ3l/bTc2U6ztG9USHBJW4PJDFtjjjUmpdGJMlq0LY8=";
+		String encodeCode = "/BIBAQAAAAAAAAPoXz6x7t/9wgc=";
+		try {
+			byte[] bytes = decoder.decodeBuffer(encodeCode);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 
 	}
