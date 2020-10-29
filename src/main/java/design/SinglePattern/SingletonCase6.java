@@ -8,19 +8,19 @@ package design.SinglePattern;
  */
 
 public class SingletonCase6 {
-	static enum SingletonEnum {
+	enum SingletonEnum {
 		//创建一个枚举对象，该对象天生为单例
 		INSTANCE;
 		private SingletonCase6 singleton;
 
 		//私有化枚举的构造函数
 		private SingletonEnum() {
-			System.out.print("-----1-----");
+			System.out.println("-----1 init constructor-----");
 			singleton = new SingletonCase6();
 		}
 
 		public SingletonCase6 getSingleton() {
-			System.out.print("-----2-----");
+			System.out.println("-----2 return singleton-----");
 			return singleton;
 		}
 	}
@@ -29,7 +29,7 @@ public class SingletonCase6 {
 	}
 
 	public static SingletonCase6 getInstance(){
-		System.out.print("-----3-----");
+		System.out.println("-----3 getInstance -----");
 		return SingletonEnum.INSTANCE.getSingleton();
 	}
 
