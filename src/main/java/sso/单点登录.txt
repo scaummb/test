@@ -1,0 +1,13 @@
+从对接方角度，解析如何完成SSO：
+1、秩维和左邻都得到一对appKey和appSecret：
+appKey ：6d00f9de-06c4-417d-9c5f-923dcb52ae09
+secretKey ： ra9VSteycacFGmbRrB/w3waO/AnTX4svgYNHNOF1l6EYnFN5JQp2HY11JknirgYJWLF6pI8L+VC+zECIX6Xftg==
+
+2、用户手机app跳转到秩维H5页面
+
+3、秩维H5页面发起第一个请求：
+
+4、秩维H5页面发起第二个请求：
+
+5、秩维H5页面发起第三个请求：
+

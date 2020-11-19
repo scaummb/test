@@ -5,13 +5,18 @@ package stream;
  * @date: 2019/9/15 11:58
  */
 
-public class Female {
+public  class Female {
 	private Integer age;
 	private String name;
 	private Integer height;
 	private Integer weight;
 	private Integer nation; // 1:china,2:others
 	private Byte gender; // 1:male,2:female
+
+	public Female(Integer age, String name) {
+		this.age = age;
+		this.name = name;
+	}
 
 	public Female(Integer age, String name, Integer height, Integer weight, Integer nation, Byte gender) {
 		this.age = age;
