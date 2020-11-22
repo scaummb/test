@@ -18,6 +18,7 @@ public class FinalizeEscapeGC {
 
     @Override
     protected void finalize() throws Throwable {
+        // 覆盖实现finalize方法
         super.finalize();
         System.out.println("finalize method executed!");
         FinalizeEscapeGC.SAVE_HOOK = this;
@@ -28,14 +29,14 @@ public class FinalizeEscapeGC {
 
         // 对象第一次拯救自己
         SAVE_HOOK = null;
-        System.gc();
+        System.gc(); //触发使用finalize()
 
         // 因为finalize方法优先级很低，所以暂停 0.5s 等待它
         Thread.sleep(500);
         if (SAVE_HOOK != null){
             SAVE_HOOK.isAlive();
         } else {
-            System.out.println("no, i am dead :(");
+            System.out.println("first time check,no, i am dead :(");
         }
 
         // 下面这段代码和上面的完全相同，但是这次自救却失败了
@@ -46,7 +47,7 @@ public class FinalizeEscapeGC {
         if (SAVE_HOOK != null){
             SAVE_HOOK.isAlive();
         } else {
-            System.out.println("no, i am dead :(");
+            System.out.println("second time check, no, i am dead :(");
         }
 
     }
