@@ -12,8 +12,8 @@ public class MD5Encoder {
 
 	public static void main(String[] args){
 		try {
-			String encodingString = md5("Test", "key");
-			boolean verifyResult = verify("Test", "key", encodingString);
+			String encodingString = md5("TestStrategy", "key");
+			boolean verifyResult = verify("TestStrategy", "key", encodingString);
 			System.out.println("encodingString = " + encodingString + ", verifyResult = " + verifyResult);
 
 		} catch (Exception e) {
