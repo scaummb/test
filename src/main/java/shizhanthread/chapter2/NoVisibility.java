@@ -24,6 +24,11 @@ public class NoVisibility {
 					}
 				} else {
 					System.out.println("ReaderThread, ready, ready= " + ready + ", number= " + number);
+					try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					number = 1;
 				}
 			}
