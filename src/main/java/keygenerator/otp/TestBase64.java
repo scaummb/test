@@ -4,6 +4,8 @@ import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,8 +19,20 @@ public class TestBase64 {
 	final static BASE64Encoder encoder = new BASE64Encoder();
 	final static BASE64Decoder decoder = new BASE64Decoder();
 	public static void main(String[] args) throws IOException {
-		testBase64EnCode2();
-		testDeCodeSmartQrCode();
+		testUrlEncode();
+	}
+
+	private static void testUrlEncode() {
+		String url = "http://116.239.33.45:6062/persons/getPersonInfoLink?systemId=1&qrType=1";
+		try {
+			String router = "zl://browser/i?";
+			router = router + "clientHandlerType=1" + "&url=" + URLEncoder.encode(url, "utf-8");
+			System.out.println(router);
+		} catch (UnsupportedEncodingException e) {
+
+		}
+
+
 	}
 
 	/**

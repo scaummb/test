@@ -32,11 +32,11 @@ public class SSODemo {
 	public static void main(String[] args) throws IOException {
 		//第一步：获取授权码code
 		String client_id = appKey;
-		String url = "http://zhiwei/index.html"; //第三方H5页面
+		String url = "http://www.baidu.com"; //第三方H5页面
 		String state = "zhiwei";//所填内容，客户端跳转原封不动返回给第三方H5页面的数据(有需要就用)
-		String.format(URL_GET_AUTHORIZATION_CODE, client_id, url, state);
+		String getUrl = String.format(URL_GET_AUTHORIZATION_CODE, client_id, URLEncoder.encode(url, "utf-8"), state);
 		CloseableHttpClient httpclient = getHttplient();
-		HttpGet httpGet = getHttpGet(URL_GET_AUTHORIZATION_CODE);
+		HttpGet httpGet = getHttpGet(getUrl);
 		CloseableHttpResponse response = httpclient.execute(httpGet);
 
 		int status = response.getStatusLine().getStatusCode();

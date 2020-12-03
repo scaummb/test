@@ -1,4 +1,4 @@
-package charset.urlencode;
+package url.urlencode;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -14,6 +14,18 @@ import java.net.URLEncoder;
 
 public class TestUrlEncode {
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		test2();
+	}
+
+	private static void test2() throws UnsupportedEncodingException {
+		String url = "https://m.baidu.com"; //第三方链接
+		String encodeUrl = URLEncoder.encode(url, "utf-8");
+		String getUrl = "zl://browser/i?"
+				+ "url=https://evh/oauth2/authorize?response_type=code&client_id=6d00f9de-06c4-417d-9c5f-923dcb52ae09&redirect_uri="+encodeUrl+"&scope=basic&state=zhiwei#oauth2_redirect"
+				+ "#sign_suffix";
+	}
+
+	private static void test1() throws UnsupportedEncodingException {
 		String text1 = "莫";
 		String text2 = "123";
 		String text3 = "123=/";
@@ -23,7 +35,5 @@ public class TestUrlEncode {
 		System.out.println(encode1);
 		System.out.println(encode2);
 		System.out.println(encode3);
-
-
 	}
 }

@@ -2,9 +2,7 @@ package shizhanthread.chapter2;
 
 import shizhanthread.annotations.ThreadSafe;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import java.math.BigInteger;
 
 /**
@@ -13,16 +11,26 @@ import java.math.BigInteger;
  */
 
 @ThreadSafe
-public class CachedFactoriser implements Servlet {
+public class CachedFactoriser extends BaseClass implements Servlet {
 
-	@GuardedBy("this") private BigInteger lastNumber;
-	@GuardedBy("this") private BigInteger[] lastFactors;
-	@GuardedBy("this") private long hits;
-	@GuardedBy("this") private long cacheHits;
+	private BigInteger lastNumber;
+	private BigInteger[] lastFactors;
+	private long hits;
+	private long cacheHits;
 
 	public synchronized long getHits() {return hits;}
 	public synchronized double getCacheHitRatio() {
 		return (double) cacheHits /(double) hits;
+	}
+
+	@Override
+	public void init(ServletConfig servletConfig) throws ServletException {
+
+	}
+
+	@Override
+	public ServletConfig getServletConfig() {
+		return null;
 	}
 
 	public void service(ServletRequest req, ServletResponse resp) {
@@ -43,5 +51,15 @@ public class CachedFactoriser implements Servlet {
 			}
 		}
 		encodeIntoResponse(resp,factors);
+	}
+
+	@Override
+	public String getServletInfo() {
+		return null;
+	}
+
+	@Override
+	public void destroy() {
+
 	}
 }
