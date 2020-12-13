@@ -1,5 +1,6 @@
 package array.generic;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,26 +15,7 @@ public class ArraysOfGenerics {
 		List[] la = new List[10];
 //		ls = (List<String>)la;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		Arrays.copyOf();
 	}
 
 }
