@@ -23,7 +23,7 @@ public class TestBase64 {
 	}
 
 	private static void testUrlEncode() {
-		String url = "http://116.239.33.45:6062/persons/getPersonInfoLink?systemId=1&qrType=1";
+		String url = "http://210.74.227.63:8801/persons/getPersonInfoLink?systemId=1&qrType=1";
 		try {
 			String router = "zl://browser/i?";
 			router = router + "clientHandlerType=1" + "&url=" + URLEncoder.encode(url, "utf-8");
