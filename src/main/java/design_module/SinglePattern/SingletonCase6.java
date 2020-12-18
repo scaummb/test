@@ -3,8 +3,6 @@ package design_module.SinglePattern;
 /**
  * 枚举类
  * 本质就是：创建一个枚举类，封装一个对象,枚举类私有构造器中初始化对象
- * @author moubin.mo
- * @date: 2019/12/17 16:11
  */
 
 public class SingletonCase6 {
@@ -13,7 +11,7 @@ public class SingletonCase6 {
 		INSTANCE;
 		private SingletonCase6 singleton;
 
-		//私有化枚举的构造函数
+		//私有化枚举的构造函数（强调不可外部实例化）
 		private SingletonEnum() {
 			System.out.println("-----1 init constructor-----");
 			singleton = new SingletonCase6();
