@@ -9,9 +9,27 @@ import java.math.BigDecimal;
 
 public class TestBigDecimal {
 	public static void main(String[] args) {
-		test3();
-		test4();
-		test5();
+//		test3();
+//		test4();
+//		test5();
+		test6();
+	}
+
+	private static void test6() {
+//		BigDecimal valueSec = new BigDecimal(1000000);
+		BigDecimal valueSec = new BigDecimal(500000);
+		BigDecimal valueFir = new BigDecimal(1000000);
+		//尽量用字符串的形式初始化
+		BigDecimal stringFir = new BigDecimal("0.005");
+		BigDecimal stringSec = new BigDecimal("1000000");
+
+		//除法(除数/被除数)
+		BigDecimal divideVal = valueSec.divide(valueFir, 20, BigDecimal.ROUND_HALF_UP);
+		System.out.println("除法用value结果：" + divideVal);
+		System.out.println("除法用value结果：" + divideVal.toString());
+		BigDecimal divideStr = stringSec.divide(stringFir, 20, BigDecimal.ROUND_HALF_UP);
+		System.out.println("除法用string结果：" + divideStr);
+		System.out.println("除法用string结果：" + divideStr.toString());
 	}
 
 	private static void test3(){
