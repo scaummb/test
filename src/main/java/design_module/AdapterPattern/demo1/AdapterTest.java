@@ -9,7 +9,7 @@ package design_module.AdapterPattern.demo1;
  * @author moubin.mo
  * @date: 2020/5/30 18:16
  */
-
+//类适配器
 public class AdapterTest {
 	public static void main(String[] args) {
 		Adapter adapter = new Adapter();

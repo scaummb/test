@@ -8,7 +8,7 @@ package design_module.SinglePattern;
  */
 
 public class SingletonCase5 {
-	//静态内部类,在被用到时才加载（根据内部类不会在其外部类被加载的同时被加载的事实）
+	//静态内部类,懒加载：在被用到时才加载（根据内部类不会在其外部类被加载的同时被加载的事实）
 	private static class SingletonCase5Holder{
 		private static final SingletonCase5 singleton = new SingletonCase5();
 	}

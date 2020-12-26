@@ -7,4 +7,6 @@ package design_module.AdapterPattern.demo2;
 
 public class Adaptee {
 
+	public Adaptee() {
+	}
 }

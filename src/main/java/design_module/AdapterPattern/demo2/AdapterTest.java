@@ -8,14 +8,14 @@ package design_module.AdapterPattern.demo2;
  *     这里Adaptee与Adapter是组合关系。Target和Adaptee和上面的类适配器一样，不再贴出。
  *
  *     类适配器与对象适配器的区别
- * 		类适配器使用的是继承的方式，直接继承了Adaptee，所以无法对Adaptee的子类进行适配。
- * 		对象适配器使用的是组合的方式，·所以Adaptee及其子孙类都可以被适配。另外，对象适配器对于增加一些新行为非常方便，而且新增加的行为同时适用于所有的源。
+ * 		类适配器使用的是继承的方式，直接继承了Adaptee，所以无法对Adaptee 的子类进行适配。
+ * 		对象适配器使用的是组合的方式（Adapter保管一个Adaptee 对象），所以 Adaptee 及其子孙类都可以被适配。另外，对象适配器对于增加一些新行为非常方便，而且新增加的行为同时适用于所有的源。
  *		基于组合/聚合优于继承的原则，使用对象适配器是更好的选择。但具体问题应该具体分析，某些情况可能使用类适配器会适合，最适合的才是最好的。
  * </P>
  * @author moubin.mo
  * @date: 2020/5/30 18:16
  */
-
+//对象适配器
 public class AdapterTest {
 	public static void main(String[] args) {
 		Adapter adapter = new Adapter(new Adaptee());
