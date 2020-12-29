@@ -1,6 +1,5 @@
 package version_control.test;
 
-import date.DateHelper;
 import keygenerator.otp.TimeBasedOneTimePasswordGenerator;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
@@ -8,9 +7,7 @@ import sun.misc.BASE64Encoder;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Date;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,14 +22,100 @@ public class SmartCardUtils {
 	final static BASE64Decoder decoder = new BASE64Decoder();
 	final static BASE64Encoder encoder = new BASE64Encoder();
 
-	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException {
+	public static void main(String[] args) {
+		String qrCode = "NTEBETAwOTAzNjA2MzA4NTQwMDY2";
+		decode(qrCode);
+
 //		TimeBasedOneTimePasswordGenerator totp;
 //		totp = getTotp();
 //		int code = generateTotp(totp, smartKey, (DateHelper.currentGMTTime().getTime() / 1000) + 1 * stepInSecond);
 
-		String totp = TOTP.generateTOTP(smartKey, DateHelper.currentGMTTime().getTime(), 30, "8", "HmacSHA1");
-		String qrCode = getQrCode(totp, true);
-		System.out.println(qrCode);
+//		String totp = TOTP.generateTOTP(smartKey, DateHelper.currentGMTTime().getTime(), 30, "8", "HmacSHA1");
+//		String qrCode = getQrCode(totp, true);
+//		System.out.println(qrCode);
+	}
+
+	private static void decode(String qrCode) {
+		try {
+			if(qrCode == null || qrCode.length() < 18) {
+				System.out.println("error");
+			}
+			System.out.println("normal -> qrCode = " + qrCode);
+			byte[] bytes = org.apache.commons.codec.binary.Base64.decodeBase64(qrCode);
+			qrCode = new String(bytes);
+			System.out.println("Base64.decode -> qrCode = " + qrCode);
+			if(qrCode != null && qrCode.length() == 21 && qrCode.startsWith("51")) {
+				// '51' barcode
+				qrCode = (qrCode.substring(3));
+			}
+
+			if(qrCode.length() == 18 && qrCode.getBytes()[0] == 0x31) {
+				//try barcode first
+				String payCode = qrCode.substring(1);
+				long uid = payCodeVerify(payCode);
+				if(uid != -1) {
+					System.out.println("uid="+uid);
+				}
+			}
+
+			byte[] code = org.apache.commons.codec.binary.Base64.decodeBase64(qrCode);
+			if(code[0] == '5' && code[1] == '1') {
+				byte[] newCode = new byte[code.length-2];
+				System.arraycopy(code, 2, newCode, 0, code.length-2);
+				code = newCode;
+			}
+
+			//try qr code
+			List<SmartCardItem> items = getSmartCardSegments(code);
+			for(int i = 0; i < items.size(); i++) {
+				SmartCardItem item = items.get(i);
+				if(item.getSmartCardType().equals(SmartCardType.SMART_CARD_PAY.getCode())) {
+					String payCode = new String(item.getSmartCardCode());
+					long uid = payCodeVerify(payCode);
+					if(uid != -1) {
+						System.out.println("uid="+uid);
+					} else {
+					}
+				}
+
+			}
+
+		} catch (Exception e) {
+
+		}
+	}
+
+	private static List<SmartCardItem> getSmartCardSegments(byte[] code) {
+		int i = 0, len, typ;
+		Map<Integer, byte[]> segments = new HashMap<Integer, byte[]>();
+		List<SmartCardItem> items = new ArrayList<SmartCardItem>();
+
+		while(i+2 < code.length) {
+			len = (int)code[i+1];
+			if(len < 0 || (i+2+len) > code.length) {
+				len = len + 256;
+			}
+			typ = (int)code[i];
+			i += 2;
+			byte[] seg = new byte[len];
+			System.arraycopy(code, i, seg, 0, len);
+			segments.put(new Integer(typ), seg);
+			SmartCardItem item = new SmartCardItem();
+			item.setSmartCardCode(seg);
+			item.setSmartCardType((byte)typ);
+			items.add(item);
+			i += len;
+		}
+
+		return items;
+	}
+	private static long payCodeVerify(String payCode) {
+		String randomUid = payCode.substring(0, 9);
+		String totpCode = payCode.substring(9, 17);
+		Long uid = Long.parseLong(randomUid);
+		Long totpCodeInt = Long.parseLong(totpCode);
+		uid = (uid ^ totpCodeInt);
+		return uid;
 	}
 
 	private static TimeBasedOneTimePasswordGenerator getTotp() throws NoSuchAlgorithmException {
@@ -121,3 +204,24 @@ public class SmartCardUtils {
 	}
 }
 
+
+class SmartCardItem {
+	private Byte smartCardType;
+	private byte[] smartCardCode;
+
+	public Byte getSmartCardType() {
+		return smartCardType;
+	}
+
+	public void setSmartCardType(Byte smartCardType) {
+		this.smartCardType = smartCardType;
+	}
+
+	public byte[] getSmartCardCode() {
+		return smartCardCode;
+	}
+
+	public void setSmartCardCode(byte[] smartCardCode) {
+		this.smartCardCode = smartCardCode;
+	}
+}
