@@ -1,5 +1,7 @@
 package keygenerator.otp;
 
+import shizhanthread.annotations.NotThreadSafe;
+
 import javax.crypto.Mac;
 import java.nio.ByteBuffer;
 import java.security.InvalidKeyException;
@@ -15,7 +17,9 @@ import java.security.NoSuchAlgorithmException;
  *
  * @author <a href="https://github.com/jchambers">Jon Chambers</a>
  */
+@NotThreadSafe
 public class HmacOneTimePasswordGenerator {
+    //状态变量，加密算法类型，不可变条件（竞态条件），所以必须使用同步机制，确保多线程下的状态安全性（线程封闭 or volatile or synchronized）
     private final String algorithm;
     private final int passwordLength;
 
