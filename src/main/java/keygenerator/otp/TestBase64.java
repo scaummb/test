@@ -19,7 +19,13 @@ public class TestBase64 {
 	final static BASE64Encoder encoder = new BASE64Encoder();
 	final static BASE64Decoder decoder = new BASE64Decoder();
 	public static void main(String[] args) throws IOException {
-		testUrlEncode();
+		testDecode();
+	}
+
+	private static void testDecode() throws IOException {
+		String test = "123345";
+		byte[] bytes = decoder.decodeBuffer(test);
+		System.out.println(new String(bytes));
 	}
 
 	private static void testUrlEncode() {

@@ -8,7 +8,7 @@ package lambda;
 public class LambdaTest {
 	public static void main(String[] args) {
 		//method invoke
-		String x = "123";
+		String x = "1233333";
 		//正常操作=调用方法的声明
 		//lambda=调用时定义好方法体（声明+实现）
 		print(x, (a) -> {
@@ -19,7 +19,7 @@ public class LambdaTest {
 
 	private static String print(String x, MyFunction myFunction) {
 		//method invoke
-		myFunction.print("123");
+		myFunction.print(x);
 		return null;
 	}
 
