@@ -1,10 +1,19 @@
-2.常用的六大设计模式
+2.常用的六大设计原则
 1)单一职责原则
 2)里氏替换原则
 3)依赖倒转原则
 4)接口隔离原则
 5)迪米特法则
 6)开闭原则
+单一职责原则（Single Responsibility Principle）；
+开闭原则（Open Closed Principle）；
+里氏替换原则（Liskov Substitution Principle）；
+迪米特法则（Law of Demeter），又叫“最少知道法则”；
+接口隔离原则（Interface Segregation Principle）；
+依赖倒置原则（Dependence Inversion Principle）。
+
+软件设计最大的难题就是应对需求的变化，但是纷繁复杂的需求变化又是不可预料的，我们要为不可预料的变化做好准备，这本身是一件非常痛苦的事情，但好在有大师们已经给我们提出了非常好的六大设计原则和23种设计模式来“封装”未来的变化。
+
 
 1、开闭原则(fix)
 一个软件实体，如类、模块和函数应该对扩展开放，对修改关闭.

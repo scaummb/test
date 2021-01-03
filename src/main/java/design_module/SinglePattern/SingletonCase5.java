@@ -3,8 +3,6 @@ package design_module.SinglePattern;
 /**
  * 内部类
  * 优点：由于静态内部类跟外部类是平级的，所以外部类加载的时候不会影响内部类，因此实现了lazy loading, 同时也是利用静态变量的方式，使得INSTANCE只会在SingletonHolder加载的时候初始化一次，从而保证不会有多线程初始化的情况，因此也是线程安全的。
- * @author moubin.mo
- * @date: 2019/12/17 16:11
  */
 
 public class SingletonCase5 {

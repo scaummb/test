@@ -3,8 +3,6 @@ package design_module.SinglePattern;
 /**
  * 饿汉式
  * 饿汉式的特点是：类在加载时就直接初始化了实例。即使没用到，也会实例化，因此，也是线程安全的单例模式。
- * @author moubin.mo
- * @date: 2019/12/17 16:11
  */
 
 public class SingletonCase3 {
@@ -13,7 +11,6 @@ public class SingletonCase3 {
 
 	public SingletonCase3() {
 	}
-
 	/**
 	 * 对外暴露唯一接口
 	 * 提供单例对象
@@ -21,5 +18,4 @@ public class SingletonCase3 {
 	public static SingletonCase3 getInstance(){
 		return singleton;
 	}
-
 }

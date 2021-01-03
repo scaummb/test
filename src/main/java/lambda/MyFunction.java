@@ -8,7 +8,6 @@ package lambda;
  *     每个与之对应的lambda表达式必须要与抽象方法的声明相匹配。
  * </p>
  */
-
 //自定义函数式接口时，应当在接口前加上@FunctionalInterface标注（虽然不加也不会有错误）。
 //编译器会注意到这个标注，如果你的接口中定义了第二个抽象方法的话，编译器会抛出异常。
 @FunctionalInterface

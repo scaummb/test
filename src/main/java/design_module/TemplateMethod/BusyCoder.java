@@ -4,7 +4,7 @@ package design_module.TemplateMethod;
  * @author moubin.mo
  * @date: 2020/12/28 17:38
  */
-
+//勤奋的程序员
 public class BusyCoder extends Coding {
 	@Override
 	void washingHands() {

@@ -4,8 +4,6 @@ package design_module.SinglePattern;
  * 双重检验
  * 双重非空判断，new对象前加一次锁。
  * volatile关键字，考虑的是，new关键字在虚拟机中执行时其实分为很多步骤，具体原因可以参考深入理解java虚拟机一书（考虑的是这个new关键字字节码执行时是非原子性的），而volatile关键字可以防止指令重排。
- * @author moubin.mo
- * @date: 2019/12/17 16:11
  */
 
 public class SingletonCase4 {
