@@ -6,22 +6,17 @@ package design_module.PrototypePattern;
  */
 
 public abstract class Shape implements Cloneable {
-	private String id;
 	protected String type;
 
 	// 定义动作
 	abstract void draw();
 
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public String getType(){
 		return type;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	//克隆方法

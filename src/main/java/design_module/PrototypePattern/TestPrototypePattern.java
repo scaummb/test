@@ -7,15 +7,17 @@ package design_module.PrototypePattern;
 
 public class TestPrototypePattern {
 	public static void main(String[] args) {
-		ShapeCache.loadCache();
+		//initialization
+		ShapeCacheFactory.loadCache();
 
-		Shape clonedShape = (Shape) ShapeCache.getShape("1");
+		//Circle Square Rectangle
+		Shape clonedShape = (Shape) ShapeCacheFactory.getShape("Circle");
 		System.out.println("Shape : " + clonedShape.getType());
 
-		Shape clonedShape2 = (Shape) ShapeCache.getShape("2");
+		Shape clonedShape2 = (Shape) ShapeCacheFactory.getShape("Square");
 		System.out.println("Shape : " + clonedShape2.getType());
 
-		Shape clonedShape3 = (Shape) ShapeCache.getShape("3");
+		Shape clonedShape3 = (Shape) ShapeCacheFactory.getShape("Rectangle");
 		System.out.println("Shape : " + clonedShape3.getType());
 	}
 }
