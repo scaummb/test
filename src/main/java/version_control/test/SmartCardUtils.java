@@ -23,7 +23,7 @@ public class SmartCardUtils {
 	final static BASE64Encoder encoder = new BASE64Encoder();
 
 	public static void main(String[] args) {
-		String qrCode = "NTEBETAwOTAzNjA2MzA4NTQwMDY2";
+		String qrCode = "NTEDBwE3NjU1Nzk=";
 		decode(qrCode);
 
 //		TimeBasedOneTimePasswordGenerator totp;
