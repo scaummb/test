@@ -6,8 +6,9 @@ package final_test;
  */
 
 public class TestFinalParam {
+	static final int i = 234;
 	public static void main(String[] args) {
-
+		final float i = 3.14f;
 	}
 
 	private static void test(final int a){
