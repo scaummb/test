@@ -1,4 +1,4 @@
-package design_module.BuiderPattern;
+package design_module.BuilderPattern.testcase1;
 
 /**
  * @author moubin.mo
