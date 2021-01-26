@@ -295,4 +295,28 @@ public class DateStatisticHelper {
 		return calendar;
 	}
 
+	public static Date getMonthStartDateTime(String date) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date dateTime = sdf.parse(date);
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(dateTime);
+		calendar.set(Calendar.DAY_OF_MONTH, 1);
+		calendar.set(Calendar.HOUR, 0);
+		calendar.set(Calendar.MINUTE, 0);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		return calendar.getTime();
+	}
+
+	public static Date getMonthEndDateTime(String date) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date dateTime = sdf.parse(date);
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(dateTime);
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+		calendar.set(Calendar.HOUR_OF_DAY, 23);
+		calendar.set(Calendar.MINUTE, 59);
+		calendar.set(Calendar.SECOND, 59);
+		return calendar.getTime();
+	}
 }
