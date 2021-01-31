@@ -8,6 +8,9 @@ import java.util.ArrayList;
  */
 
 public class TestNullList {
+	private static final Object[] aa = {};
+	transient Object[] elementData; // non-private to simplify nested class access
+
 	public static void main(String[] args) {
 		ArrayList<Long> longs = new ArrayList<>();
 		ArrayList<Long> longss = null;
