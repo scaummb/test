@@ -1,4 +1,4 @@
-package innerClass;
+package innerClass.test1;
 
 /**
  * @author moubin.mo

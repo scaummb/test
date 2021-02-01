@@ -8,5 +8,5 @@ package abstractAndInterface;
 public interface interface1 {
 	//接口可以有抽象方法的
 	abstract void test();
-	void test2();
+	String test2();
 }
