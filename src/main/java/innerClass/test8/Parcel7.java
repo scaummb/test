@@ -6,7 +6,7 @@ package innerClass.test8;
  * </p>
  */
 public class Parcel7 {
-    //匿名内部类方法-形式1
+    //匿名内部类方法-形式1:抽象接口+接口方法实现
     public Contents contents() {
         return new Contents() {
             private int i = 11;
@@ -17,7 +17,7 @@ public class Parcel7 {
         };
     }
 
-    //匿名内部类方法-形式2
+    //匿名内部类方法-形式2:显式声明接口的实现类并返回该类的实例
     class MyContents implements Contents {
         private int i = 11;
         @Override

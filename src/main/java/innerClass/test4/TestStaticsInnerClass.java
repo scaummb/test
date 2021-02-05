@@ -14,12 +14,13 @@ public class TestStaticsInnerClass {
     //非静态内部类
     class Destination{
     }
-
     public static void main(String[] args) {
         TestStaticsInnerClass p = new TestStaticsInnerClass();
         //非静态内部类，需要外围类的引用来创建
         TestStaticsInnerClass.Destination d = p.new Destination();
         //静态内部类，通过外围类名来直接创建
         TestStaticsInnerClass.Contents c = new TestStaticsInnerClass.Contents();
+        TestStaticsInnerClass.Contents c3 = new TestStaticsInnerClass.Contents();
+        System.out.println(c.equals(c3));
     }
 }

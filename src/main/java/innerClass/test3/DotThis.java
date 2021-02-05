@@ -14,22 +14,17 @@ public class DotThis {
     public Inner inner() {
         return new Inner();
     }
-
     //内部类
     public class Inner {
         // 返回外部类的引用
         public DotThis outerClass() {
+            //类名.this返回外围类引用
             return DotThis.this;
         }
     }
-
     public static void main(String[] args) {
         DotThis dotThis = new DotThis();
         //创建了一个内部类
         DotThis.Inner dti = dotThis.inner();
-        //根据内部类获取到它的外围类
-        dti.outerClass().f();
-        //比较下这两个对象是否一致？肯定一样呀
-        System.out.println("dotThis == dti.outerClass()? result = " + dotThis.equals(dti.outerClass()));
     }
 }

@@ -25,12 +25,10 @@ public class TestMethodCodeBlockInnerClass {
         //这里编译会报错，无法引用到 TrackingSlip
 //         TrackingSlip ts = new TrackingSlip("x");
     }
-
     //外围类提供方法1
     public void track() {
         internalTracking(true);
     }
-
     public static void main(String[] args) {
         // 创建外围类
         TestMethodCodeBlockInnerClass p = new TestMethodCodeBlockInnerClass();

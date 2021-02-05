@@ -9,13 +9,11 @@ public class Sequence {
     public Sequence(int size) {
         items = new Object[size];
     }
-
     public void add(Object x) {
         if (next < items.length) {
             items[next++] = x;
         }
     }
-
     //外围类构造内部类的方法
     public Selector selector() {
         return new SequenceSelector();
@@ -41,7 +39,6 @@ public class Sequence {
                 i++;
             }
         }
-
     }
 
     public static void main(String[] args) {
