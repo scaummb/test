@@ -17,5 +17,5 @@ public class PrivateLock {
 			//访问或修改Widget的状态
 		}
 	}
+	class Widget{}
 }
-class Widget{}
