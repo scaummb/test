@@ -1,6 +1,7 @@
 package url.urlencode;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
@@ -14,7 +15,13 @@ import java.net.URLEncoder;
 
 public class TestUrlEncode {
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		test2();
+		test3();
+	}
+
+	private static void test3() throws UnsupportedEncodingException {
+		String enCodedUrl = "zl://browser/i?clientHandlerType=1&url=http%3A%2F%2F116.239.33.45%3A6062%2Fpersons%2FgetPersonInfoLink%3FsystemId%3D1%26qrType%3D1";
+		String decodeUrl = URLDecoder.decode(enCodedUrl, "utf-8");
+		System.out.println(decodeUrl);
 	}
 
 	private static void test2() throws UnsupportedEncodingException {
