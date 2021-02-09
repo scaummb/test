@@ -19,6 +19,17 @@ public class TestThread {
 		executorService.submit(new TestRunnableDemo());
 		executorService.submit(new TestCallableDemo());
 		executorService.shutdown();
+
+		MyThread myThread = new MyThread();
+		myThread.start();
+		myThread.run();
+	}
+
+	public static class MyThread extends Thread {
+		@Override
+		public void run() {
+			System.out.println("MyThread run...");
+		}
 	}
 }
 

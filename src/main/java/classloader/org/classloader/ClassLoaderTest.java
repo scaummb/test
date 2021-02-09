@@ -7,12 +7,14 @@ package classloader.org.classloader;
 
 public class ClassLoaderTest {
 	public static void main(String[] args) {
-		ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
-		while (classLoader != null){
-			System.out.println(classLoader);
-			classLoader = classLoader.getParent();
-		}
-		System.out.println(classLoader);
+//		ClassLoader classLoader = sun.security.ec.SunEC.class.getClassLoader();
+//		System.out.println(classLoader);
+//		System.out.println(classLoader.getParent());
+
+//		ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
+//		System.out.println(classLoader);
+//		classLoader = classLoader.getParent();
+//		System.out.println(classLoader);
 	}
 
 	//sun.misc.Launcher$AppClassLoader@18b4aac2

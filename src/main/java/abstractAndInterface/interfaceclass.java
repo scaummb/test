@@ -9,7 +9,7 @@ public interface interfaceclass extends interface2,interface1 {
 	//不含有私有成员变量
 	abstract void test();
 	void test1();
-	abstract void test2();
+	abstract String test2();
 	public default void test3(){
 	}
 }
