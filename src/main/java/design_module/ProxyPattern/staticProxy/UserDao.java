@@ -6,17 +6,10 @@ package design_module.ProxyPattern.staticProxy;
  * @author moubin.mo
  */
 
-public class RealSubject implements Subject {
-
-    private String name = "mmb";
-
+public class UserDao implements Subject {
+    private String name = "name-1";
     @Override
     public void visit() {
         System.out.println("my name is "+name);
-    }
-
-    @Override
-    public void gohome() {
-        System.out.println("i am "+name + ",i want to go back home.");
     }
 }

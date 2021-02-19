@@ -16,6 +16,9 @@ import java.lang.reflect.Proxy;
  * 实现一个真正的委托类，即静态代理的（RealSubject类）
  * 创建一个动态代理类，实现InvocationHandler接口，并重写该invoke方法
  * 在测试类中，生成动态代理的对象。
+ *
+ * java的动态代理有两种方法：一个是利用实现InvocationHandler接口，一个是利用
+ *
  * */
 public class testDynamic {
     public static void main(String[] args){
@@ -25,6 +28,7 @@ public class testDynamic {
         DynamicProxy dynamicProxy = new DynamicProxy(dynamicSubject);
         //委托类RealDynamicSubject的类加载器
         ClassLoader classLoader = dynamicSubject.getClass().getClassLoader();
+        //动态生成的代理对象
         DynamicSubject subject = (DynamicSubject) Proxy.newProxyInstance(classLoader, new Class[]{DynamicSubject.class}, dynamicProxy);
         subject.visit();
         subject.gohome();
@@ -43,7 +47,7 @@ public class testDynamic {
 
     /**
      * 创建动态代理的对象，需要借助Proxy.newProxyInstance。该方法的三个参数分别是：
-     * ClassLoader loader表示当前使用到的appClassloader。
+     * ClassLoader loader表示当前使用到的 appClassloader。
      * Class<?>[] interfaces表示目标对象实现的一组接口。
      * InvocationHandler h表示当前的InvocationHandler实现实例对象。
      * */

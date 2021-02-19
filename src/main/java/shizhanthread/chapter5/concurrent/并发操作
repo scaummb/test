@@ -1,1 +1,2 @@
 1.这一章内容非常多，包括了ConcurrentHashMap&CopyOnWriteArrayList
+2.可以发散的点：安全失败&快速失败，上面两者都是安全失败。

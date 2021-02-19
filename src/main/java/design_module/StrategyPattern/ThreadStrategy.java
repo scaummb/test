@@ -14,8 +14,6 @@ public class ThreadStrategy {
 		Thread thread2 = new Thread2();
 		thread1.start();
 		thread2.start();
-
-
 	}
 }
 

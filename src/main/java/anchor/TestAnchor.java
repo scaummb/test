@@ -16,6 +16,8 @@ public class TestAnchor {
 		System.out.println("a3 = " + a3);
 		System.out.println("a4 = " + a4);
 
-
+		float a = (float) 1.1;//ex
+		int b = (int) a;//ex
+		double c = 11e10;
 	}
 }

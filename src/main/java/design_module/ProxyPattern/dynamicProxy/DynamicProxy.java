@@ -4,9 +4,9 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * Date: 2019/7/27 15 :28
- *
- * @author moubin.mo
+ * <p>
+ *     代理类
+ * </p>
  */
 
 public class DynamicProxy implements InvocationHandler {

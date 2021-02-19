@@ -1,29 +1,18 @@
 package design_module.ProxyPattern.staticProxy;
 
 /**
- * Date: 2019/7/27 15 :18
- *
- * @author moubin.mo
+ * <p>
+ *     代理类
+ * </p>
  */
-
-public class ProxySubject implements Subject {
-
+public class ProxyHuman {
     private Subject subject;
-
-    public ProxySubject(Subject subject) {
+    public ProxyHuman(Subject subject) {
         this.subject = subject;
     }
-
-    @Override
     public void visit() {
         subject.visit();
     }
-
-    @Override
-    public void gohome() {
-        subject.gohome();
-    }
-
     public void setSubject(Subject subject) {
         this.subject = subject;
     }
