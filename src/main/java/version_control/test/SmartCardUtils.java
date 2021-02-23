@@ -204,7 +204,6 @@ public class SmartCardUtils {
 	}
 }
 
-
 class SmartCardItem {
 	private Byte smartCardType;
 	private byte[] smartCardCode;
@@ -225,3 +224,4 @@ class SmartCardItem {
 		this.smartCardCode = smartCardCode;
 	}
 }
+
