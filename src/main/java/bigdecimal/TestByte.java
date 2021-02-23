@@ -9,9 +9,26 @@ import java.util.List;
  */
 
 public class TestByte {
-		public static void main(String[] args) {
-			test2();
+
+	public static void main(String[] args) {
+			test3();
 		}
+
+	private static void test3() {
+		Integer i = 42;
+		Long l = 42l;
+		Double d = 42.0;
+
+		System.out.println(i == 42);
+		System.out.println(l == 42);
+		System.out.println(l == 42L);
+		System.out.println(l.equals(42L));
+		System.out.println(l.equals(i));
+
+		Double d2 = 1001d;
+		Double d3 = 1001.3d;
+		Float f = 42.0f;
+	}
 
 	private static void test2() {
 		byte b1 = 1,b2 = 2, b3, b6;
@@ -31,5 +48,6 @@ public class TestByte {
 		System.out.println(len);
 		System.out.println((int)len);
 		System.out.println((int)len+256);// ?加256
+
 	}
 }
