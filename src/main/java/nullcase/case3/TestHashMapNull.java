@@ -2,6 +2,7 @@ package nullcase.case3;
 
 import org.apache.commons.lang.StringUtils;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -11,6 +12,16 @@ import java.util.HashSet;
 
 public class TestHashMapNull {
 	public static void main(String[] args) {
+		test2();
+	}
+
+	private static void test2() {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("1", "1");
+
+	}
+
+	private static void test1() {
 		HashSet<Long> userIdSet = new HashSet<>();
 		String join = StringUtils.join(userIdSet, ",");
 		System.out.println(join);
