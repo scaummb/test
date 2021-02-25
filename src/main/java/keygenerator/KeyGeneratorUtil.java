@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
  * @date: 2019/10/16 08:47
  */
 @Slf4j
-public class KeyGenerator {
-	private final static Logger LOGGER = LoggerFactory.getLogger(KeyGenerator.class);
+public class KeyGeneratorUtil {
+	private final static Logger LOGGER = LoggerFactory.getLogger(KeyGeneratorUtil.class);
 	/**
 	 * A string identifier for the HMAC-SHA1 algorithm (required by HOTP and allowed by TOTP). HMAC-SHA1 is the default
 	 * algorithm for TOTP.
@@ -31,10 +31,10 @@ public class KeyGenerator {
 	private static String cardKey = "wNmfqGmeE0x5IQmn1OXK7ZFtTC38d7AiHTB4EVHRoM0s7P8gxmhHsR9S4bCGTAQ0WIKjVwSXYNdSiJ6WlBQHog==";
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException, ParseException {
-//		javax.crypto.KeyGenerator keyGenerator = null;
+//		javax.crypto.KeyGeneratorUtil keyGenerator = null;
 //		try {
 //			for (int i=1; i<100; i++) {
-//				keyGenerator = javax.crypto.KeyGenerator.getInstance(TOTP_ALGORITHM_HMAC_SHA1);
+//				keyGenerator = javax.crypto.KeyGeneratorUtil.getInstance(TOTP_ALGORITHM_HMAC_SHA1);
 //				keyGenerator.init(512);
 //				Key secretKey = keyGenerator.generateKey();
 //				String resultStr = Base64.encodeBase64String(secretKey.getEncoded());
