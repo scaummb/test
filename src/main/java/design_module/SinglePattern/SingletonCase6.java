@@ -4,7 +4,6 @@ package design_module.SinglePattern;
  * 枚举类
  * 本质就是：创建一个枚举类，封装一个对象,枚举类私有构造器中初始化对象
  */
-
 public class SingletonCase6 {
 	enum SingletonEnum {
 		//创建一个枚举对象，该对象天生为单例
