@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -13,7 +14,16 @@ import java.util.Date;
 
 public class TimeStampTest {
     public static void main(String[] args) throws ParseException {
-        test02();
+        test03();
+    }
+
+    private static void test03() {
+        System.out.println("UserAuthDailyStatisticsScheduleJob, date = " + DateHelper.currentGMTTime().getTime());
+
+        //每日统计
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        System.out.println("UserAuthDailyStatisticsScheduleJob, date = " + calendar.getTimeInMillis());
     }
 
     private static void test02() throws ParseException {
