@@ -46,9 +46,7 @@ public class ThreadPool {
 	}
 
 	private static void test2() {
-		//线程池的工作线程数量是无界的
-		//默认存活时间60s，超过会被kill掉
-		//没有拒绝策略
+		//线程池的工作线程数量是无界的,默认存活时间60s，超过会被kill掉,默认没有拒绝策略
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		for (int i=0; i<= 10000; i++){
 			int finalI = i;
@@ -62,10 +60,8 @@ public class ThreadPool {
 	}
 
 	private static void test1() throws InterruptedException {
-		//线程池的工作线程数量基础大小 = 数量最大值;
-		//拒绝策略是超过了基础数据，则会抛异常 RejectedExecutionException。
-		//线程存活时间，0，不会出现多余工作线程
-		//自定义：线程工厂
+		//线程池的工作线程数量基础大小 = 数量最大值; 拒绝策略是超过了基础数据，则会抛异常 RejectedExecutionException。
+		//线程存活时间，0，不会出现多余工作线程,自定义：线程工厂
 		ExecutorService executorService = Executors.newFixedThreadPool(10);
 		for (int i=0; i<= 10000; i++){
 			int finalI = i;
