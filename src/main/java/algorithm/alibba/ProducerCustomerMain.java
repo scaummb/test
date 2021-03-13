@@ -2,6 +2,7 @@ package algorithm.alibba;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.*;
 
 /**
@@ -13,11 +14,14 @@ import java.util.concurrent.*;
  * 2、B线程组负责消费data数据；A、B线程组要实现阻塞；请尽量考虑异常场景的处理；
  * 3、B线程组的一个处理线程在获取到一个数据后，需要再拆分5个子线程并行处理数据，当5个子线程全部处理完成，B的处理线程将结果合并；请尽量考虑异常场景的处理；
  * </p>
+ * @author momoubin
  */
 public class ProducerCustomerMain {
     public static void main(String[] args) {
-        ArrayBlockingQueue<Integer> dataQueue = new ArrayBlockingQueue<>(20); //数据队列，容量20
-        ExecutorService threadPool = Executors.newCachedThreadPool();  //线程池
+        //数据队列，容量20
+        ArrayBlockingQueue<Integer> dataQueue = new ArrayBlockingQueue<>(20);
+        //线程池
+        ExecutorService threadPool = Executors.newCachedThreadPool();
 
         System.out.println("生产者线程组启动");
         //生产者线程启动
@@ -51,7 +55,7 @@ public class ProducerCustomerMain {
 
         @Override
         public Integer call() throws Exception {
-            int data = (int) (Math.random() * 10);  //随机生成数据
+            int data = (new Random().nextInt(10));  //随机生成数据
             dataQueue.put(data);   //放入数据队列中
             System.out.println("生产线程-"+Thread.currentThread().getName()+"生成数据:"+data );
             return data;

@@ -3,6 +3,7 @@ package concurrency.pool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author moubin.mo
@@ -15,6 +16,17 @@ public class ThreadPool {
 //		test2();
 //		test3();
 		test4();
+		test5();
+	}
+
+	private static void test5() {
+		ScheduledExecutorService pool = Executors.newSingleThreadScheduledExecutor();
+		pool.schedule(new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("123123");
+			}
+		}, 0, TimeUnit.SECONDS);
 	}
 
 	private static void test4() {
