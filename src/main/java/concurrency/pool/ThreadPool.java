@@ -31,8 +31,8 @@ public class ThreadPool {
 		ExecutorService executorService4 = Executors.newFixedThreadPool(10);
 		//单线程调度执行任务
 		ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-		test5();
 	}
+
 
 	private static void test5() {
 		ScheduledExecutorService pool = Executors.newSingleThreadScheduledExecutor();
