@@ -21,12 +21,12 @@ public class TestAvoke {
 		value.setValue(1000L);
 	}
 
-	public static void changeValue(Long anchor){
-		anchor=1000L;
+	public static void changeValue(Long anchor) {
+		anchor = 1000L;
 	}
 }
 
-class Value{
+class Value {
 	Long value;
 
 	public Long getValue() {

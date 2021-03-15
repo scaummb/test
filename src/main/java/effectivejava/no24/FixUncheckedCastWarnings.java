@@ -21,11 +21,11 @@ public class FixUncheckedCastWarnings {
 		Set<Lark> exaltation1 = new HashSet<Lark>();
 	}
 
-	public static <T> T[] toArray (T[] a) {
+	public static <T> T[] toArray(T[] a) {
 		if (a.length < SIZE) {
 			// 这个强制转换是正确的，因为创建的数组是和传入的数组类型一致的，使用了泛型参数列表 T[]
 			@SuppressWarnings("unchecked")
-			T[] result = (T[])Arrays.copyOf(elements, SIZE, a.getClass());
+			T[] result = (T[]) Arrays.copyOf(elements, SIZE, a.getClass());
 			return result;
 		}
 		System.arraycopy(elements, 0, a, 0, SIZE);
@@ -37,4 +37,5 @@ public class FixUncheckedCastWarnings {
 
 }
 
-class Lark{}
+class Lark {
+}

@@ -10,13 +10,13 @@ public class TestGoto {
 		int i = 0;
 		int j = 0;
 		LABLE:
-		for (; i <10; i++) {
-			for (; j <10; j++) {
-				if (j == 7 ){
+		for (; i < 10; i++) {
+			for (; j < 10; j++) {
+				if (j == 7) {
 					break LABLE;
 				}
 			}
 		}
-		System.out.println("i = " + i + " , j = "+ j);
+		System.out.println("i = " + i + " , j = " + j);
 	}
 }

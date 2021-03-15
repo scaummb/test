@@ -14,6 +14,6 @@ public class SetType {
 
 	@Override
 	public boolean equals(Object obj) {
-		return obj instanceof SetType && (i == ((SetType)obj).i);
+		return obj instanceof SetType && (i == ((SetType) obj).i);
 	}
 }

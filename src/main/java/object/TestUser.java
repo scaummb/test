@@ -12,7 +12,7 @@ public class TestUser {
 		User user = new User();
 		user.setNamespaceUserToken("aaa");
 		user.setNamespaceUserType(NamespaceUserType.WX.getCode());
-		if(StringUtils.isNotBlank(user.getNamespaceUserToken()) && NamespaceUserType.WX.getCode().equals(user.getNamespaceUserType())){
+		if (StringUtils.isNotBlank(user.getNamespaceUserToken()) && NamespaceUserType.WX.getCode().equals(user.getNamespaceUserType())) {
 			System.out.print("ok");
 		}
 	}

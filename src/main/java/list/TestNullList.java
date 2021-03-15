@@ -15,7 +15,7 @@ public class TestNullList {
 		ArrayList<Long> longs = new ArrayList<>();
 		ArrayList<Long> longss = null;
 		longs.addAll(longss);
-		for (Long a : longs){
+		for (Long a : longs) {
 			System.out.println(a);
 		}
 	}

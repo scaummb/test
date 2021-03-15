@@ -21,6 +21,7 @@ public class TestCollection {
 
 
 	}
+
 	private static String getCacheKey(Object... keys) {
 		return StringUtils.join(Arrays.asList(keys), ":");
 	}

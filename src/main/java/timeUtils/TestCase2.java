@@ -12,6 +12,7 @@ import java.util.Date;
 /**
  * Date / LocalDateTime
  * SimpleDateFormat / DateTimeFormatter
+ *
  * @author moubin.mo
  * @date: 2019/12/23 13:03
  */
@@ -29,7 +30,7 @@ public class TestCase2 {
 		return date;
 	}
 
-	private static Calendar createCalendar(){
+	private static Calendar createCalendar() {
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(2019, 12, 23);
 		return calendar;

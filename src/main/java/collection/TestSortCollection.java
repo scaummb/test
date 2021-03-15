@@ -22,18 +22,19 @@ public class TestSortCollection {
 	}
 
 
-	static class PeopleComparator implements Comparator<People>{
+	static class PeopleComparator implements Comparator<People> {
 
 		@Override
 		public int compare(People dto1, People dto2) {
 			if (!ObjectUtils.isEmpty(dto1) && !ObjectUtils.isEmpty(dto1.getAge())
-					&& !ObjectUtils.isEmpty(dto2) && !ObjectUtils.isEmpty(dto2.getAge())){
+					&& !ObjectUtils.isEmpty(dto2) && !ObjectUtils.isEmpty(dto2.getAge())) {
 				return dto1.getAge().compareTo(dto2.getAge());
 			}
 			return 0;
 		}
 	}
-	static class People{
+
+	static class People {
 		private Integer age;
 
 		public People(Integer age) {

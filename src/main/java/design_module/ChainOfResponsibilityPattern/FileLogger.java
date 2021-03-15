@@ -7,7 +7,7 @@ package design_module.ChainOfResponsibilityPattern;
 
 public class FileLogger extends AbstractLogger {
 
-	public FileLogger(int level){
+	public FileLogger(int level) {
 		this.level = level;
 	}
 

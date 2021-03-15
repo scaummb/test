@@ -28,7 +28,7 @@ public class UnsafeCountingFactorizer implements Servlet {
 
 		//获取请求参数
 		BigInteger i = extractFromRequest(req);
-		if (i.equals(lastNumber.get())){
+		if (i.equals(lastNumber.get())) {
 			encodeIntoResponse(response, lastFactors.get());
 		} else {
 			//拓展请求参数处理

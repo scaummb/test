@@ -38,8 +38,8 @@ public class SensitiveWordService {
 
 		//匹配敏感词时，先将富文本中的链接去除 add by yanlong.liang 20190920
 		try {
-			text = text.replaceAll(regex,"");
-		}catch (Exception e) {
+			text = text.replaceAll(regex, "");
+		} catch (Exception e) {
 		}
 		String[] chineseWords = text.split("[a-zA-Z]+");
 		for (String word : chineseWords) {
@@ -82,7 +82,7 @@ public class SensitiveWordService {
 			URLConnection connection = connect(realUrl);
 			in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
 			//使用readLine方法，一次读一行
-			while((s = in.readLine())!=null){
+			while ((s = in.readLine()) != null) {
 				map.put(s.trim().toUpperCase(), s.trim().toUpperCase());
 			}
 		} catch (MalformedURLException e) {
@@ -101,7 +101,7 @@ public class SensitiveWordService {
 
 		if (map.size() > 0) {
 			acdat.build(map);
-		}else {
+		} else {
 			acdat = null;
 		}
 

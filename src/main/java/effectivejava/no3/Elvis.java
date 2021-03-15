@@ -10,11 +10,11 @@ public class Elvis {
 	public static final Elvis INSTANCE = new Elvis();
 
 	//构造器保持为私有，导出公有静态成员，客户端可以访问该类的唯一实例
-	private Elvis(){
+	private Elvis() {
 		//...
 	}
 
-	public void leaveTheBuilding(){
+	public void leaveTheBuilding() {
 		//...
 	}
 }

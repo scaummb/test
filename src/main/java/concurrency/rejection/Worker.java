@@ -8,6 +8,7 @@ package concurrency.rejection;
 public class Worker implements Runnable {
 	// 任务编号
 	private String id;
+
 	public String getId() {
 		return id;
 	}
@@ -15,6 +16,7 @@ public class Worker implements Runnable {
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public Worker(String id) {
 		super();
 		this.id = id;

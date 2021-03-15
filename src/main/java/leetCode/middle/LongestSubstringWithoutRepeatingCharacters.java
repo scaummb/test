@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * 3. 无重复字符的最长子串
+ *
  * @author moubin.mo
  * @date: 2019/11/22 12:29
  */
@@ -18,9 +19,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		int n = s.length();
 		int ans = 0;
 		HashMap<Character, Integer> map = new HashMap<>();
-		for (int end = 0, start = 0; end < n; end++){
+		for (int end = 0, start = 0; end < n; end++) {
 			char alpha = s.charAt(end);
-			if (map.containsKey(alpha)){
+			if (map.containsKey(alpha)) {
 				start = Math.max(map.get(alpha), start);
 			}
 			ans = Math.max(ans, end - start + 1);

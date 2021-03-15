@@ -17,12 +17,12 @@ public class HashMapStoreUrl {
 	// Encodes a URL to a shortened URL.
 	public String encode(String longUrl) {
 		char[] chs = new char[6];
-		while(true){
-			for(int i = 0; i < 6; i++){
-				chs[i] = INDEX.charAt((int)(Math.random()*62));
+		while (true) {
+			for (int i = 0; i < 6; i++) {
+				chs[i] = INDEX.charAt((int) (Math.random() * 62));
 			}
 			String shortUrl = TINYURL_PREFIX + new String(chs);
-			if(!map.containsKey(shortUrl)){
+			if (!map.containsKey(shortUrl)) {
 				map.put(shortUrl, longUrl);
 				return shortUrl;
 			}

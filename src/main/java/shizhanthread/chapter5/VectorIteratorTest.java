@@ -4,7 +4,7 @@ import java.util.Vector;
 
 /**
  * <p>
- *      容器复合操作：1.迭代(Now)， 2.跳转，3.条件运算
+ * 容器复合操作：1.迭代(Now)， 2.跳转，3.条件运算
  * </p>
  */
 
@@ -13,7 +13,7 @@ public class VectorIteratorTest {
 
 	public void exceptionOperation() {
 		//ArrayIndexOutOfBoundsException maybe be throws.
-		for (int i=0; i < vector.size(); i++){
+		for (int i = 0; i < vector.size(); i++) {
 			dosomething(vector.get(i));
 		}
 	}
@@ -24,8 +24,8 @@ public class VectorIteratorTest {
 
 	//客户端加锁
 	public void atomicOperation() {
-		synchronized (vector){
-			for (int i=0; i < vector.size(); i++){
+		synchronized (vector) {
+			for (int i = 0; i < vector.size(); i++) {
 				dosomething(vector.get(i));
 			}
 		}

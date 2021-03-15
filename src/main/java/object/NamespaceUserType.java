@@ -30,7 +30,7 @@ public enum NamespaceUserType {
 			NamespaceUserType[] var2 = values;
 			int var3 = values.length;
 
-			for(int var4 = 0; var4 < var3; ++var4) {
+			for (int var4 = 0; var4 < var3; ++var4) {
 				NamespaceUserType value = var2[var4];
 				if (code.equals(value.code)) {
 					return value;

@@ -6,9 +6,12 @@ package shizhanthread.chapter5.concurrent.utils;
  */
 
 public class Preloader {
-	public void start(){
+	public void start() {
 		thread.start();
 	}
+
 	private final Thread thread = new Thread();
-	class ProductInfo{}
+
+	class ProductInfo {
+	}
 }

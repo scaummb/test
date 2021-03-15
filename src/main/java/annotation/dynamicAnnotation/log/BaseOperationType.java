@@ -21,9 +21,9 @@ public enum BaseOperationType {
 		return methodName;
 	}
 
-	public static BaseOperationType fromType(String type){
-		for (BaseOperationType baseOperationType : BaseOperationType.values()){
-			if (baseOperationType.methodName.equals(type)){
+	public static BaseOperationType fromType(String type) {
+		for (BaseOperationType baseOperationType : BaseOperationType.values()) {
+			if (baseOperationType.methodName.equals(type)) {
 				return baseOperationType;
 			}
 		}

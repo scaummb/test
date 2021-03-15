@@ -12,7 +12,7 @@ public class TestIntegerInitialize {
 		int i2 = 59; //常量池的值
 		Integer i3 = Integer.valueOf(59);//从cache缓存取出对象
 		Integer i4 = new Integer(59);//构造器新建一个对象
-		System.out.println(i1==i2);
+		System.out.println(i1 == i2);
 
 		int a = Integer.parseInt("1023");
 		int b = Integer.valueOf("1023").intValue();

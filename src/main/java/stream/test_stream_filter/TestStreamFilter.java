@@ -24,7 +24,7 @@ public class TestStreamFilter {
 		list.add(a3);
 		list.add(a4);
 		List<A> collect = list.stream().filter(aa -> !ObjectUtils.isEmpty(aa.getName())).collect(Collectors.toList());
-		for (A aaa: collect){
+		for (A aaa : collect) {
 			System.out.println(aaa.toString());
 		}
 	}

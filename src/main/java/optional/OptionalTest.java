@@ -6,8 +6,9 @@ import java.util.Optional;
 
 /**
  * <p>
- *      JDK8中引入了函数式编程，大大提高了我们编写代码的可读性，其中Optional则是为了避免NPE而生。
+ * JDK8中引入了函数式编程，大大提高了我们编写代码的可读性，其中Optional则是为了避免NPE而生。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/6/6 15:39
  */
@@ -42,7 +43,7 @@ public class OptionalTest {
 	}
 }
 
-class Wheel{
+class Wheel {
 
 	private String brand;
 
@@ -59,7 +60,7 @@ class Wheel{
 	}
 }
 
-class Car{
+class Car {
 	private Wheel wheel;
 
 	public Car(Wheel wheel) {
@@ -75,7 +76,7 @@ class Car{
 	}
 }
 
-class Person{
+class Person {
 	private Car car;
 
 	public Car getCar() {

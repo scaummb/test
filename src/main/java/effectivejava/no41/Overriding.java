@@ -14,17 +14,20 @@ public class Overriding {
 	}
 }
 
-class Wine{
-	String name(){return "wine";}
+class Wine {
+	String name() {
+		return "wine";
+	}
 }
 
-class SparklingWine extends Wine{
+class SparklingWine extends Wine {
 	@Override
 	String name() {
 		return "SparklingWine";
 	}
 }
-class Champagne extends SparklingWine{
+
+class Champagne extends SparklingWine {
 	@Override
 	String name() {
 		return "Champagne";

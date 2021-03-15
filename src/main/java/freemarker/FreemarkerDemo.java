@@ -34,12 +34,13 @@ public class FreemarkerDemo {
 	}
 
 	public static void test06() throws IOException, TemplateException {
-		Namespace previousNamespace = new Namespace(1L, "深圳湾1","homeUrl1","pcHomeUrl1","contentServerUrl1","opServerUrl1", "smsHeader1");
-		Namespace afterNamespace = new Namespace(2L, "深圳湾2","homeUrl2","pcHomeUrl2","contentServerUrl2","opServerUrl1", "smsHeader1");
-		Map root = new HashMap(){{
-			put("namespaceName","深圳湾");
-			put("previousNamespace",previousNamespace);
-			put("afterNamespace",afterNamespace);}};
+		Namespace previousNamespace = new Namespace(1L, "深圳湾1", "homeUrl1", "pcHomeUrl1", "contentServerUrl1", "opServerUrl1", "smsHeader1");
+		Namespace afterNamespace = new Namespace(2L, "深圳湾2", "homeUrl2", "pcHomeUrl2", "contentServerUrl2", "opServerUrl1", "smsHeader1");
+		Map root = new HashMap() {{
+			put("namespaceName", "深圳湾");
+			put("previousNamespace", previousNamespace);
+			put("afterNamespace", afterNamespace);
+		}};
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.UPDATE_NAMESPACE_TEMPLATE,
 				templateConfig);
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
@@ -47,7 +48,10 @@ public class FreemarkerDemo {
 	}
 
 	public static void test00() throws IOException, TemplateException {
-		Map root = new HashMap(){{put("name","zuolin");put("age",null);}};
+		Map root = new HashMap() {{
+			put("name", "zuolin");
+			put("age", null);
+		}};
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_1,
 				templateConfig);
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, root));
@@ -79,7 +83,10 @@ public class FreemarkerDemo {
 
 	public static void test04() throws IOException, TemplateException {
 		Macro macro = buildMacro();
-		HashMap<String, Object> map = new HashMap(){{put("macro", macro);put("namespaceId", 11);}};
+		HashMap<String, Object> map = new HashMap() {{
+			put("macro", macro);
+			put("namespaceId", 11);
+		}};
 		Template temp = new Template(FreemarkerTemplate.TEMPLATE_NAME, FreemarkerTemplate.TEMPLATE_TEST_5,
 				templateConfig);
 		System.out.println(FreeMarkerTemplateUtils.processTemplateIntoString(temp, map));
@@ -94,7 +101,9 @@ public class FreemarkerDemo {
 		Macro macro = new Macro();
 		macro.setAge(1);
 		macro.setName("1");
-		List<Macro> objects = new ArrayList<Macro>(){{add(macro);}};
+		List<Macro> objects = new ArrayList<Macro>() {{
+			add(macro);
+		}};
 
 		Macro macro2 = new Macro();
 		macro2.setAge(2);
@@ -103,7 +112,10 @@ public class FreemarkerDemo {
 		Macro macro4 = new Macro();
 		macro4.setAge(4);
 		macro4.setName("4");
-		List<Macro> objects2 = new ArrayList<Macro>(){{add(macro2);add(macro4);}};
+		List<Macro> objects2 = new ArrayList<Macro>() {{
+			add(macro2);
+			add(macro4);
+		}};
 
 		Macro macro3 = new Macro();
 		macro3.setAge(2);
@@ -117,9 +129,9 @@ public class FreemarkerDemo {
 	 */
 	private static Map convertObjectToMap(Object obj) {
 		if (obj == null || obj instanceof String || obj instanceof Number
-		|| obj instanceof java.util.Date || obj instanceof java.sql.Date ||obj instanceof java.sql.Time
-		|| obj instanceof java.sql.Timestamp || obj instanceof Collection || obj instanceof Map
-		|| obj instanceof Boolean || obj instanceof Iterator || obj instanceof Enumeration || obj instanceof Iterable) {
+				|| obj instanceof java.util.Date || obj instanceof java.sql.Date || obj instanceof java.sql.Time
+				|| obj instanceof java.sql.Timestamp || obj instanceof Collection || obj instanceof Map
+				|| obj instanceof Boolean || obj instanceof Iterator || obj instanceof Enumeration || obj instanceof Iterable) {
 			return new HashMap<>();
 		}
 		return handleUnknownType(obj);
@@ -159,20 +171,24 @@ public class FreemarkerDemo {
 		user.setToken("1234356456");
 		organizationCustomer.setUser(user);
 
-		ArrayList<String> list = new ArrayList(){{add("1123");add("123123123");add("54489798");}};
+		ArrayList<String> list = new ArrayList() {{
+			add("1123");
+			add("123123123");
+			add("54489798");
+		}};
 		organizationCustomer.setAddress(list);
 
-		List<ContactUser> members = new ArrayList(){{
+		List<ContactUser> members = new ArrayList() {{
 			add(new ContactUser("a", 1, "111"));
 			add(new ContactUser("b", 2, "222"));
 			add(new ContactUser("c", 3, "333"));
 		}};
 		organizationCustomer.setMembers(members);
 
-		List<OrganizationCustomer> customers = new ArrayList(){{
-			add(new OrganizationCustomer(2L,"test02","description02"));
-			add(new OrganizationCustomer(3L,"test03","description03"));
-			add(new OrganizationCustomer(4L,"test04","description04"));
+		List<OrganizationCustomer> customers = new ArrayList() {{
+			add(new OrganizationCustomer(2L, "test02", "description02"));
+			add(new OrganizationCustomer(3L, "test03", "description03"));
+			add(new OrganizationCustomer(4L, "test04", "description04"));
 		}};
 		organizationCustomer.setCustomers(customers);
 		return organizationCustomer;
@@ -189,7 +205,7 @@ public class FreemarkerDemo {
 		try {
 			Template freeMarkerTemplate = new Template(templateKey, templateText, templateConfig);
 			return FreeMarkerTemplateUtils.processTemplateIntoString(freeMarkerTemplate, model);
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 		return defaultValue;

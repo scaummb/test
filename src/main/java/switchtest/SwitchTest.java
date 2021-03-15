@@ -16,8 +16,9 @@ public class SwitchTest {
 		Object obj = new Object();
 
 
-		switch (a){
-			default:;
+		switch (a) {
+			default:
+				;
 		}
 
 //		switch (b){ no
@@ -25,8 +26,9 @@ public class SwitchTest {
 //		switch (d){ yes
 //		switch (e){ no
 //		switch (obj){ no
-		switch (f){ //yes
-			default:;
+		switch (f) { //yes
+			default:
+				;
 		}
 	}
 }

@@ -6,17 +6,20 @@ package design_module.SinglePattern;
  */
 
 public class SingletonCase3 {
-	/**类在加载的时候直接进行初始化*/
+	/**
+	 * 类在加载的时候直接进行初始化
+	 */
 	private static SingletonCase3 singleton = new SingletonCase3();
 
 	private SingletonCase3() {
 		System.out.println("Single 3 constructor..");
 	}
+
 	/**
 	 * 对外暴露唯一接口
 	 * 提供单例对象
 	 */
-	public static SingletonCase3 getInstance(){
+	public static SingletonCase3 getInstance() {
 		return singleton;
 	}
 

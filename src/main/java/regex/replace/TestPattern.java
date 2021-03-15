@@ -13,11 +13,11 @@ import java.util.regex.Pattern;
 
 public class TestPattern {
 	public static void main(String[] args) {
-		String testText = TextContents.TEXT_1 ;
+		String testText = TextContents.TEXT_1;
 		String regex = "\\!\\[\\]\\(.*\\)";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(testText);
-		ArrayList<String> al=new ArrayList<String>();
+		ArrayList<String> al = new ArrayList<String>();
 
 		Map<String, String> map = new HashMap<>();
 
@@ -28,14 +28,14 @@ public class TestPattern {
 //			System.out.println(testText.substring(m.start()+4, m.end()-1));
 //		}
 
-		try{
+		try {
 			throw new RuntimeException("123123123");
-		}catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("123");
 		}
 
-		for (int i =9; i>0; i--){
+		for (int i = 9; i > 0; i--) {
 			System.out.println(i);
 		}
 	}

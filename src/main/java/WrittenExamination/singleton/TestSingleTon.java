@@ -7,10 +7,12 @@ package WrittenExamination.singleton;
 
 public class TestSingleTon {
 	private final static TestSingleTon SINGLE_TON = new TestSingleTon();
-	//constructor
-	private TestSingleTon(){}
 
-	public static TestSingleTon getInstance(){
+	//constructor
+	private TestSingleTon() {
+	}
+
+	public static TestSingleTon getInstance() {
 		return SINGLE_TON;
 	}
 }

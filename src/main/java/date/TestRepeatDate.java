@@ -27,7 +27,6 @@ public class TestRepeatDate {
 //		System.out.println(calendar.get(Calendar.DATE));
 
 
-
 //		ArrayList<RemindDate> list = new ArrayList<>();
 //		do {
 //			list.add(new RemindDate(new Timestamp(current), new Timestamp(currentEnd)));

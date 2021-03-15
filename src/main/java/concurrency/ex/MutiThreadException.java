@@ -13,49 +13,49 @@ import java.util.concurrent.Future;
  * @create: 2019-01-08 17:06
  */
 public class MutiThreadException {
-    public static void main(String[] args) {
-        System.out.println("MutiThreadException.main()------>start<------");
-        try {
-            List<Future<Object>> resultList = new ArrayList<>();
-            CustomExceptionHandler customExceptionHandler = new CustomExceptionHandler();
-            //线程池
-            ExecutorService service=Executors.newFixedThreadPool(6);
-            for (int i = 0; i < 3; i++) {
-                //new 线程
-                Thread t=new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(Thread.currentThread().getName().endsWith("2")){
+	public static void main(String[] args) {
+		System.out.println("MutiThreadException.main()------>start<------");
+		try {
+			List<Future<Object>> resultList = new ArrayList<>();
+			CustomExceptionHandler customExceptionHandler = new CustomExceptionHandler();
+			//线程池
+			ExecutorService service = Executors.newFixedThreadPool(6);
+			for (int i = 0; i < 3; i++) {
+				//new 线程
+				Thread t = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						if (Thread.currentThread().getName().endsWith("2")) {
 //                          int i=1/0;
-                            throw new RuntimeException();
-                        }
-                        try {
-                            Thread.sleep(3000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-                //不是用线程池执行线程，使用循环的方式创建多线程，那么就用下面这两行和ExceptionHandle类来捕获子线程中的异常
-                t.setUncaughtExceptionHandler(new CustomExceptionHandler());
-                t.start();
-                //使用线程池的方式执行线程，如果子线程有异常的话，ExecutorService就已经捕获到了，我们可以从future对象中获取异常。正常情况下future对象中获取的是null，有异常的话获取到的就是异常信息
-                Future<Object> future = (Future<Object>) service.submit(t);
-                resultList.add(future);
-            }
-            for(Future f:resultList){
-                //在这里遍历就可以获取到future里面的异常，如果获取到的是null就说明成功执行了，没有异常。这里使用future的get方法时必须使用try catch才能获取到future对象里面的异常
-                try {
-                    Object o=f.get();
-                    System.out.println(o);
-                } catch (Exception e) {
-                    System.out.println(e.toString()+"===========================");
-                }
-            }
-            service.shutdown();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println("MutiThreadException.main()------>end<------");
-    }
+							throw new RuntimeException();
+						}
+						try {
+							Thread.sleep(3000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				});
+				//不是用线程池执行线程，使用循环的方式创建多线程，那么就用下面这两行和ExceptionHandle类来捕获子线程中的异常
+				t.setUncaughtExceptionHandler(new CustomExceptionHandler());
+				t.start();
+				//使用线程池的方式执行线程，如果子线程有异常的话，ExecutorService就已经捕获到了，我们可以从future对象中获取异常。正常情况下future对象中获取的是null，有异常的话获取到的就是异常信息
+				Future<Object> future = (Future<Object>) service.submit(t);
+				resultList.add(future);
+			}
+			for (Future f : resultList) {
+				//在这里遍历就可以获取到future里面的异常，如果获取到的是null就说明成功执行了，没有异常。这里使用future的get方法时必须使用try catch才能获取到future对象里面的异常
+				try {
+					Object o = f.get();
+					System.out.println(o);
+				} catch (Exception e) {
+					System.out.println(e.toString() + "===========================");
+				}
+			}
+			service.shutdown();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("MutiThreadException.main()------>end<------");
+	}
 }

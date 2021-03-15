@@ -32,7 +32,7 @@ public class TestBigDecimal {
 		System.out.println("除法用string结果：" + divideStr.toString());
 	}
 
-	private static void test3(){
+	private static void test3() {
 		System.out.println(1.03 - 0.43);
 		System.out.println(1.00 - 9 * 0.1);
 	}
@@ -43,14 +43,14 @@ public class TestBigDecimal {
 	 * bigdecimal 进行货币计算
 	 * </p>
 	 */
-	private static void test5(){
+	private static void test5() {
 		final BigDecimal TEN_CENTS = new BigDecimal("0.1");
 		int itemsBought = 0;
 		BigDecimal funds = new BigDecimal("1.00");
 
 		for (BigDecimal price = TEN_CENTS;
-			funds.compareTo(price) >= 0;
-			price = price.add(TEN_CENTS)){
+			 funds.compareTo(price) >= 0;
+			 price = price.add(TEN_CENTS)) {
 			itemsBought++;
 			funds = funds.subtract(price);
 		}
@@ -64,10 +64,10 @@ public class TestBigDecimal {
 	 * float/double 进行货币计算
 	 * </p>
 	 */
-	private static void test4(){
+	private static void test4() {
 		double funds = 1.00;
 		int itemsBought = 0;
-		for (double price = 0.10; funds >= price; price += 0.10){
+		for (double price = 0.10; funds >= price; price += 0.10) {
 			funds -= price;
 			itemsBought++;
 		}
@@ -75,19 +75,19 @@ public class TestBigDecimal {
 		System.out.println("Change：$" + funds);
 	}
 
-	private static void test2(){
+	private static void test2() {
 		BigDecimal bigDecimal = new BigDecimal(0.01);
 		System.out.println("intVal = " + bigDecimal.intValue());
 		System.out.println("scale = " + bigDecimal.scale());
 	}
 
-	private static void test(){
+	private static void test() {
 		BigDecimal bigDecimal = new BigDecimal("-100.01");
 		System.out.println("intVal = " + bigDecimal.intValue());
 		System.out.println("scale = " + bigDecimal.scale());
 	}
 
-	private static void test1(){
+	private static void test1() {
 		BigDecimal valueSec = new BigDecimal(1000000);
 		BigDecimal valueFir = new BigDecimal(1000000);
 		BigDecimal valueThi = new BigDecimal(-1000000);

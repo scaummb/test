@@ -41,9 +41,9 @@ public class RemindDTO implements Comparable {
 	@Override
 	public int compareTo(Object o) {
 		RemindDTO obj = (RemindDTO) o;
-		if (Long.compare(this.startTime , obj.getStartTime()) == 0){
+		if (Long.compare(this.startTime, obj.getStartTime()) == 0) {
 			return Long.compare(this.getEndTime(), obj.getEndTime());
 		}
-		return Long.compare(this.startTime , obj.getStartTime());
+		return Long.compare(this.startTime, obj.getStartTime());
 	}
 }

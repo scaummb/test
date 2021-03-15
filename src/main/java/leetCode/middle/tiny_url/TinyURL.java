@@ -9,7 +9,7 @@ public class TinyURL {
 
 	private static final char SECRET_KEY = 8;
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		String longUrl = "https://leetcode.com/problems/design-tinyurl";
 		String shortUrl1 = encode(longUrl);
 		String longUrl1 = decode(shortUrl1);
@@ -20,9 +20,9 @@ public class TinyURL {
 	public static String encode(String longUrl) {
 		// 将需要加密的内容转换为字节数组
 		byte[] bt = longUrl.getBytes();
-		for(int i = 0; i < bt.length; i++){
+		for (int i = 0; i < bt.length; i++) {
 			// 通过异或运算进行加密
-			bt[i] = (byte)(bt[i] ^ (int)SECRET_KEY);
+			bt[i] = (byte) (bt[i] ^ (int) SECRET_KEY);
 		}
 		// 将加密后的字符串保存到 newresult 变量中
 		String newresult = new String(bt, 0, bt.length);
@@ -33,9 +33,9 @@ public class TinyURL {
 	public static String decode(String shortUrl) {
 		// 将需要加密的内容转换为字节数组
 		byte[] bt = shortUrl.getBytes();
-		for(int i = 0; i < bt.length; i++){
+		for (int i = 0; i < bt.length; i++) {
 			// 通过异或运算进行加密
-			bt[i] = (byte)(bt[i] ^ (int)SECRET_KEY);
+			bt[i] = (byte) (bt[i] ^ (int) SECRET_KEY);
 		}
 		// 将加密后的字符串保存到 newresult 变量中
 		String newresult = new String(bt, 0, bt.length);

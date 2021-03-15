@@ -10,26 +10,27 @@ import java.util.stream.Stream;
 
 /**
  * stream 之 map使用测试
+ *
  * @author moubin.mo
  * @date: 2019/9/15 11:43
  */
 
 public class TestStreamMap {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		List<Person> persons = getList();
 
 		// 找到所有女性
 		Stream<Female> femaleStream = persons.stream()
-				.filter(person -> person.getGender().equals((byte)2))
+				.filter(person -> person.getGender().equals((byte) 2))
 				.map(
-				r -> {
-					return new Female(r.getAge(), r.getName(), r.getHeight(), r.getWeight(), r.getNation(), r.getGender());
-				}
-		);
+						r -> {
+							return new Female(r.getAge(), r.getName(), r.getHeight(), r.getWeight(), r.getNation(), r.getGender());
+						}
+				);
 
 		List<Female> females = femaleStream.collect(Collectors.toList());
-		females.stream().forEach( r -> {
-			System.out.println(r);
+		females.stream().forEach(r -> {
+					System.out.println(r);
 				}
 		);
 
@@ -52,7 +53,7 @@ public class TestStreamMap {
 
 	}
 
-	public static List<Person> getList(){
+	public static List<Person> getList() {
 		//(Integer age, String name, Integer height, Integer weight, Integer nation, Byte gender)
 		Person zhenzhihui = new Person(23, "zhenzhihui", 156, 66, 1, (byte) 1);
 		Person zhiguhui = new Person(23, "zhiguhui", 156, 66, 2, (byte) 1);

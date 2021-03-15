@@ -18,6 +18,7 @@ import java.sql.Timestamp;
  *     <li>namespaceId:域空间id</li>
  *     <li>status:状态{@link com.everhomes.rest.helpcenter.constants.FileStatus}</li>
  * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/3/30 20:22
  */

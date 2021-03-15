@@ -27,11 +27,11 @@ public class Test {
 		LogTemplateObjectField expireTimeField = new LogTemplateObjectField();
 		expireTimeField.setField("licenseEndDate");
 //		expireTimeField.setPrefixText("Zone有效期");
-		List<LogTemplateObjectField> fromObjectFields = new ArrayList(){{
+		List<LogTemplateObjectField> fromObjectFields = new ArrayList() {{
 			add(nameField);
 			add(expireTimeField);
 		}};
-		List<LogTemplateObjectField> toObjectFields = new ArrayList(){{
+		List<LogTemplateObjectField> toObjectFields = new ArrayList() {{
 			add(nameField);
 			add(expireTimeField);
 		}};
@@ -54,7 +54,10 @@ public class Test {
 		Zones newzones = new Zones();
 		newzones.setName("he2");
 		newzones.setLicenseEndDate(new Timestamp(1585577262000L));
-		HashMap hashMap = new HashMap(){{put("fromObject", zones);put("toObject", newzones);}};
+		HashMap hashMap = new HashMap() {{
+			put("fromObject", zones);
+			put("toObject", newzones);
+		}};
 //		AdaptorUtils.handleDataMap(logTemplate.getData(), zones, newzones, hashMap);
 //		System.out.println(JSON.toJSON(logTemplate.getData()));
 	}

@@ -13,8 +13,8 @@ public class NoVisibility {
 	private static class ReaderThread extends Thread {
 		@Override
 		public void run() {
-			while (true){
-				if (!ready){
+			while (true) {
+				if (!ready) {
 					try {
 						Thread.sleep(2000);
 						System.out.println("ReaderThread , no ready, ready= " + ready + ", number= " + number);
@@ -34,10 +34,11 @@ public class NoVisibility {
 			}
 		}
 	}
+
 	private static class ReaderThread2 extends Thread {
 		@Override
 		public void run() {
-			while (true){
+			while (true) {
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -45,7 +46,7 @@ public class NoVisibility {
 				}
 				number = 1000;
 				ready = true;
-				while (true){
+				while (true) {
 					System.out.println("main, ready= " + ready + ", number= " + number);
 				}
 			}

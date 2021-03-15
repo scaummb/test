@@ -26,17 +26,16 @@ public class BoundHashSet<T> {
 		try {
 			wasAdded = set.add(o);
 			return wasAdded;
-		}
-		finally {
-			if (!wasAdded){
+		} finally {
+			if (!wasAdded) {
 				sem.release();
 			}
 		}
 	}
 
-	public boolean remove(Object o){
+	public boolean remove(Object o) {
 		boolean wasRemoved = set.remove(o);
-		if (wasRemoved){
+		if (wasRemoved) {
 			sem.release();
 		}
 		return wasRemoved;

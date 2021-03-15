@@ -9,6 +9,7 @@ import java.util.concurrent.*;
 
 public class TestCallable {
 	private static ExecutorService pools = Executors.newFixedThreadPool(1);
+
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
 		StringBuffer stringBuffer = new StringBuffer();
 		Future<String> submit = pools.submit(new Callable<String>() {

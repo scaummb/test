@@ -26,7 +26,7 @@ public class TimeUtils {
 		return versionNumber.toString();
 	}
 
-	public static String getPublishVersionNumberV2(){
+	public static String getPublishVersionNumberV2() {
 		DateTimeFormatter df = DateTimeFormatter.ofPattern(DEFAULT_TIME_FORMATTER);
 		return LocalDateTime.now().format(df);
 	}

@@ -17,6 +17,7 @@ import java.util.Set;
 
 /**
  * 第二种方式：apache HttpClient3.1
+ *
  * @author moubin.mo
  * @date: 2019/12/18 21:51
  */
@@ -29,7 +30,7 @@ public class HttpTestCase02 {
 
 	}
 
-	public static String doGet(String url){
+	public static String doGet(String url) {
 
 		// 输入流
 		InputStream is = null;
@@ -47,14 +48,14 @@ public class HttpTestCase02 {
 		);
 		// 设置请求重试机制，默认重试次数：3次，参数设置为true，重试机制可用，false相反
 		getMethod.getParams().setParameter(
-				HttpMethodParams.RETRY_HANDLER,new DefaultHttpMethodRetryHandler(3, true)
+				HttpMethodParams.RETRY_HANDLER, new DefaultHttpMethodRetryHandler(3, true)
 		);
 
-		try{
+		try {
 			// 执行Get方法
 			int statusCode = httpClient.executeMethod(getMethod);
 			// 判断返回码
-			if (statusCode != HttpStatus.SC_OK){
+			if (statusCode != HttpStatus.SC_OK) {
 				// 如果状态码返回的不是ok,说明失败了,打印错误信息
 				System.err.println("Method faild: " + getMethod.getStatusLine());
 			} else {
@@ -66,7 +67,7 @@ public class HttpTestCase02 {
 				StringBuffer sbf = new StringBuffer();
 				// 读取封装的输入流
 				String temp = null;
-				while ((temp = br.readLine()) != null){
+				while ((temp = br.readLine()) != null) {
 					sbf.append(temp);
 				}
 
@@ -78,7 +79,7 @@ public class HttpTestCase02 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if (br != null){
+			if (br != null) {
 				try {
 					br.close();
 				} catch (IOException e) {
@@ -86,7 +87,7 @@ public class HttpTestCase02 {
 				}
 			}
 
-			if (is != null){
+			if (is != null) {
 				try {
 					is.close();
 				} catch (IOException e) {
@@ -101,7 +102,7 @@ public class HttpTestCase02 {
 		return result;
 	}
 
-	public static String doPost(String url, Map<String, Object> paramMap){
+	public static String doPost(String url, Map<String, Object> paramMap) {
 		// 获取输入流
 		InputStream is = null;
 		BufferedReader br = null;
@@ -116,7 +117,7 @@ public class HttpTestCase02 {
 		postMethod.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, 60000);
 
 		NameValuePair[] nvp = null;
-		if (paramMap != null && paramMap.size() > 0){
+		if (paramMap != null && paramMap.size() > 0) {
 			// 创建键值参数对象数组，大小为参数的个数
 			nvp = new NameValuePair[paramMap.size()];
 
@@ -126,7 +127,7 @@ public class HttpTestCase02 {
 
 			int index = 0;
 
-			while (iterator.hasNext()){
+			while (iterator.hasNext()) {
 				Map.Entry<String, Object> mapEntry = iterator.next();
 				// 从mapEntry中获取key和value创建键值对象存放到数组中
 				nvp[index] = new NameValuePair() {
@@ -148,7 +149,7 @@ public class HttpTestCase02 {
 				index++;
 			}
 
-			if (nvp != null && nvp.length > 0){
+			if (nvp != null && nvp.length > 0) {
 				postMethod.setRequestBody((org.apache.commons.httpclient.NameValuePair[]) nvp);
 			}
 

@@ -12,9 +12,9 @@ import java.util.concurrent.Future;
 
 public class ThreadDeadLock {
 
-	private final static ExecutorService exec =  Executors.newSingleThreadExecutor();
+	private final static ExecutorService exec = Executors.newSingleThreadExecutor();
 
-	public class RenderPageTank implements Callable<String>{
+	public class RenderPageTank implements Callable<String> {
 		@Override
 		public String call() throws Exception {
 			Future<String> header = null, footer = null;
@@ -30,8 +30,11 @@ public class ThreadDeadLock {
 			return new Page();
 		}
 	}
-	class Page{}
-	class LoadFileTask implements Callable<String>{
+
+	class Page {
+	}
+
+	class LoadFileTask implements Callable<String> {
 
 		private String name;
 

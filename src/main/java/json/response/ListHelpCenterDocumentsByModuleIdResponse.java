@@ -10,6 +10,7 @@ import java.util.List;
  *     <li>totalNum:文档总量</li>
  *     <li>pageNum：下一页页码</li>
  * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/4/1 11:34
  */

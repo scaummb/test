@@ -18,6 +18,7 @@ import java.util.Map;
 public class TestBase64 {
 	final static BASE64Encoder encoder = new BASE64Encoder();
 	final static BASE64Decoder decoder = new BASE64Decoder();
+
 	public static void main(String[] args) throws IOException {
 		testDecode();
 	}
@@ -62,7 +63,7 @@ public class TestBase64 {
 	}
 
 	private static void testBase64EnCode2() {
-		byte[] bytes = new byte[]{-4,18,1,1, 0,0,0,0, 0,0,3,-24, 95,62,-79,-18, -33,-3,-62,7};
+		byte[] bytes = new byte[]{-4, 18, 1, 1, 0, 0, 0, 0, 0, 0, 3, -24, 95, 62, -79, -18, -33, -3, -62, 7};
 		String encode = encoder.encode(bytes);
 		System.out.println(encode);
 	}
@@ -86,7 +87,7 @@ public class TestBase64 {
 		System.out.println(value);
 	}
 
-	private final static void testBase64EnCode(){
+	private final static void testBase64EnCode() {
 		String string = "51";
 		String encode = encoder.encode(string.getBytes());
 		System.out.println(encode);
@@ -104,14 +105,14 @@ public class TestBase64 {
 		System.out.println(decodeText);
 	}
 
-	private final static String Base64Decode(){
+	private final static String Base64Decode() {
 		String string = "NTEBETAwMDQ1MzE1MDAwMDExNDk5AocBAYBXtXWZJWCYXTqDZWShpYqbCvt4ySidK8a6aTcbYuwbtDcaqXtbdp5H3Q9HAAZS9cn/qxQxGwBPihHaccUNJ/dcGQDXsKvpI0RW/w9AIS3FDbzJw7MSqQM1VZVEuF2CB87+tHTIHJ3l/bTc2U6ztG9USHBJW4PJDFtjjjUmpdGJMlq0LY8=";
 //		String string = "NTEBETUyMzE1NzU1ODQ4NDc0MDY2";
 		try {
 			byte[] code = decoder.decodeBuffer(string);
-			if(code[0] == '5' && code[1] == '1') {
-				byte[] newCode = new byte[code.length-2];
-				System.arraycopy(code, 2, newCode, 0, code.length-2);
+			if (code[0] == '5' && code[1] == '1') {
+				byte[] newCode = new byte[code.length - 2];
+				System.arraycopy(code, 2, newCode, 0, code.length - 2);
 				code = newCode;
 				String s = new String(code, "UTF-8");
 				System.out.println(code);
@@ -128,10 +129,10 @@ public class TestBase64 {
 		int i = 0, len, typ;
 		Map<Integer, byte[]> segments = new HashMap<Integer, byte[]>();
 
-		while(i+2 < code.length) {
-			len = (int)code[i+1];
-			typ = (int)code[i];
-			if(len < 0 || (i+2+len) > code.length) {
+		while (i + 2 < code.length) {
+			len = (int) code[i + 1];
+			typ = (int) code[i];
+			if (len < 0 || (i + 2 + len) > code.length) {
 				break;
 			}
 			i += 2;

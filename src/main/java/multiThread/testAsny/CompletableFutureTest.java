@@ -29,7 +29,7 @@ public class CompletableFutureTest {
 			}
 		}, threadPool);
 		// 异步获取 futureTask 的执行结果，此处代码可以跟其他流程代码放在一起
-		futureTask.thenAccept(e-> System.out.println("future task result:" + e));
+		futureTask.thenAccept(e -> System.out.println("future task result:" + e));
 		System.out.println("main thread end");
 	}
 }

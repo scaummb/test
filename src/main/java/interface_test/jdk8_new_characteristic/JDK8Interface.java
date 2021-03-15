@@ -8,7 +8,7 @@ package interface_test.jdk8_new_characteristic;
 public interface JDK8Interface {
 
 	// static修饰符定义静态方法
-	static void test(){
+	static void test() {
 		System.out.println("jdk8 允许接口定义 final static 方法");
 	}
 

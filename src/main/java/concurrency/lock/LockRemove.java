@@ -6,7 +6,7 @@ package concurrency.lock;
  */
 
 public class LockRemove {
-	public String concatString(String s1,String s2,String s3){
+	public String concatString(String s1, String s2, String s3) {
 		return s1 + s2 + s3;
 	}
 }

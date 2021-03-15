@@ -5,7 +5,7 @@ package reflect.childrenParentClassFieldReflect;
  * @date: 2020/8/9 18:14
  */
 
-public class Daughter extends Parent{
+public class Daughter extends Parent {
 	private String name;
 	private Integer age;
 

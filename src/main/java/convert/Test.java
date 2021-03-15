@@ -12,7 +12,9 @@ public class Test {
 		AObject aObject = new AObject();
 		aObject.setId(11L);
 		aObject.setName("aObject");
-		ArrayList arrayList = new ArrayList(10){{add(11);}};
+		ArrayList arrayList = new ArrayList(10) {{
+			add(11);
+		}};
 		aObject.setIds(arrayList);
 		BObject bObject = ConvertHelper.convert(aObject, BObject.class);
 		System.out.println(bObject);

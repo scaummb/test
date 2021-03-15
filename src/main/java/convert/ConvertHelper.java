@@ -46,29 +46,29 @@ public class ConvertHelper {
 
 	private static Map<String, Method> getMethodLookupMap(Class<?> clz) {
 		Map var1 = s_map;
-		synchronized(s_map) {
-			Map<String, Method> methodMap = (Map)s_map.get(clz);
+		synchronized (s_map) {
+			Map<String, Method> methodMap = (Map) s_map.get(clz);
 			if (methodMap == null) {
 				methodMap = new HashMap();
 				Method[] var3 = clz.getMethods();
 				int var4 = var3.length;
 
-				for(int var5 = 0; var5 < var4; ++var5) {
+				for (int var5 = 0; var5 < var4; ++var5) {
 					Method method = var3[var5];
 					String methodName = method.getName();
 					if (methodName.startsWith("set") && method.getParameterTypes() != null && method.getParameterTypes().length == 1) {
 						method.setAccessible(true);
-						((Map)methodMap).put(methodName, method);
+						((Map) methodMap).put(methodName, method);
 					}
 				}
 			}
 
-			return (Map)methodMap;
+			return (Map) methodMap;
 		}
 	}
 
 	private static Method findSetter(Class<?> clz, String methodName) {
 		Map<String, Method> methodMap = getMethodLookupMap(clz);
-		return (Method)methodMap.get(methodName);
+		return (Method) methodMap.get(methodName);
 	}
 }

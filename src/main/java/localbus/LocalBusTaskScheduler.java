@@ -13,8 +13,8 @@ public class LocalBusTaskScheduler {
 	private TaskScheduler scheduler = new ThreadPoolTaskScheduler();
 
 	public LocalBusTaskScheduler(TaskScheduler scheduler) {
-		((ThreadPoolTaskScheduler)this.scheduler).setPoolSize(5);
-		((ThreadPoolTaskScheduler)this.scheduler).afterPropertiesSet();
+		((ThreadPoolTaskScheduler) this.scheduler).setPoolSize(5);
+		((ThreadPoolTaskScheduler) this.scheduler).afterPropertiesSet();
 	}
 
 	public TaskScheduler getScheduler() {

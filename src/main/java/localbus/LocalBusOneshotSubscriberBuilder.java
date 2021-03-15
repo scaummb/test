@@ -16,12 +16,13 @@ public class LocalBusOneshotSubscriberBuilder implements ApplicationContextAware
 	public LocalBusOneshotSubscriberBuilder() {
 	}
 
-	public LocalBusOneshotSubscription build(){
+	public LocalBusOneshotSubscription build() {
 		LocalBusOneshotSubscription subscription = new LocalBusOneshotSubscription();
 		this.applicationContext.getAutowireCapableBeanFactory().autowireBean(subscription);
 		return subscription;
 	}
-	public LocalBusOneshotSubscription build(String subject, LocalBusOneshotSubscriber subscriber){
+
+	public LocalBusOneshotSubscription build(String subject, LocalBusOneshotSubscriber subscriber) {
 		LocalBusOneshotSubscription subscription = new LocalBusOneshotSubscription();
 		this.applicationContext.getAutowireCapableBeanFactory().autowireBean(subscription);
 		return subscription.setSubject(subject).setSubscriber(subscriber);

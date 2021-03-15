@@ -10,8 +10,8 @@ class FooBar {
 	private static Object lock = new Object();
 	private static volatile Boolean flag = true;
 	//here is the full path, or maybe cann't compile in leetcode.
-	java.util.concurrent.Semaphore semaphoreFoo=new java.util.concurrent.Semaphore(0);
-	java.util.concurrent.Semaphore semaphoreBar=new java.util.concurrent.Semaphore(0);
+	java.util.concurrent.Semaphore semaphoreFoo = new java.util.concurrent.Semaphore(0);
+	java.util.concurrent.Semaphore semaphoreBar = new java.util.concurrent.Semaphore(0);
 
 	public FooBar(int n) {
 		this.n = n;
@@ -20,8 +20,8 @@ class FooBar {
 	public void foo(Runnable printFoo) throws InterruptedException {
 
 		for (int i = 0; i < n; i++) {
-			synchronized (lock){
-				if (!flag){
+			synchronized (lock) {
+				if (!flag) {
 					lock.wait();
 				}
 				// printBar.run() outputs "foo". Do not change or remove this line.
@@ -31,11 +31,12 @@ class FooBar {
 			}
 		}
 	}
+
 	public void bar(Runnable printBar) throws InterruptedException {
 
 		for (int i = 0; i < n; i++) {
-			synchronized (lock){
-				if (flag){
+			synchronized (lock) {
+				if (flag) {
 					lock.wait();
 				}
 				// printBar.run() outputs "bar". Do not change or remove this line.
@@ -85,7 +86,7 @@ class FooBar {
 				}
 			}
 		};
-		Runnable runnable2 =new Runnable() {
+		Runnable runnable2 = new Runnable() {
 			@Override
 			public void run() {
 				try {

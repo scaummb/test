@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 /**
- *<ul>
+ * <ul>
  *     <li>dtos:下级节点列表</li>
  *     <li>id：id</li>
  *     <li>moduleId:模块id</li>
@@ -29,7 +29,8 @@ import java.util.List;
  *     <li>updateTime:updateTime</li>
  *     <li>updatorUid:updatorUid</li>
  *     <li>updatorNickName:更新者昵称</li>
- *</ul>
+ * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/4/2 10:34
  */

@@ -5,5 +5,5 @@ package enum_test;
  * @date 2020/5/4
  */
 public enum Spiciness {
-    NOT, MILD, MEDIUM, HOT, FLAMING;
+	NOT, MILD, MEDIUM, HOT, FLAMING;
 }

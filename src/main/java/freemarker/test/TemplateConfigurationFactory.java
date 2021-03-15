@@ -17,8 +17,8 @@ public class TemplateConfigurationFactory {
 
 	public Configuration templateConfig;
 
-	public static Configuration getConfiguration(){
-		if (ObjectUtils.isEmpty(map.get(DEFAULT_CONFIGURAION))){
+	public static Configuration getConfiguration() {
+		if (ObjectUtils.isEmpty(map.get(DEFAULT_CONFIGURAION))) {
 			Configuration templateConfig = new Configuration();
 			templateConfig = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
 			templateConfig.setTemplateLoader(new StringTemplateLoader());

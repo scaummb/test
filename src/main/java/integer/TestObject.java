@@ -6,7 +6,7 @@ package integer;
  */
 
 public class TestObject {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		MessageLocator locator = new MessageLocator("key");
 		Long anchor = locator.getAnchor();
 		locator.setAnchor(12L);

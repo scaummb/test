@@ -8,6 +8,9 @@ import shizhanthread.annotations.NotThreadSafe;
  */
 @NotThreadSafe
 public class PublishObject2 {
-	private String[] states = new String[] {"AK","AL"};
-	public String[] getStates() { return states; }
+	private String[] states = new String[]{"AK", "AL"};
+
+	public String[] getStates() {
+		return states;
+	}
 }

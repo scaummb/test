@@ -5,19 +5,19 @@ package jvm.String;
  * 则可以指定长度，也可以避免重新分配内存</p>
  */
 public class WiltherStringBuilder {
-    public String implicit(String [] fields){
-        String result = "";
-        for (int i = 0; i < fields.length; i++){
-            result += fields[i];
-        }
-        return result;
-    }
+	public String implicit(String[] fields) {
+		String result = "";
+		for (int i = 0; i < fields.length; i++) {
+			result += fields[i];
+		}
+		return result;
+	}
 
-    public String explict(String [] fields){
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < fields.length; i++){
-            result.append(fields[i]);
-        }
-        return result.toString();
-    }
+	public String explict(String[] fields) {
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < fields.length; i++) {
+			result.append(fields[i]);
+		}
+		return result.toString();
+	}
 }

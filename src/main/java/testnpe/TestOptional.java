@@ -4,6 +4,7 @@ import java.util.Optional;
 
 /**
  * Optional类使用
+ *
  * @author moubin.mo
  * @date: 2019/10/27 18:02
  */
@@ -11,7 +12,7 @@ import java.util.Optional;
 public class TestOptional {
 	public static void main(String[] args) {
 		String result = "1,2,3,4";
-		if (result!=null) {
+		if (result != null) {
 			String[] strings = result.split(",");
 		}
 

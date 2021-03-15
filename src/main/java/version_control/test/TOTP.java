@@ -169,10 +169,9 @@ public class TOTP {
 	}
 
 	/**
-	 *
-	 * @param key 密钥
-	 * @param time 当前时间，单位毫秒
-	 * @param x 时间步数
+	 * @param key          密钥
+	 * @param time         当前时间，单位毫秒
+	 * @param x            时间步数
 	 * @param returnDigits 返回个数
 	 * @param crypto
 	 * @return

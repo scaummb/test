@@ -8,7 +8,7 @@ import design_module.AbstractFactoryPattern.filesystem.Folder.LinuxFolder;
  * @date: 2021/2/11 22:55
  */
 
-public class LinuxSystemFolderFactory implements FolderFactory{
+public class LinuxSystemFolderFactory implements FolderFactory {
 	@Override
 	public Folder createFolder() {
 		return new LinuxFolder();

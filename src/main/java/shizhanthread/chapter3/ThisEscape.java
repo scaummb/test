@@ -12,6 +12,7 @@ public class ThisEscape {
 		EventSource eventSource = new EventSource();
 		new ThisEscape(eventSource);
 	}
+
 	// ThisEscape 对象的构造器
 	public ThisEscape(EventSource source) {
 		source.registerListener(
@@ -20,8 +21,9 @@ public class ThisEscape {
 					public void onEvent(Event e) {
 						doSomething(e);
 					}
-				},this);
+				}, this);
 	}
+
 	private void doSomething(Event e) {
 	}
 }

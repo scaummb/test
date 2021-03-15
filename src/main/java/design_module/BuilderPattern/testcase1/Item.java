@@ -8,8 +8,10 @@ package design_module.BuilderPattern.testcase1;
 public interface Item {
 	//动作1：获取名字
 	public String name();
+
 	//动作2：打包
 	public Packing packing();
+
 	//动作3：价格展示
 	public float price();
 }

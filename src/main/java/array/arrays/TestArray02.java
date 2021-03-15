@@ -17,8 +17,8 @@ public class TestArray02 {
 	}
 
 	private static void testfor(char a, char[] a1) {
-		for (int k = 0; k <a1.length; k++){
-			if (a == a1[k]){
+		for (int k = 0; k < a1.length; k++) {
+			if (a == a1[k]) {
 				System.out.println("yes");
 			} else {
 				System.out.println("yes");

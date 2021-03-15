@@ -8,6 +8,7 @@ import java.net.URL;
 
 /**
  * 第一种方式：java原生HttpURLConnection
+ *
  * @author moubin.mo
  * @date: 2019/12/18 21:51
  */
@@ -15,9 +16,10 @@ import java.net.URL;
 public class HttpTestCase01 {
 
 	private final static String BAIDU_URL = "http://www.baidu.com";
+
 	public static void main(String[] args) {
 		doGet(BAIDU_URL);
-		doPost(BAIDU_URL, String.join(":","param","mmb"));
+		doPost(BAIDU_URL, String.join(":", "param", "mmb"));
 	}
 
 	// Get请求
@@ -27,11 +29,11 @@ public class HttpTestCase01 {
 		BufferedReader br = null;
 		String result = null;
 
-		try{
+		try {
 			// 创建远程url连接对象
 			URL url = new URL(httpurl);
 			// 通过远程url连接对象打开一个连接，强转成httpURLConnection类
-			connection  = (HttpURLConnection) url.openConnection();
+			connection = (HttpURLConnection) url.openConnection();
 			// 设置连接方式：get
 			connection.setRequestMethod("GET");
 			// 设置连接主机服务器的超时时间：15000毫秒
@@ -43,14 +45,14 @@ public class HttpTestCase01 {
 
 
 			// 通过connection连接，获取输入流
-			if (connection.getResponseCode() == 200 ){
+			if (connection.getResponseCode() == 200) {
 				is = connection.getInputStream();
 				// 封装输入流is，并指定字符集
 				br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 				// 存放数据
 				StringBuffer sbf = new StringBuffer();
 				String temp = null;
-				while ((temp = br.readLine()) != null){
+				while ((temp = br.readLine()) != null) {
 					sbf.append(temp);
 					sbf.append("\r\n");
 				}
@@ -64,7 +66,7 @@ public class HttpTestCase01 {
 			e.printStackTrace();
 		} finally {
 			// 关闭资源
-			if (null != br){
+			if (null != br) {
 				try {
 					br.close();
 				} catch (IOException e) {
@@ -72,8 +74,8 @@ public class HttpTestCase01 {
 				}
 			}
 
-			if (null != is){
-				try{
+			if (null != is) {
+				try {
 					is.close();
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -94,7 +96,7 @@ public class HttpTestCase01 {
 		BufferedReader br = null;
 		String result = null;
 
-		try{
+		try {
 			URL url = new URL(httpUrl);
 			// 通过远程url连接对象打开连接
 			connection = (HttpURLConnection) url.openConnection();
@@ -118,7 +120,7 @@ public class HttpTestCase01 {
 			// 通过输出流对象将参数写出去/传输出去,它是通过字节数组写出的
 			os.write(param.getBytes());
 			// 通过连接对象获取一个输入流，向远程读取
-			if (connection.getResponseCode() == 200){
+			if (connection.getResponseCode() == 200) {
 				is = connection.getInputStream();
 				// 对输入流对象进行包装:charset根据工作项目组的要求来设置
 				br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -127,7 +129,7 @@ public class HttpTestCase01 {
 
 				String temp = null;
 				// 循环遍历一行一行读取数据
-				while ((temp = br.readLine()) != null){
+				while ((temp = br.readLine()) != null) {
 					sbf.append(temp);
 					sbf.append("\r\n");
 				}
@@ -141,15 +143,15 @@ public class HttpTestCase01 {
 			e.printStackTrace();
 		} finally {
 			// 关闭资源
-			if (null != br){
-				try{
+			if (null != br) {
+				try {
 					br.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 
-			if (null != is){
+			if (null != is) {
 				try {
 					is.close();
 				} catch (IOException e) {

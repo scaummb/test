@@ -6,14 +6,17 @@ package design_module.SinglePattern;
  */
 public class SingletonCase2 {
 	private static SingletonCase2 singleton = null;
+
 	public SingletonCase2() {
 	}
+
 	/**
 	 * 整个方法锁住了，效率较低
+	 *
 	 * @return
 	 */
-	public synchronized static SingletonCase2 getInstance(){
-		if (singleton == null){
+	public synchronized static SingletonCase2 getInstance() {
+		if (singleton == null) {
 			singleton = new SingletonCase2();
 		}
 		return singleton;

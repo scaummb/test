@@ -15,18 +15,18 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 public class TestThreadPool4 {
-    public static void main(String[] args) {
-        // 有界的任务队列，线程池
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i=0;i<10;i++){
-            final int index = i;
-            executorService.submit(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("runnable, i = " + index);
-                }
-            });
-        }
-        executorService.shutdown();
-    }
+	public static void main(String[] args) {
+		// 有界的任务队列，线程池
+		ExecutorService executorService = Executors.newFixedThreadPool(5);
+		for (int i = 0; i < 10; i++) {
+			final int index = i;
+			executorService.submit(new Runnable() {
+				@Override
+				public void run() {
+					System.out.println("runnable, i = " + index);
+				}
+			});
+		}
+		executorService.shutdown();
+	}
 }

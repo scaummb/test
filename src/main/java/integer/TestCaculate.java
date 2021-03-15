@@ -9,6 +9,6 @@ public class TestCaculate {
 	public static void main(String[] args) {
 		Long a = 1576425600000L;
 		Long b = 62400000L;
-		System.out.print(a+b);
+		System.out.print(a + b);
 	}
 }

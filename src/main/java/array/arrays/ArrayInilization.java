@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 /**
  * <p>
- *     初始化数组：如何对指向数组的引用赋值；
- *     对象数组跟基本类型数组在使用上几乎是相同的，唯一区别是对象数组保存引用，基本类型直接保存基本类型的值。
+ * 初始化数组：如何对指向数组的引用赋值；
+ * 对象数组跟基本类型数组在使用上几乎是相同的，唯一区别是对象数组保存引用，基本类型直接保存基本类型的值。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/6/20 22:39
  */
@@ -21,13 +22,13 @@ public class ArrayInilization {
 		System.out.println("b:" + Arrays.toString(b));
 
 		BerylliumSphere[] c = new BerylliumSphere[4];
-		for (int i = 0; i < c.length; i++){
-			if (c[i] == null){
+		for (int i = 0; i < c.length; i++) {
+			if (c[i] == null) {
 				c[i] = new BerylliumSphere();
 			}
 		}
 
-		BerylliumSphere[] d = {new BerylliumSphere(),new BerylliumSphere(), new BerylliumSphere()};
+		BerylliumSphere[] d = {new BerylliumSphere(), new BerylliumSphere(), new BerylliumSphere()};
 
 		// dynamic aggregate initialization.
 		a = new BerylliumSphere[]{new BerylliumSphere(), new BerylliumSphere()};
@@ -40,8 +41,8 @@ public class ArrayInilization {
 		System.out.println(Arrays.toString(f));
 
 		int[] g = new int[4];
-		for (int i = 0; i <g.length; i++){
-			g[i] = i*i;
+		for (int i = 0; i < g.length; i++) {
+			g[i] = i * i;
 		}
 
 		int[] h = {11, 57, 93};
@@ -51,12 +52,12 @@ public class ArrayInilization {
 
 		e = h;
 		System.out.println("e.length" + e.length);
-		e = new int[]{1,2};
+		e = new int[]{1, 2};
 		System.out.println("e.length" + e.length);
 
 	}
 }
 
-class BerylliumSphere{
+class BerylliumSphere {
 
 }

@@ -18,6 +18,7 @@ import java.util.Map;
 public class AdaptorUtils {
 	/**
 	 * <p>获取模板key</p>
+	 *
 	 * @param scope
 	 * @param code
 	 * @param locale
@@ -35,29 +36,30 @@ public class AdaptorUtils {
 
 	/**
 	 * <p>
-	 *     解释设置data的字段数据
-	 *     {fromObject:{{field:xx,value:xx,text:xx,mode:xx}},
-	 *     toObject:{{field:xx,value:xx,text:xx,mode:xx}}}
+	 * 解释设置data的字段数据
+	 * {fromObject:{{field:xx,value:xx,text:xx,mode:xx}},
+	 * toObject:{{field:xx,value:xx,text:xx,mode:xx}}}
 	 * </p>
+	 *
 	 * @param templateObject 业务模板数据
-	 * @param fromObject 操作后数据对象
-	 * @param toObject 操作前数据对象
-	 * @param data 模板数据Map，是给freemarker处理准备的map
+	 * @param fromObject     操作后数据对象
+	 * @param toObject       操作前数据对象
+	 * @param data           模板数据Map，是给freemarker处理准备的map
 	 */
-	public static void handleDataMap(LogTemplateObject templateObject, Object fromObject, Object toObject, Map<String,Object> data) {
-		if (ObjectUtils.isEmpty(templateObject)){
+	public static void handleDataMap(LogTemplateObject templateObject, Object fromObject, Object toObject, Map<String, Object> data) {
+		if (ObjectUtils.isEmpty(templateObject)) {
 			return;
 		}
 
 		// 设置 fromTemplateObject 进 freemarker 数据解析模板
-		if (!ObjectUtils.isEmpty(fromObject)){
+		if (!ObjectUtils.isEmpty(fromObject)) {
 			LogTemplateObject fromTemplateObject = ConvertHelper.convert(templateObject, LogTemplateObject.class);
 			ArrayList<LogTemplateObjectField> fieldArrayList = new ArrayList();
 			Field[] allFields = FieldUtils.getAllFields(fromObject.getClass());
 			for (Field field : allFields) {
 				field.setAccessible(true);
-				for (LogTemplateObjectField objectField :fromTemplateObject.getFields()){
-					if (objectField.getField().equals(field.getName())){
+				for (LogTemplateObjectField objectField : fromTemplateObject.getFields()) {
+					if (objectField.getField().equals(field.getName())) {
 						try {
 							LogTemplateObjectField newField = ConvertHelper.convert(objectField, LogTemplateObjectField.class);
 							newField.setValue(String.valueOf(field.get(fromObject)));
@@ -75,14 +77,14 @@ public class AdaptorUtils {
 		System.out.println(JSON.toString(data));
 
 		// 设置 toTemplateObject 进 freemarker 数据解析模板
-		if (!ObjectUtils.isEmpty(toObject)){
+		if (!ObjectUtils.isEmpty(toObject)) {
 			LogTemplateObject toTemplateObject = ConvertHelper.convert(templateObject, LogTemplateObject.class);
 			ArrayList<LogTemplateObjectField> fieldArrayList = new ArrayList();
 			Field[] allFields = FieldUtils.getAllFields(toObject.getClass());
 			for (Field field : allFields) {
 				field.setAccessible(true);
-				for (LogTemplateObjectField objectField :toTemplateObject.getFields()){
-					if (objectField.getField().equals(field.getName())){
+				for (LogTemplateObjectField objectField : toTemplateObject.getFields()) {
+					if (objectField.getField().equals(field.getName())) {
 						try {
 							LogTemplateObjectField newField = ConvertHelper.convert(objectField, LogTemplateObjectField.class);
 							newField.setValue(String.valueOf(field.get(toObject)));
@@ -103,10 +105,10 @@ public class AdaptorUtils {
 
 	public static String getTemplateSourceCode(String description, String templateFields) {
 		StringBuffer stringBuffer = new StringBuffer();
-		if (!StringUtils.isEmpty(description)){
+		if (!StringUtils.isEmpty(description)) {
 			stringBuffer.append(description);
 		}
-		if (!StringUtils.isEmpty(templateFields)){
+		if (!StringUtils.isEmpty(templateFields)) {
 			stringBuffer.append(templateFields);
 		}
 		return stringBuffer.toString();

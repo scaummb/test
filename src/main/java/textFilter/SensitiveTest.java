@@ -18,9 +18,9 @@ public class SensitiveTest {
 		for (String text : cmd.getTextList()) {
 			//匹配敏感词时，先将富文本中的链接去除 add by yanlong.liang 20190920
 			try {
-				text = text.replaceAll(regex,"");
+				text = text.replaceAll(regex, "");
 				System.out.println(text);
-			}catch (Exception e) {
+			} catch (Exception e) {
 			}
 			String[] chineseWords = text.split("[a-zA-Z]+");
 			String[] englishWords = text.split("[^a-zA-Z]+");

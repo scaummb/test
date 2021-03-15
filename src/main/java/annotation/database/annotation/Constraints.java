@@ -9,7 +9,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface Constraints {
-    boolean primaryKey() default false;
-    boolean allowNull() default true;
-    boolean unique() default false;
+	boolean primaryKey() default false;
+
+	boolean allowNull() default true;
+
+	boolean unique() default false;
 }

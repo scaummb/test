@@ -15,6 +15,7 @@ import java.sql.Timestamp;
  *     <li>updateTime:updateTime</li>
  *     <li>updatorUid:updatorUid</li>
  * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/3/31 10:30
  */

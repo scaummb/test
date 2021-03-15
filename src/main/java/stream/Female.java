@@ -5,7 +5,7 @@ package stream;
  * @date: 2019/9/15 11:58
  */
 
-public  class Female {
+public class Female {
 	private Integer age;
 	private String name;
 	private Integer height;

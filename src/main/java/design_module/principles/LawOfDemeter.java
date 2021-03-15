@@ -12,19 +12,22 @@ public class LawOfDemeter {
 }
 
 //总公司员工
-class Employee{
+class Employee {
 	private String id;
 }
+
 //分公司员工
-class SubEmployee{
+class SubEmployee {
 	private String id;
 }
+
 //分公司经理
-class SubCompanyManager{
+class SubCompanyManager {
 	List<SubEmployee> subEmployees = new ArrayList<SubEmployee>();
 }
+
 //总公司经理
-class CompanyManager{
+class CompanyManager {
 	//总公司员工
 	List<Employee> employeeList = new ArrayList<Employee>();
 	//分公司员工

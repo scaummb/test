@@ -18,9 +18,12 @@ public class CachedFactoriser extends BaseClass implements Servlet {
 	private long hits;
 	private long cacheHits;
 
-	public synchronized long getHits() {return hits;}
+	public synchronized long getHits() {
+		return hits;
+	}
+
 	public synchronized double getCacheHitRatio() {
-		return (double) cacheHits /(double) hits;
+		return (double) cacheHits / (double) hits;
 	}
 
 	@Override
@@ -38,19 +41,19 @@ public class CachedFactoriser extends BaseClass implements Servlet {
 		BigInteger[] factors = null;
 		synchronized (this) {
 			++hits;
-			if(i.equals(lastNumber)) {
+			if (i.equals(lastNumber)) {
 				++cacheHits;
 				factors = lastFactors.clone();
 			}
 		}
-		if(factors == null) {
+		if (factors == null) {
 			factors = factor(i);
 			synchronized (this) {
 				lastNumber = i;
 				lastFactors = factors.clone();
 			}
 		}
-		encodeIntoResponse(resp,factors);
+		encodeIntoResponse(resp, factors);
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import java.lang.reflect.Method;
 
 /**
  * <p>策略中转站</p>
+ *
  * @author moubin.mo
  * @date: 2020/5/19 11:55
  */
@@ -27,22 +28,22 @@ public class OperationLogContext {
 		this.operationLogHandler = operationLogHandler;
 	}
 
-	public void submitLog(OperationBaseLogger logger, OperationType type){
+	public void submitLog(OperationBaseLogger logger, OperationType type) {
 		//1.处理上下文数据
 		buildContextParam(logger);
 		//2.业务handler构造日志
 		OpcLog opcLog = null;
-		if (BaseOperationType.fromType(type.getOperationType()) != null){
+		if (BaseOperationType.fromType(type.getOperationType()) != null) {
 			// 获取所有方法
 			Method[] methods = operationLogHandler.getClass().getDeclaredMethods();
-			for (Method method : methods){
-				if(!method.isAccessible()){
+			for (Method method : methods) {
+				if (!method.isAccessible()) {
 					method.setAccessible(true);
 				}
 				// 获取方法的注解
 				OpcLogMethodHandler annotation = method.getAnnotation(OpcLogMethodHandler.class);
 				if (annotation.methodName()
-						.equals(BaseOperationType.fromType(type.getOperationType()).getMethodName())){
+						.equals(BaseOperationType.fromType(type.getOperationType()).getMethodName())) {
 					try {
 						// 注解一致则调用方法
 						opcLog = (OpcLog) method.invoke(operationLogHandler, logger);
@@ -54,15 +55,15 @@ public class OperationLogContext {
 				}
 			}
 		} else if (BaseOperationType.fromType(type.getOperationType()) == null
-				&& !StringUtils.isEmpty(type.getMethod())){
+				&& !StringUtils.isEmpty(type.getMethod())) {
 			Method[] methods = operationLogHandler.getClass().getDeclaredMethods();
-			for (Method method : methods){
-				if(!method.isAccessible()){
+			for (Method method : methods) {
+				if (!method.isAccessible()) {
 					method.setAccessible(true);
 				}
 				// 获取方法的注解
 				OpcLogMethodHandler annotation = method.getAnnotation(OpcLogMethodHandler.class);
-				if (annotation.methodName().equals(type.getMethod())){
+				if (annotation.methodName().equals(type.getMethod())) {
 					try {
 						// 注解一致则调用方法
 						opcLog = (OpcLog) method.invoke(operationLogHandler, logger);
@@ -76,7 +77,7 @@ public class OperationLogContext {
 		}
 
 		//3.异步提交日志任务
-		if (!ObjectUtils.isEmpty(opcLog)){
+		if (!ObjectUtils.isEmpty(opcLog)) {
 			saveLog(logger);
 		}
 	}

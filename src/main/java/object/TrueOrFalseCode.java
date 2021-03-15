@@ -5,6 +5,7 @@ package object;
  *     <li>((byte) 0):FALSE </li>
  *     <li>((byte) 1): TRUE</li>
  * </ul>
+ *
  * @author moubin.mo
  * @date: 2019/11/21 15:59
  */

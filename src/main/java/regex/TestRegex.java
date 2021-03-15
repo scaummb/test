@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 /**
  * <p>kafka同步下发数据，topic的正则匹配</p>
+ *
  * @author moubin.mo
  * @date: 2020/6/16 17:19
  */
@@ -23,6 +24,6 @@ public class TestRegex {
 		System.out.println(b);
 
 		String a = "1234356";
-		System.out.println(a.substring(a.length()-4));
+		System.out.println(a.substring(a.length() - 4));
 	}
 }

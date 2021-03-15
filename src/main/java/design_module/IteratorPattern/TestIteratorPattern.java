@@ -13,7 +13,7 @@ public class TestIteratorPattern {
 		bookShelf.appendBook(new Book("九阳真经"));
 		bookShelf.appendBook(new Book("神雕侠侣"));
 		Iterator it = bookShelf.iterator();
-		while (it.hasNext()){
+		while (it.hasNext()) {
 			Book book = (Book) it.next();
 			System.out.println(book.getName());
 		}

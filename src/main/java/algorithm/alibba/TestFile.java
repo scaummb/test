@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 /**
  * <p>
- *     集合，IO流的操作，Stream，线程池，线程工具的使用
+ * 集合，IO流的操作，Stream，线程池，线程工具的使用
  * </p>
  */
 public class TestFile {
@@ -28,21 +28,21 @@ public class TestFile {
 	private static String sortFile(String fileName) throws InterruptedException {
 		int lineNums = getFileLineNum(fileName);
 
-		Map dataRange = new LinkedHashMap<Integer,Integer>();
+		Map dataRange = new LinkedHashMap<Integer, Integer>();
 
 		//10 * 1024 * 1024 * 1024 = 10G,每行1k，有 10*1024*1024行数据，大约10000000多行
 		//设置每个线程处理50000行，需要1000个线程
 		int maxPageSize = 50000;
 
 		//翻页起始
-		for (int i = 0; i < lineNums; i += maxPageSize){
+		for (int i = 0; i < lineNums; i += maxPageSize) {
 			dataRange.put(i, Math.min(i + maxPageSize, lineNums));
 		}
 
 		CountDownLatch countDownLatch = new CountDownLatch(dataRange.size());
 
 		Set<Integer> keySets = dataRange.keySet();
-		for (Integer start : keySets){
+		for (Integer start : keySets) {
 			int startlineNo = start + 1;
 			int pageSize = (Integer) dataRange.get(start) - startlineNo;
 			//提交任务
@@ -52,7 +52,7 @@ public class TestFile {
 		countDownLatch.await();
 
 		TreeSet treeSet = new TreeSet<>(Comparator.reverseOrder());
-		for (TreeSet datas : treeSetList){
+		for (TreeSet datas : treeSetList) {
 			treeSet.addAll(datas);
 		}
 
@@ -61,7 +61,7 @@ public class TestFile {
 	}
 
 	private static int getFileLineNum(String fileName) {
-		try{
+		try {
 			LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(fileName));
 			lineNumberReader.skip(Long.MAX_VALUE);
 			int lineNumber = lineNumberReader.getLineNumber();
@@ -81,12 +81,12 @@ public class TestFile {
 	private static TreeSet sortFileStream(Stream<String> lines) {
 		TreeSet<Integer> list = new TreeSet<>();
 		lines.forEach(line -> {
-			if (StringUtils.isNotEmpty(line)){
+			if (StringUtils.isNotEmpty(line)) {
 				String[] lineDatas = line.split("\\s");
-				for (String data : lineDatas){
+				for (String data : lineDatas) {
 					int data1 = Integer.parseInt(data);
 					list.add(data1);
-					if (list.size()>10){
+					if (list.size() > 10) {
 						list.pollFirst();
 					}
 				}
@@ -96,7 +96,7 @@ public class TestFile {
 	}
 
 	//task
-	static class SortTask implements Runnable{
+	static class SortTask implements Runnable {
 		private CountDownLatch countDownLatch;
 		private String fileName;
 		private int startLine;

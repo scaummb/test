@@ -17,6 +17,7 @@ import java.util.Map;
 
 /**
  * <p>Gson自定义类型解析器</p>
+ *
  * @author moubin.mo
  * @date: 2020/8/31 23:59
  */

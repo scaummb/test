@@ -2,7 +2,7 @@ package design_module.FlyweightPattern;
 
 /**
  * <p>
- *     指那些不需要共享的Flyweight子类。
+ * 指那些不需要共享的Flyweight子类。
  * </p>
  */
 

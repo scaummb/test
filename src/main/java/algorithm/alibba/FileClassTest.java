@@ -15,8 +15,9 @@ public class FileClassTest {
 		String fileName = "E:\\code\\test\\src\\main\\java\\algorithm\\alibba\\hahah.txt";
 		System.out.println(getFileLineNum(fileName));
 	}
+
 	private static int getFileLineNum(String fileName) {
-		try{
+		try {
 			LineNumberReader lineNumberReader = new LineNumberReader(new FileReader(fileName));
 			lineNumberReader.skip(Long.MAX_VALUE);
 			int lineNumber = lineNumberReader.getLineNumber();

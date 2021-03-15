@@ -5,7 +5,7 @@ import design_module.AbstractFactoryPattern.filesystem.FolderFactory.WindowsSyst
 
 /**
  * <p>
- *     抽象工厂类
+ * 抽象工厂类
  * </p>
  */
 

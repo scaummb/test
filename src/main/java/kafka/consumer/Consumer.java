@@ -14,17 +14,18 @@ public class Consumer {
 	public static void main(String[] args) {
 		ExecutorService service = Executors.newFixedThreadPool(10);
 		service.submit(new MsgEventLoop());
-		for (int i=0;i<100;i++){
+		for (int i = 0; i < 100; i++) {
 			KafkaMessage kafkaMessage = new KafkaMessage();
 			kafkaMessage.setMsgType(getMsgType().getType());
 			MsgEventLoop.accept(kafkaMessage);
 		}
 	}
 
-	private final static MsgType getMsgType(){
+	private final static MsgType getMsgType() {
 		Integer i = new Random().nextInt(1);
 		return MsgType.fromCode(i.byteValue());
 	}
+
 	public Consumer() {
 	}
 
@@ -34,9 +35,8 @@ public class Consumer {
 /**
  * {@link MsgType}
  * {@link MsgDataType}
- *
  */
-class KafkaMessage{
+class KafkaMessage {
 	private Byte msgType;
 	private Byte msgDataType;
 	private List<SyncData> members;

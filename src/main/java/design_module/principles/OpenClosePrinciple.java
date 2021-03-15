@@ -10,21 +10,25 @@ import java.util.List;
 
 public class OpenClosePrinciple {
 }
+
 //公司工作
-class Company{
+class Company {
 	private List<Coder> coders = new ArrayList<>();
-	void working(){
-		for (Coder code : coders){
-			 code.coding();
+
+	void working() {
+		for (Coder code : coders) {
+			code.coding();
 		}
 	}
 }
+
 //程序员
-interface Coder{
+interface Coder {
 	void coding();
 }
+
 //程序媛
-class FemaleCoder implements Coder, Salary{
+class FemaleCoder implements Coder, Salary {
 	@Override
 	public void coding() {
 		//...
@@ -35,15 +39,17 @@ class FemaleCoder implements Coder, Salary{
 		//...我要加薪
 	}
 }
+
 //程序猿
-class MaleCoder implements Coder{
+class MaleCoder implements Coder {
 	@Override
 	public void coding() {
 		//...
 	}
 }
+
 //待遇福利
-interface Salary{
+interface Salary {
 	//涨工资动作
 	void raise();
 }

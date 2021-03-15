@@ -9,9 +9,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class LockExpend {
 	private final static ReentrantLock lock = new ReentrantLock();
+
 	public static void main(String[] args) {
 		int[] ints = new int[10];
-		for (int i : ints){
+		for (int i : ints) {
 			lock.lock();
 			try {
 				// do something..

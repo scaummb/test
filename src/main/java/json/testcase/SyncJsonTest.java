@@ -13,7 +13,7 @@ public class SyncJsonTest {
 		SyncData syncData = JSON.parseObject(jsonString, SyncData.class);
 		syncData.getData().stream().forEach(
 				r -> {
-					OrganizationCustomerSyncData customerSyncData = JSON.toJavaObject((JSON)r, OrganizationCustomerSyncData.class);
+					OrganizationCustomerSyncData customerSyncData = JSON.toJavaObject((JSON) r, OrganizationCustomerSyncData.class);
 					System.out.println(customerSyncData);
 				}
 		);

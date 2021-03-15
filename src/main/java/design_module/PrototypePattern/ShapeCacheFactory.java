@@ -23,14 +23,14 @@ public class ShapeCacheFactory {
 	public static void loadCache() {
 		Circle circle = new Circle();
 		circle.setType("Circle");
-		shapeMap.put(circle.getType(),circle);
+		shapeMap.put(circle.getType(), circle);
 
 		Square square = new Square();
 		square.setType("Square");
-		shapeMap.put(square.getType(),square);
+		shapeMap.put(square.getType(), square);
 
 		Rectangle rectangle = new Rectangle();
 		rectangle.setType("Rectangle");
-		shapeMap.put(rectangle.getType(),rectangle);
+		shapeMap.put(rectangle.getType(), rectangle);
 	}
 }

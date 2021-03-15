@@ -24,7 +24,7 @@ public class DateFormat {
 		SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:00:00");
 		String timeFormat = simpleDateFormat1.format(new Date());
 		System.out.println(timeFormat);
-		System.out.println(timeFormat.substring(0,11));
+		System.out.println(timeFormat.substring(0, 11));
 
 		Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(currentTimeMillis);
@@ -37,11 +37,7 @@ public class DateFormat {
 		cal.add(GregorianCalendar.DAY_OF_MONTH, -1);
 		long time2 = cal.getTimeInMillis();
 
-		System.out.println("time1 = " + time1 + ", time2 = "+ time2 + ", gap = " + (time1-time2));
-
-
-
-
+		System.out.println("time1 = " + time1 + ", time2 = " + time2 + ", gap = " + (time1 - time2));
 
 
 	}

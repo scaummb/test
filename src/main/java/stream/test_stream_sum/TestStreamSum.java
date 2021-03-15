@@ -30,7 +30,7 @@ public class TestStreamSum {
 
 	private static Integer[] getList() {
 		Integer[] arrays = new Integer[10000];
-		for (int i=0; i<10000; i++){
+		for (int i = 0; i < 10000; i++) {
 			arrays[i] = i;
 		}
 		return arrays;

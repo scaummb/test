@@ -11,15 +11,16 @@ public class TestMethods {
 		test2(null);
 
 	}
-	static void test1(Long a){
-		if (a!= null){
+
+	static void test1(Long a) {
+		if (a != null) {
 			return;
 		}
 		System.out.println("a is null");
 	}
 
-	static void test2(Long b){
-		if (b!= null){
+	static void test2(Long b) {
+		if (b != null) {
 			return;
 		}
 		System.out.println("b is null");

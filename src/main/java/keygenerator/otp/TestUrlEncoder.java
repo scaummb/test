@@ -13,7 +13,8 @@ public class TestUrlEncoder {
 	public static void main(String[] args) {
 		testUrlEnCode();
 	}
-	private final static void testUrlEnCode(){
+
+	private final static void testUrlEnCode() {
 		String string = "51";
 		String encode = encoder.encode(string);
 		System.out.println(encode);

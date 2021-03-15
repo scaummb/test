@@ -110,14 +110,14 @@ public class Version implements Serializable {
 	}
 
 	public static long encodeValue(int major, int minor, int revision) {
-		return (long)(major << 20 | minor << 10 | revision);
+		return (long) (major << 20 | minor << 10 | revision);
 	}
 
 	public static Version fromEncodedValue(long encodedValue) {
 		Version version = new Version();
-		version.setMajor((int)(encodedValue >> 20 & 1023L));
-		version.setMinor((int)(encodedValue >> 10 & 1023L));
-		version.setRevision((int)(encodedValue & 1023L));
+		version.setMajor((int) (encodedValue >> 20 & 1023L));
+		version.setMinor((int) (encodedValue >> 10 & 1023L));
+		version.setRevision((int) (encodedValue & 1023L));
 		return version;
 	}
 

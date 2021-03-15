@@ -13,21 +13,26 @@ public class InterfaceSegregationPrinciple {
 		coderMan.movingBrick(new GoldBrick());
 	}
 }
+
 //搬砖的程序员
-class CoderMan{
-	void movingBrick(Brick brick){
+class CoderMan {
+	void movingBrick(Brick brick) {
 		//....
 	}
 }
+
 //砖头
-interface Brick{
+interface Brick {
 }
+
 //石头砖头
-class StoneBrick implements Brick{
+class StoneBrick implements Brick {
 }
+
 //银砖头
-class SilverBrick implements Brick{
+class SilverBrick implements Brick {
 }
+
 //金砖头
-class GoldBrick implements Brick{
+class GoldBrick implements Brick {
 }

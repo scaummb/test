@@ -11,9 +11,9 @@ import java.util.List;
 public class TestNPE {
 	public static void main(String[] args) {
 		List<A> alist = new ArrayList<>();
-		if (alist != null){
+		if (alist != null) {
 			alist.stream().forEach(
-					(r) ->{
+					(r) -> {
 						System.out.println(r.getName());
 					}
 			);
@@ -22,7 +22,7 @@ public class TestNPE {
 	}
 }
 
-class A{
+class A {
 	private String name;
 
 	public String getName() {

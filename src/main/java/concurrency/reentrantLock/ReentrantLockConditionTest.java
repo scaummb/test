@@ -6,10 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * <p>
- *     用ReentrantLock绑定三个条件实现线程A打印一次1，线程B打印两次2，线程C打印三次3
- *     打印不同内容。
+ * 用ReentrantLock绑定三个条件实现线程A打印一次1，线程B打印两次2，线程C打印三次3
+ * 打印不同内容。
  *
  * </p>
+ *
  * @author moubin.mo
  * @date: 2021/3/6 18:25
  */
@@ -17,24 +18,25 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLockConditionTest {
 	public static void main(String[] args) {
 		Resource resource = new Resource();
-		new Thread(()->{
-			for (int i = 1; i <= 2; i++){
+		new Thread(() -> {
+			for (int i = 1; i <= 2; i++) {
 				resource.print1();
 			}
 		}, "A").start();
-		new Thread(()->{
-			for (int i = 1; i <= 2; i++){
+		new Thread(() -> {
+			for (int i = 1; i <= 2; i++) {
 				resource.print2();
 			}
 		}, "B").start();
-		new Thread(()->{
-			for (int i = 1; i <= 2; i++){
+		new Thread(() -> {
+			for (int i = 1; i <= 2; i++) {
 				resource.print3();
 			}
 		}, "C").start();
 	}
 }
-class Resource{
+
+class Resource {
 	private int number = 1;//A:1 B:2 C:3
 	private Lock lock = new ReentrantLock();
 	private Condition c1 = lock.newCondition();
@@ -42,11 +44,11 @@ class Resource{
 	private Condition c3 = lock.newCondition();
 	private Condition c4 = lock.newCondition();
 
-	public void print1(){
+	public void print1() {
 		lock.lock();
 
 		try {
-			while (number != 1){
+			while (number != 1) {
 				c1.await();
 			}
 
@@ -65,11 +67,11 @@ class Resource{
 		}
 	}
 
-	public void print2(){
+	public void print2() {
 		lock.lock();
 
 		try {
-			while (number != 2){
+			while (number != 2) {
 				//在被信号唤醒或者中断之前，都会一直阻塞
 				c2.await();
 			}

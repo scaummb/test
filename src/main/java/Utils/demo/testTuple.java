@@ -12,15 +12,15 @@ import java.util.List;
  */
 
 public class testTuple {
-    public static void main(String [] args){
+	public static void main(String[] args) {
 
 
-    }
+	}
 
-    private List<Tuple<String, Object>> toTupleList(String key, Object value) {
-        List<Tuple<String, Object>> list = new ArrayList<>();
-        Tuple<String, Object> variable = new Tuple<>(key, value);
-        list.add(variable);
-        return list;
-    }
+	private List<Tuple<String, Object>> toTupleList(String key, Object value) {
+		List<Tuple<String, Object>> list = new ArrayList<>();
+		Tuple<String, Object> variable = new Tuple<>(key, value);
+		list.add(variable);
+		return list;
+	}
 }
