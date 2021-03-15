@@ -28,6 +28,12 @@ public class TestByte {
 		Double d2 = 1001d;
 		Double d3 = 1001.3d;
 		Float f = 42.0f;
+
+		long test = 012;
+		float aaa = -412;
+		double aa = 0x123;
+//		byte bb = 128;
+//		int other = (int)true; //boolean can not cast to int
 	}
 
 	private static void test2() {

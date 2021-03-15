@@ -15,6 +15,21 @@ public class ThreadPool {
 //		test2();
 //		test3();
 		test4();
+		test15();
+	}
+
+	private static void test15() {
+		//可以延期执行或者周期执行
+		ScheduledExecutorService executorService = Executors.newScheduledThreadPool(10);
+		//工作线程数量，基本大小=1，最大大小=1,FIFO
+		ExecutorService executorService2 = Executors.newSingleThreadExecutor();
+		//线程池的工作线程数量是无界的,默认存活时间60s，超过会被kill掉,默认没有拒绝策略
+		ExecutorService executorService3 = Executors.newCachedThreadPool();
+		//线程池的工作线程数量基础大小 = 数量最大值; 拒绝策略是超过了基础数据，则会抛异常 RejectedExecutionException。
+		//线程存活时间，0，不会出现多余工作线程,自定义：线程工厂
+		ExecutorService executorService4 = Executors.newFixedThreadPool(10);
+		//单线程调度执行任务
+		ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
 	}
 
 	private static void test4() {
