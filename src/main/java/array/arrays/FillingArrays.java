@@ -24,7 +24,7 @@ public class FillingArrays {
 		Arrays.fill(a1, true);
 		System.out.println("a1 = " + Arrays.toString(a1));
 
-		Arrays.fill(a2, (byte)1);
+		Arrays.fill(a2, (byte) 1);
 		System.out.println("a2 = " + Arrays.toString(a2));
 
 		Arrays.fill(a3, '1');

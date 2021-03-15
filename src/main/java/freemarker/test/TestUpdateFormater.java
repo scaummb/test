@@ -35,7 +35,7 @@ public class TestUpdateFormater {
 				String content = FreeMarkerTemplateUtils.processTemplateIntoString(freeMarkerTemplate, data);
 				System.out.println(content);
 			}
-		} catch(Exception e) {
+		} catch (Exception e) {
 		}
 	}
 }

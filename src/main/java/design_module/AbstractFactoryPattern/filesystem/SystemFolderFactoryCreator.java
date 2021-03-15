@@ -6,11 +6,12 @@ import design_module.AbstractFactoryPattern.filesystem.FolderFactory.WindowsSyst
 
 /**
  * <p>
- *     抽象工厂接口
+ * 抽象工厂接口
  * </p>
  */
 
 public interface SystemFolderFactoryCreator {
 	WindowsSystemFolderFactory getWindowsFolderFactory();
+
 	LinuxSystemFolderFactory getLinuxFolderFactory();
 }

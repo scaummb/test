@@ -21,20 +21,21 @@ public class PulishingVehicleTracker {
 		return unmodifiableMap;
 	}
 
-	public SafePoint getLocation(String id){
+	public SafePoint getLocation(String id) {
 		return locations.get(id);
 	}
 
-	public void setLocation (String id, int x, int y){
-		if (!locations.containsKey(id)){
-			throw new IllegalArgumentException("invalid vehicle name:"+id);
+	public void setLocation(String id, int x, int y) {
+		if (!locations.containsKey(id)) {
+			throw new IllegalArgumentException("invalid vehicle name:" + id);
 		}
-		locations.get(id).set(x,y);
+		locations.get(id).set(x, y);
 	}
 
 }
+
 //线程安全且可变的SafePoint
-class SafePoint{
+class SafePoint {
 	private int x, y;
 
 	public SafePoint(int x, int y) {
@@ -43,15 +44,15 @@ class SafePoint{
 	}
 
 	public SafePoint(int[] a) {
-		this(a[0],a[1]);
+		this(a[0], a[1]);
 	}
 
-	public synchronized int[] get(){
-		return new int[]{x,y};
+	public synchronized int[] get() {
+		return new int[]{x, y};
 	}
 
-	public synchronized void set(int x, int y){
-		this.x=x;
-		this.y=y;
+	public synchronized void set(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 }

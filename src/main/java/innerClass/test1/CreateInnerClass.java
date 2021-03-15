@@ -8,8 +8,9 @@ package innerClass.test1;
 //外围类
 public class CreateInnerClass {
 	//内部类1
-	class Contents{
+	class Contents {
 		private int i = 11;
+
 		public int value() {
 			return i;
 		}
@@ -18,9 +19,11 @@ public class CreateInnerClass {
 	//内部类2
 	class Destination {
 		private String label;
+
 		public Destination(String whereTo) {
 			label = whereTo;
 		}
+
 		String readLabel() {
 			return label;
 		}
@@ -35,11 +38,12 @@ public class CreateInnerClass {
 	}
 
 	//外围类方法2
-	public Destination getAnotherDestination(){
+	public Destination getAnotherDestination() {
 		return new Destination("anotherDestination");
 	}
+
 	//外围类方法3
-	public Contents getAnotherContents(){
+	public Contents getAnotherContents() {
 		return new Contents();
 	}
 

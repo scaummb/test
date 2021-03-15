@@ -6,6 +6,7 @@ import java.util.Base64;
 
 /**
  * byte、byte[]、String之间的转换关系
+ *
  * @author moubin.mo
  * @date: 2019/10/18 15:38
  */
@@ -27,6 +28,6 @@ public class DataStructure {
 		//Base64 Decoded
 		byte[] decoded = Base64.getDecoder().decode(encoded);
 		//Verify original content
-		System.out.println( new String(decoded) );
+		System.out.println(new String(decoded));
 	}
 }

@@ -9,7 +9,7 @@ import java.io.UnsupportedEncodingException;
 
 public class TestStringToByteArrays {
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		String a="田江南你好";
+		String a = "田江南你好";
 		byte[] by = null;
 		by = a.getBytes("utf-8");
 		System.out.println(by);

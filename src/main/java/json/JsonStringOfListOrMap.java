@@ -6,8 +6,9 @@ import java.util.*;
 
 /**
  * <p>
- *     json-map：{"map":{"1":"1","2":"2"},"list":["1111","2222"]}
+ * json-map：{"map":{"1":"1","2":"2"},"list":["1111","2222"]}
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/8/26 19:16
  */
@@ -23,7 +24,7 @@ public class JsonStringOfListOrMap {
 		list.add("1111");
 		list.add("2222");
 
-		try{
+		try {
 			TestJson testJson = new TestJson(map, list);
 			String jsonString = gson.toJson(testJson);
 			System.out.println(jsonString);
@@ -33,19 +34,18 @@ public class JsonStringOfListOrMap {
 			Set<String> set = hashMap.keySet();
 			for (String key : set) {
 				Object o = hashMap.get(key);
-				if (o instanceof List){
+				if (o instanceof List) {
 
 
-				} else if (o instanceof Map){
+				} else if (o instanceof Map) {
 
 
 				}
 				System.out.println(o.getClass());
 			}
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			System.out.println(ex.getStackTrace().toString());
 		}
-
 
 
 	}
@@ -61,7 +61,7 @@ public class JsonStringOfListOrMap {
 
 }
 
-class TestJson{
+class TestJson {
 	private Map map;
 	private List list;
 

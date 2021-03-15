@@ -11,15 +11,15 @@ import java.lang.reflect.Type;
 import java.util.Date;
 
 public class GsonJacksonDateAdapter implements JsonDeserializer<Date>, JsonSerializer<Date> {
-    public GsonJacksonDateAdapter() {
-    }
+	public GsonJacksonDateAdapter() {
+	}
 
-    public JsonElement serialize(Date src, Type typeOfSrc, JsonSerializationContext context) {
-        return src != null ? new JsonPrimitive(src.getTime()) : null;
-    }
+	public JsonElement serialize(Date src, Type typeOfSrc, JsonSerializationContext context) {
+		return src != null ? new JsonPrimitive(src.getTime()) : null;
+	}
 
-    public Date deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        Long time = json.getAsLong();
-        return time != null ? new Date(time) : null;
-    }
+	public Date deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+		Long time = json.getAsLong();
+		return time != null ? new Date(time) : null;
+	}
 }

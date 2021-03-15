@@ -5,9 +5,10 @@ import java.util.concurrent.*;
 
 /**
  * <p>
- *     而在线程池中，该如何批量的为所有线程设置UncaughtExceptionHandler呢？
+ * 而在线程池中，该如何批量的为所有线程设置UncaughtExceptionHandler呢？
  *
  * </p>
+ *
  * @author moubin.mo
  * @date: 2021/3/8 08:12
  */
@@ -44,8 +45,7 @@ public class TestBatchEx {
 					System.out.println(e.toString() + "===========================");
 				}
 			}
-		}
-		catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

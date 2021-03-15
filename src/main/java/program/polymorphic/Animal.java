@@ -27,19 +27,19 @@ public class Animal {
 		this.age = age;
 	}
 
-	public void cry(){
+	public void cry() {
 		System.out.println("how to cry..");
 	}
 }
 
-class Cat extends Animal{
+class Cat extends Animal {
 	@Override
 	public void cry() {
 		System.out.println("miao miao");
 	}
 }
 
-class Dog extends Animal{
+class Dog extends Animal {
 	@Override
 	public void cry() {
 		System.out.println("wang wang");

@@ -14,14 +14,14 @@ public class TestListRemove {
 		test2();
 	}
 
-	private static void  test2() {
+	private static void test2() {
 		int index = 0;
 		List<Integer> list = new ArrayList<>();
 		list.add(3);
 		list.add(1);
 		list.add(2);
 		Iterator<Integer> iterator = list.iterator();
-		while (iterator.hasNext()){
+		while (iterator.hasNext()) {
 			Integer next = iterator.next();
 
 			list.remove(index);

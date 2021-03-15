@@ -6,38 +6,63 @@ import java.util.*;
 
 /**
  * <p>
- *     HashSet排序：使用TreeSet进行排序
+ * HashSet排序：使用TreeSet进行排序
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/6/8 15:12
  */
 
 public class TestStringSort {
 	public static void main(String[] args) {
-		Map<String,List<ApartmentDTO>> result = new HashMap();
-		result.putIfAbsent("", new ArrayList(){{add(new ApartmentDTO("无名号房"));}});
-		result.putIfAbsent("3", new ArrayList(){{add(new ApartmentDTO("3楼房"));}});
-		result.putIfAbsent("1", new ArrayList(){{add(new ApartmentDTO("1楼房"));}});
-		result.putIfAbsent("2", new ArrayList(){{add(new ApartmentDTO("2楼房"));}});
-		result.putIfAbsent("22", new ArrayList(){{add(new ApartmentDTO("22楼房"));}});
-		result.putIfAbsent("23", new ArrayList(){{add(new ApartmentDTO("23楼房"));}});
-		result.putIfAbsent("24", new ArrayList(){{add(new ApartmentDTO("24楼房"));}});
-		result.putIfAbsent("9899", new ArrayList(){{add(new ApartmentDTO("9899"));}});
-		result.putIfAbsent("12222", new ArrayList(){{add(new ApartmentDTO("12222楼房"));}});
-		result.putIfAbsent("1", new ArrayList(){{add(new ApartmentDTO("1楼房"));}});
-		result.putIfAbsent("-1", new ArrayList(){{add(new ApartmentDTO("-1楼房"));}});
-		result.putIfAbsent("0", new ArrayList(){{add(new ApartmentDTO("0楼房"));}});
+		Map<String, List<ApartmentDTO>> result = new HashMap();
+		result.putIfAbsent("", new ArrayList() {{
+			add(new ApartmentDTO("无名号房"));
+		}});
+		result.putIfAbsent("3", new ArrayList() {{
+			add(new ApartmentDTO("3楼房"));
+		}});
+		result.putIfAbsent("1", new ArrayList() {{
+			add(new ApartmentDTO("1楼房"));
+		}});
+		result.putIfAbsent("2", new ArrayList() {{
+			add(new ApartmentDTO("2楼房"));
+		}});
+		result.putIfAbsent("22", new ArrayList() {{
+			add(new ApartmentDTO("22楼房"));
+		}});
+		result.putIfAbsent("23", new ArrayList() {{
+			add(new ApartmentDTO("23楼房"));
+		}});
+		result.putIfAbsent("24", new ArrayList() {{
+			add(new ApartmentDTO("24楼房"));
+		}});
+		result.putIfAbsent("9899", new ArrayList() {{
+			add(new ApartmentDTO("9899"));
+		}});
+		result.putIfAbsent("12222", new ArrayList() {{
+			add(new ApartmentDTO("12222楼房"));
+		}});
+		result.putIfAbsent("1", new ArrayList() {{
+			add(new ApartmentDTO("1楼房"));
+		}});
+		result.putIfAbsent("-1", new ArrayList() {{
+			add(new ApartmentDTO("-1楼房"));
+		}});
+		result.putIfAbsent("0", new ArrayList() {{
+			add(new ApartmentDTO("0楼房"));
+		}});
 		TreeSet<String> keys = sortResult(result);
 		System.out.println(JSON.toJSONString(result));
 
 		keys.stream().forEach(
-				(key)->{
+				(key) -> {
 					System.out.println(JSON.toJSONString(result.get(key)));
-		});
+				});
 
 	}
 
-	private static TreeSet<String> sortResult(Map<String,List<ApartmentDTO>> result) {
+	private static TreeSet<String> sortResult(Map<String, List<ApartmentDTO>> result) {
 		Set<String> keySet = result.keySet();
 		System.out.println(keySet);
 		TreeSet<String> tree = new TreeSet(new FloorComparator());
@@ -47,12 +72,12 @@ public class TestStringSort {
 	}
 }
 
-class FloorComparator implements Comparator{
+class FloorComparator implements Comparator {
 	@Override
 	public int compare(Object o1, Object o2) {
-		String string1 = (String)o1;
-		String string2 = (String)o2;
-		if (string1.length() == string2.length()){
+		String string1 = (String) o1;
+		String string2 = (String) o2;
+		if (string1.length() == string2.length()) {
 			return (string1.compareTo(string2));
 		}
 		return (string1.length() - string2.length());

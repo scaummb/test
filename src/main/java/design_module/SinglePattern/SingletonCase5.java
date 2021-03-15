@@ -7,7 +7,7 @@ package design_module.SinglePattern;
 
 public class SingletonCase5 {
 	//静态内部类,懒加载：在被用到时才加载（根据内部类不会在其外部类被加载的同时被加载的事实）
-	private static class SingletonCase5Holder{
+	private static class SingletonCase5Holder {
 		private SingletonCase5Holder() {
 			System.out.println("static inner class constructor...");
 		}
@@ -18,7 +18,7 @@ public class SingletonCase5 {
 	public SingletonCase5() {
 	}
 
-	public static SingletonCase5 getInstance(){
+	public static SingletonCase5 getInstance() {
 		return SingletonCase5Holder.singleton;
 	}
 

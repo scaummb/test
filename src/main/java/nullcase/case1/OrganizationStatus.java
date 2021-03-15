@@ -11,48 +11,48 @@ package nullcase.case1;
  * </ul>
  */
 public enum OrganizationStatus {
-    UNTREATED((byte) 0), INACTIVE((byte) 1), ACTIVE((byte) 2), LOCKED((byte) 3), DELETED((byte) 4),
-    TRAIL((byte) 5), EXPIRED((byte) 6);
+	UNTREATED((byte) 0), INACTIVE((byte) 1), ACTIVE((byte) 2), LOCKED((byte) 3), DELETED((byte) 4),
+	TRAIL((byte) 5), EXPIRED((byte) 6);
 
-    private byte code;
+	private byte code;
 
-    private OrganizationStatus(byte code) {
-        this.code = code;
-    }
+	private OrganizationStatus(byte code) {
+		this.code = code;
+	}
 
-    public byte getCode() {
-        return this.code;
-    }
+	public byte getCode() {
+		return this.code;
+	}
 
-    public static OrganizationStatus fromCode(Byte code) {
-        if (code == null) {
-            return null;
-        }
+	public static OrganizationStatus fromCode(Byte code) {
+		if (code == null) {
+			return null;
+		}
 
-        switch (code.byteValue()) {
-            case 0:
-                return UNTREATED;
+		switch (code.byteValue()) {
+			case 0:
+				return UNTREATED;
 
-            case 1:
-                return INACTIVE;
+			case 1:
+				return INACTIVE;
 
-            case 2:
-                return ACTIVE;
+			case 2:
+				return ACTIVE;
 
-            case 3:
-                return LOCKED;
+			case 3:
+				return LOCKED;
 
-            case 4:
-                return DELETED;
-            case 5:
-                return TRAIL;
-            case 6:
-                return EXPIRED;
-            default:
-                assert (false);
-                break;
-        }
+			case 4:
+				return DELETED;
+			case 5:
+				return TRAIL;
+			case 6:
+				return EXPIRED;
+			default:
+				assert (false);
+				break;
+		}
 
-        return null;
-    }
+		return null;
+	}
 }

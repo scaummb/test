@@ -8,11 +8,15 @@ package design_module.TemplateMethod;
 public abstract class Coding {
 	//一套组合操作
 	abstract void washingHands();
+
 	abstract void havingACoffee();
+
 	abstract void working();
+
 	abstract void chatting();
+
 	//开启编码
-	void startCoding(){
+	void startCoding() {
 		washingHands();
 		havingACoffee();
 		working();

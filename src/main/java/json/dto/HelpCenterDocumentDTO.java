@@ -4,7 +4,7 @@ package json.dto;
 import java.sql.Timestamp;
 
 /**
- *<ul>
+ * <ul>
  *     <li>id：id</li>
  *     <li>moduleId:模块id</li>
  *     <li>moduleName：模块名</li>
@@ -28,7 +28,8 @@ import java.sql.Timestamp;
  *     <li>updateTime:updateTime</li>
  *     <li>updatorUid:updatorUid</li>
  *     <li>updatorNickName:更新者昵称</li>
- *</ul>
+ * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/3/30 18:27
  */

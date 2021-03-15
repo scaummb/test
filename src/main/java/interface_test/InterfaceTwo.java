@@ -6,7 +6,12 @@ package interface_test;
  */
 
 public interface InterfaceTwo {
-	default void testTwoA(){};
+	default void testTwoA() {
+	}
+
+	;
+
 	void testTwoB();
+
 	public void testTwoC();
 }

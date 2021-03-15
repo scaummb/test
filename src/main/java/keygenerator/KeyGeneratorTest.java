@@ -11,6 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class KeyGeneratorTest {
 	private final static String ALGORITHM = "HmacSHA1";
+
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		KeyGenerator keyGenerator = KeyGenerator.getInstance(ALGORITHM);
 		keyGenerator.init(512);

@@ -35,7 +35,7 @@ public class TestHuawei {
 	private static String tokenUrl_v2 = "https://login.cloud.huawei.com/oauth2/v2/token";
 	private static String apiUrl_v2 = "https://push-api.cloud.huawei.com/v1/{0}/messages:send";
 
-//	private static String appId = "100691289";
+	//	private static String appId = "100691289";
 //	private static String appSecret = "8b3e887d5228ca92538033eb9e7208dd";
 	private static String appId = "100729469";
 	private static String appSecret = "767b00c9446d3e4771ccc12d9d3ca20d4cef45db5df2b6dee9459874c29f1294";
@@ -50,7 +50,7 @@ public class TestHuawei {
 		try {
 			refreshToken();
 			refreshTokenV2();
-		} catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -88,12 +88,12 @@ public class TestHuawei {
 //		String response = httpPost(tokenUrl, msgBody, 5000, 5000);
 		String response = httpPost(tokenUrl_v2, msgBody, 5000, 5000);
 		JSONObject obj = JSONObject.parseObject(response);
-		if(obj == null) {
+		if (obj == null) {
 			//use the old one
 			return accessToken;
 		}
 
-		Long left = obj.getLong("expires_in") - 5*60*1000;
+		Long left = obj.getLong("expires_in") - 5 * 60 * 1000;
 		String token = obj.getString("access_token");
 
 		if (left != null && token != null && left > 0) {
@@ -113,7 +113,7 @@ public class TestHuawei {
 
 		try {
 			URL url = new URL(httpUrl);
-			urlConnection = (HttpURLConnection)url.openConnection();
+			urlConnection = (HttpURLConnection) url.openConnection();
 			urlConnection.setRequestMethod("POST");
 			urlConnection.setDoOutput(true);
 			urlConnection.setDoInput(true);

@@ -9,9 +9,9 @@ import java.util.ListIterator;
 
 /**
  * <p>
- *     组合：为现有类添加一个原子操作时,组合是一个更好的选择。它不关心底层的List是否线程安全。
- *     	劣势：虽然额外的同步层导致轻微性能损失
- *     	好处：使用java监视器模式来封装现有的List，并且只要在类中应有指向底层List的唯一外部引用，就能够确保线程安全
+ * 组合：为现有类添加一个原子操作时,组合是一个更好的选择。它不关心底层的List是否线程安全。
+ * 劣势：虽然额外的同步层导致轻微性能损失
+ * 好处：使用java监视器模式来封装现有的List，并且只要在类中应有指向底层List的唯一外部引用，就能够确保线程安全
  *
  * </p>
  */
@@ -25,9 +25,9 @@ public class ImproveList<T> implements List<T> {
 	}
 
 	// 通过内置锁增加一层额外的加锁
-	public synchronized boolean putIfAbsent(T x){
+	public synchronized boolean putIfAbsent(T x) {
 		boolean absent = list.contains(x);
-		if (absent){
+		if (absent) {
 			list.add(x);
 		}
 		return absent;
@@ -99,7 +99,7 @@ public class ImproveList<T> implements List<T> {
 	}
 
 	//委托给底层的list
-	public synchronized void clear(){
+	public synchronized void clear() {
 		list.clear();
 	}
 

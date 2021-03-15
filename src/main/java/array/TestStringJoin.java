@@ -10,7 +10,11 @@ import java.util.List;
 
 public class TestStringJoin {
 	public static void main(String[] args) {
-		List<String> followerContactNames = new ArrayList(){{add("1");add("2");add("3");}};
+		List<String> followerContactNames = new ArrayList() {{
+			add("1");
+			add("2");
+			add("3");
+		}};
 		String followUpUsersNameList = String.join(",", followerContactNames);
 		System.out.println(followUpUsersNameList);
 	}

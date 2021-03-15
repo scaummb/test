@@ -22,14 +22,14 @@ public class SignatureUtil {
 
 	/**
 	 * <p>
-	 *     计算签名
+	 * 计算签名
+	 *
 	 * @param params
-	 * @param secretKey
-	 * </p>
+	 * @param secretKey </p>
 	 */
 	public static String computeSignature(Map<String, String> params, String secretKey) {
-		assert(params != null);
-		assert(secretKey != null);
+		assert (params != null);
+		assert (secretKey != null);
 		try {
 			Mac mac = Mac.getInstance("HmacSHA1");
 			byte[] rawKey = Base64.decodeBase64(secretKey);
@@ -41,10 +41,10 @@ public class SignatureUtil {
 			CollectionUtils.addAll(keyList, params.keySet().iterator());
 			Collections.sort(keyList);
 			//排序结果：
-			for(String key : keyList) {
+			for (String key : keyList) {
 				mac.update(key.getBytes("UTF-8"));
 				String val = params.get(key);
-				if(val != null && !val.isEmpty()){
+				if (val != null && !val.isEmpty()) {
 					mac.update(val.getBytes("UTF-8"));
 					System.out.println("mac : key = " + key + " , val = " + val);
 				}
@@ -54,11 +54,11 @@ public class SignatureUtil {
 			byte[] encryptedBytes = mac.doFinal();
 			String signature = Base64.encodeBase64String(encryptedBytes);
 			return signature;
-		} catch(InvalidKeyException e) {
+		} catch (InvalidKeyException e) {
 			throw new InvalidParameterException("Invalid secretKey for signing");
-		} catch(NoSuchAlgorithmException e) {
+		} catch (NoSuchAlgorithmException e) {
 			throw new RuntimeException("NoSuchAlgorithmException for HmacSHA1", e);
-		} catch(UnsupportedEncodingException e) {
+		} catch (UnsupportedEncodingException e) {
 			throw new RuntimeException("UnsupportedEncodingException for UTF-8", e);
 		}
 	}

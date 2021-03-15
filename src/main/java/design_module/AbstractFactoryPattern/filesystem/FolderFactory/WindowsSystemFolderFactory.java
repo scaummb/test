@@ -8,7 +8,7 @@ import design_module.AbstractFactoryPattern.filesystem.Folder.WindowFolder;
  * @date: 2021/2/11 22:57
  */
 
-public class WindowsSystemFolderFactory implements FolderFactory{
+public class WindowsSystemFolderFactory implements FolderFactory {
 	@Override
 	public Folder createFolder() {
 		return new WindowFolder();

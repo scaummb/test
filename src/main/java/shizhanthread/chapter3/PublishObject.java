@@ -13,9 +13,10 @@ import java.util.Set;
 @NotThreadSafe
 public class PublishObject {
 	public static Set<Secrets> knownSecrets;
+
 	//提供方法，对外发布 knownSecrets
-	public void initialize(){
+	public void initialize() {
 		knownSecrets = new HashSet<Secrets>();
 	}
 
- }
+}

@@ -2,21 +2,22 @@ package leetCode.tree.binary_tree;
 
 /**
  * <p>
- *     二叉查找树：查找、新增、删除节点。是过度到自平衡二叉树和红黑树的基础。
+ * 二叉查找树：查找、新增、删除节点。是过度到自平衡二叉树和红黑树的基础。
  * </p>
  */
 
 public class SearchBST {
 
-	BiTNode searchBST(BiTNode T, int key, BiTNode left, BiTNode right){
-		if (T != null){
+	BiTNode searchBST(BiTNode T, int key, BiTNode left, BiTNode right) {
+		if (T != null) {
 
 		}
 		return null;
 	}
 
 }
-class BiTNode{
+
+class BiTNode {
 	private int data;
 	private BiTNode leftChild;
 	private BiTNode rightChild;

@@ -6,6 +6,7 @@ package json.dto;
  *     <li>categoryId：文档分类id</li>
  *     <li>identify：发布标识</li>
  * </ul>
+ *
  * @author moubin.mo
  * @date: 2020/4/9 19:58
  */

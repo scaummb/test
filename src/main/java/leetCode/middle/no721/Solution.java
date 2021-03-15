@@ -42,7 +42,7 @@ class Solution {
 			for (String email : emails) {
 				// 遍历第一个list的所有元素，在之后的list中是否存在
 				int index = checkEmailRepeat(begin, mergeIndexs, email, accounts);
-				if (begin != index){
+				if (begin != index) {
 					mergeIndexs.add(index);
 					mergeIndexs.add(begin);
 					mergeAccounts(begin, index, accounts, result);
@@ -58,7 +58,7 @@ class Solution {
 
 	private static List<List<String>> sortResult(List<List<String>> accounts) {
 		HashMap hashMap = new HashMap();
-		for (int a=0; a<accounts.size(); a++){
+		for (int a = 0; a < accounts.size(); a++) {
 			hashMap.put(accounts.get(a).get(0), a);
 		}
 		List<String> arrayList = new ArrayList(hashMap.keySet());
@@ -71,8 +71,8 @@ class Solution {
 	}
 
 	private static void addElements(List<List<String>> result, List<List<String>> accounts, ArrayList<Integer> mergeIndexs) {
-		for (int a=0; a<accounts.size(); a++){
-			if (!mergeIndexs.contains(a)){
+		for (int a = 0; a < accounts.size(); a++) {
+			if (!mergeIndexs.contains(a)) {
 				result.add(accounts.get(a));
 			}
 		}
@@ -92,10 +92,10 @@ class Solution {
 	}
 
 	private static int checkEmailRepeat(int begin, ArrayList<Integer> mergeIndexs, String email, List<List<String>> accounts) {
-		for (int index=0; index<accounts.size(); index++){
-			if (index!=begin && !mergeIndexs.contains(index)){
+		for (int index = 0; index < accounts.size(); index++) {
+			if (index != begin && !mergeIndexs.contains(index)) {
 				List<String> emails = accounts.get(index).subList(1, accounts.get(index).size());
-				if (emails.contains(email)){
+				if (emails.contains(email)) {
 					return index;
 				}
 			}

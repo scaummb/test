@@ -5,7 +5,7 @@ package innerClass.test5;
  * @date: 2021/2/1 11:53
  */
 
-public class TestDemo extends TestInterfaceInnerClass{
+public class TestDemo extends TestInterfaceInnerClass {
 	public static void main(String[] args) {
 		TestInterfaceInnerClass p = new TestInterfaceInnerClass();
 		Conents contents = p.contents();

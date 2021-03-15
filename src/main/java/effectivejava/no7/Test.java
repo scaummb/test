@@ -34,5 +34,6 @@ public class Test {
 
 }
 
-class O{}
+class O {
+}
 

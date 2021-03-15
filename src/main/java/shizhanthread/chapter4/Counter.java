@@ -4,9 +4,8 @@ import shizhanthread.annotations.ThreadSafe;
 
 /**
  * <p>
- *     使用Java监视器模式的线程安全计数器,使用对象内置锁
+ * 使用Java监视器模式的线程安全计数器,使用对象内置锁
  * </p>
- *
  */
 @ThreadSafe
 public final class Counter {

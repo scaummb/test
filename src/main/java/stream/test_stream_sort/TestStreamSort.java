@@ -6,8 +6,9 @@ import java.util.*;
 
 /**
  * <p>
- *     HashSet & TreeSet
+ * HashSet & TreeSet
  * </p>
+ *
  * @author moubin.mo
  * @date: 2021/1/8 11:17
  */
@@ -31,7 +32,7 @@ public class TestStreamSort {
 					Date d1 = simpleDateFormat.parse(o1);
 					Date d2 = simpleDateFormat.parse(o2);
 					int i = (d1.getTime() >= d2.getTime()) ? 1 : -1;
-					System.out.println("i="+ i);
+					System.out.println("i=" + i);
 					return i;
 				} catch (ParseException e) {
 					e.printStackTrace();
@@ -60,7 +61,7 @@ public class TestStreamSort {
 					Date d1 = simpleDateFormat.parse(o1);
 					Date d2 = simpleDateFormat.parse(o2);
 					int i = (d1.getTime() >= d2.getTime()) ? 1 : -1;
-					System.out.println("i="+ i);
+					System.out.println("i=" + i);
 					return i;
 				} catch (ParseException e) {
 					e.printStackTrace();

@@ -15,7 +15,7 @@ public class TestThreadRunAndStart {
 	}
 }
 
-class ThreadSyncOrAsyn extends Thread{
+class ThreadSyncOrAsyn extends Thread {
 	@Override
 	public void run() {
 		try {

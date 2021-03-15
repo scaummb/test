@@ -8,6 +8,7 @@ package enum_test;
  * <li><p>SMS：短信</p></li>
  * <li><p>WECHAT：微信消息</p></li>
  * </ul>
+ *
  * @author moubin.mo
  * @date 2019-10-6 16:52:58
  */
@@ -28,9 +29,9 @@ public enum MessageType {
 		return type;
 	}
 
-	public static MessageType fromCode (String messageType){
-		for (MessageType type : MessageType.values()){
-			if (type.getType().equals(messageType)){
+	public static MessageType fromCode(String messageType) {
+		for (MessageType type : MessageType.values()) {
+			if (type.getType().equals(messageType)) {
 				return type;
 			}
 		}

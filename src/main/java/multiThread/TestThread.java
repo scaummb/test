@@ -33,7 +33,7 @@ public class TestThread {
 	}
 }
 
-class TestThreadDemo extends Thread{
+class TestThreadDemo extends Thread {
 	@Override
 	public void run() {
 		System.out.println("TestThreadDemo");

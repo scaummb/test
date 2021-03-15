@@ -12,9 +12,9 @@ public class ProduceManager {
 
 	private static List<Demand> demendList = new ArrayList<Demand>();
 
-	public static void showdemands(){
+	public static void showdemands() {
 		System.out.println("看看项目经理都提了哪些雷人需求......");
-		for (Demand demand : demendList){
+		for (Demand demand : demendList) {
 			System.out.println(demand.getDescription());
 		}
 	}

@@ -2,7 +2,7 @@ package design_module.FlyweightPattern;
 
 /**
  * <p>
- *     继承Flyweight超类或实现Flyweight接口，并为其内部状态增加存储空间。
+ * 继承Flyweight超类或实现Flyweight接口，并为其内部状态增加存储空间。
  * </p>
  */
 

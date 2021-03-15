@@ -6,13 +6,13 @@ import design_module.BuilderPattern.testcase2.drivemethod.TDDAbstractDrivingMeth
 
 /**
  * <p>
- *     驱动方法构造器 DrivingMethodBuilder
+ * 驱动方法构造器 DrivingMethodBuilder
  * </p>
  */
 public class DrivingMethodBuilder {
 
 	//构造DDDDrivingMethod
-	public static AbstractDrivingMethod buildDDDDrivingMethod(){
+	public static AbstractDrivingMethod buildDDDDrivingMethod() {
 		DDDAbstractDrivingMethod dddDrivingMethod = new DDDAbstractDrivingMethod();
 		dddDrivingMethod.addDDDDrivingMethodPuzzle("1.通过 通用语言(Ubiquitous Language)去理解和消化领域知识");
 		dddDrivingMethod.addDDDDrivingMethodPuzzle("2.从领域知识中提取和划分为一个一个的子领域（核心子域，通用子域，支撑子域）");
@@ -22,7 +22,7 @@ public class DrivingMethodBuilder {
 	}
 
 	//构造TDDDrivingMethod
-	public static AbstractDrivingMethod buildTDDDrivingMethod(){
+	public static AbstractDrivingMethod buildTDDDrivingMethod() {
 		TDDAbstractDrivingMethod tddDrivingMethod = new TDDAbstractDrivingMethod();
 		tddDrivingMethod.addTDDDrivingMethodPuzzle("1.先写功能测试，用户角度描述应用的新功能");
 		tddDrivingMethod.addTDDDrivingMethodPuzzle("2.功能测试失败后，想办法推动开发，开发修改或编写代码让它通过（或者说至少让当前失败的测试通过）");

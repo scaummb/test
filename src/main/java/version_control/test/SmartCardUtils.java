@@ -37,43 +37,43 @@ public class SmartCardUtils {
 
 	private static void decode(String qrCode) {
 		try {
-			if(qrCode == null || qrCode.length() < 18) {
+			if (qrCode == null || qrCode.length() < 18) {
 				System.out.println("error");
 			}
 			System.out.println("normal -> qrCode = " + qrCode);
 			byte[] bytes = org.apache.commons.codec.binary.Base64.decodeBase64(qrCode);
 			qrCode = new String(bytes);
 			System.out.println("Base64.decode -> qrCode = " + qrCode);
-			if(qrCode != null && qrCode.length() == 21 && qrCode.startsWith("51")) {
+			if (qrCode != null && qrCode.length() == 21 && qrCode.startsWith("51")) {
 				// '51' barcode
 				qrCode = (qrCode.substring(3));
 			}
 
-			if(qrCode.length() == 18 && qrCode.getBytes()[0] == 0x31) {
+			if (qrCode.length() == 18 && qrCode.getBytes()[0] == 0x31) {
 				//try barcode first
 				String payCode = qrCode.substring(1);
 				long uid = payCodeVerify(payCode);
-				if(uid != -1) {
-					System.out.println("uid="+uid);
+				if (uid != -1) {
+					System.out.println("uid=" + uid);
 				}
 			}
 
 			byte[] code = org.apache.commons.codec.binary.Base64.decodeBase64(qrCode);
-			if(code[0] == '5' && code[1] == '1') {
-				byte[] newCode = new byte[code.length-2];
-				System.arraycopy(code, 2, newCode, 0, code.length-2);
+			if (code[0] == '5' && code[1] == '1') {
+				byte[] newCode = new byte[code.length - 2];
+				System.arraycopy(code, 2, newCode, 0, code.length - 2);
 				code = newCode;
 			}
 
 			//try qr code
 			List<SmartCardItem> items = getSmartCardSegments(code);
-			for(int i = 0; i < items.size(); i++) {
+			for (int i = 0; i < items.size(); i++) {
 				SmartCardItem item = items.get(i);
-				if(item.getSmartCardType().equals(SmartCardType.SMART_CARD_PAY.getCode())) {
+				if (item.getSmartCardType().equals(SmartCardType.SMART_CARD_PAY.getCode())) {
 					String payCode = new String(item.getSmartCardCode());
 					long uid = payCodeVerify(payCode);
-					if(uid != -1) {
-						System.out.println("uid="+uid);
+					if (uid != -1) {
+						System.out.println("uid=" + uid);
 					} else {
 					}
 				}
@@ -90,25 +90,26 @@ public class SmartCardUtils {
 		Map<Integer, byte[]> segments = new HashMap<Integer, byte[]>();
 		List<SmartCardItem> items = new ArrayList<SmartCardItem>();
 
-		while(i+2 < code.length) {
-			len = (int)code[i+1];
-			if(len < 0 || (i+2+len) > code.length) {
+		while (i + 2 < code.length) {
+			len = (int) code[i + 1];
+			if (len < 0 || (i + 2 + len) > code.length) {
 				len = len + 256;
 			}
-			typ = (int)code[i];
+			typ = (int) code[i];
 			i += 2;
 			byte[] seg = new byte[len];
 			System.arraycopy(code, i, seg, 0, len);
 			segments.put(new Integer(typ), seg);
 			SmartCardItem item = new SmartCardItem();
 			item.setSmartCardCode(seg);
-			item.setSmartCardType((byte)typ);
+			item.setSmartCardType((byte) typ);
 			items.add(item);
 			i += len;
 		}
 
 		return items;
 	}
+
 	private static long payCodeVerify(String payCode) {
 		String randomUid = payCode.substring(0, 9);
 		String totpCode = payCode.substring(9, 17);
@@ -120,7 +121,7 @@ public class SmartCardUtils {
 
 	private static TimeBasedOneTimePasswordGenerator getTotp() throws NoSuchAlgorithmException {
 		TimeBasedOneTimePasswordGenerator totp = totpLocal.get();
-		if(totp == null) {
+		if (totp == null) {
 			totp = new TimeBasedOneTimePasswordGenerator(stepInSecond, TimeUnit.SECONDS, 8);
 			totpLocal.set(totp);
 		}
@@ -135,6 +136,7 @@ public class SmartCardUtils {
 
 	/**
 	 * 获取一卡通二维码
+	 *
 	 * @param keyTOTP
 	 * @param isSupportPay
 	 */
@@ -171,7 +173,7 @@ public class SmartCardUtils {
 		// tag+data
 		Integer dataLength = data.length;
 
-		byte[] cardCodeBytes = new byte[2+dataLength];
+		byte[] cardCodeBytes = new byte[2 + dataLength];
 		cardCodeBytes[0] = SmartCardType.SMART_CARD_CUSTOM.getCode();
 		cardCodeBytes[1] = dataLength.byteValue();
 		System.arraycopy(data, 0, cardCodeBytes, 2, data.length);

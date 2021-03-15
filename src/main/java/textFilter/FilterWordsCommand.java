@@ -16,58 +16,58 @@ import java.util.List;
  */
 public class FilterWordsCommand {
 
-    private Integer namespaceId;
-    private Byte moduleType;
-    private Long communityId;
-    private Long creatorUid;
-    private String publishTime;
-    private List<String> textList;
+	private Integer namespaceId;
+	private Byte moduleType;
+	private Long communityId;
+	private Long creatorUid;
+	private String publishTime;
+	private List<String> textList;
 
-    public Integer getNamespaceId() {
-        return namespaceId;
-    }
+	public Integer getNamespaceId() {
+		return namespaceId;
+	}
 
-    public void setNamespaceId(Integer namespaceId) {
-        this.namespaceId = namespaceId;
-    }
+	public void setNamespaceId(Integer namespaceId) {
+		this.namespaceId = namespaceId;
+	}
 
-    public Byte getModuleType() {
-        return moduleType;
-    }
+	public Byte getModuleType() {
+		return moduleType;
+	}
 
-    public void setModuleType(Byte moduleType) {
-        this.moduleType = moduleType;
-    }
+	public void setModuleType(Byte moduleType) {
+		this.moduleType = moduleType;
+	}
 
-    public Long getCreatorUid() {
-        return creatorUid;
-    }
+	public Long getCreatorUid() {
+		return creatorUid;
+	}
 
-    public void setCreatorUid(Long creatorUid) {
-        this.creatorUid = creatorUid;
-    }
+	public void setCreatorUid(Long creatorUid) {
+		this.creatorUid = creatorUid;
+	}
 
-    public String getPublishTime() {
-        return publishTime;
-    }
+	public String getPublishTime() {
+		return publishTime;
+	}
 
-    public void setPublishTime(String publishTime) {
-        this.publishTime = publishTime;
-    }
+	public void setPublishTime(String publishTime) {
+		this.publishTime = publishTime;
+	}
 
-    public List<String> getTextList() {
-        return textList;
-    }
+	public List<String> getTextList() {
+		return textList;
+	}
 
-    public void setTextList(List<String> textList) {
-        this.textList = textList;
-    }
+	public void setTextList(List<String> textList) {
+		this.textList = textList;
+	}
 
-    public Long getCommunityId() {
-        return communityId;
-    }
+	public Long getCommunityId() {
+		return communityId;
+	}
 
-    public void setCommunityId(Long communityId) {
-        this.communityId = communityId;
-    }
+	public void setCommunityId(Long communityId) {
+		this.communityId = communityId;
+	}
 }

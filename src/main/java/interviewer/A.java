@@ -11,15 +11,15 @@ public class A {
 		System.out.println(b.getNumber(0));
 	}
 
-	public int getNumber(int a){
-		return a+1;
+	public int getNumber(int a) {
+		return a + 1;
 	}
 
 
 }
 
-class B extends A{
-	public int getNumber(int a, char c){
+class B extends A {
+	public int getNumber(int a, char c) {
 		return a + 2;
 	}
 

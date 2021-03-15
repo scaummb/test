@@ -9,6 +9,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * remark:ReentrantReadWriteLock 测试
+ *
  * @author moubin.mo
  * @date: 2019/10/10 15:01
  */
@@ -20,7 +21,7 @@ public class TestReentrantReadWriteLock {
 
 	private final Map<String, Data> map = new TreeMap<>();
 
-	public Data get(String key){
+	public Data get(String key) {
 		readLock.lock();
 		try {
 			return map.get(key);
@@ -29,7 +30,7 @@ public class TestReentrantReadWriteLock {
 		}
 	}
 
-	public Set<String> getAllKeys(){
+	public Set<String> getAllKeys() {
 		readLock.lock();
 		try {
 			return map.keySet();
@@ -38,7 +39,7 @@ public class TestReentrantReadWriteLock {
 		}
 	}
 
-	public Data put(String key, Data value){
+	public Data put(String key, Data value) {
 		writeLock.lock();
 		try {
 			return map.put(key, value);

@@ -45,7 +45,7 @@ public class SSODemo {
 			//响应处理
 			HttpEntity entity = response.getEntity();
 			String entities = EntityUtils.toString(entity, "UTF-8");
-			HashMap entitiesMap = (HashMap)fromJsonString(entities, HashMap.class);
+			HashMap entitiesMap = (HashMap) fromJsonString(entities, HashMap.class);
 			code = (String) entitiesMap.get("code");
 		}
 
@@ -64,14 +64,14 @@ public class SSODemo {
 			//响应处理
 			HttpEntity entity = response.getEntity();
 			String entities = EntityUtils.toString(entity, "UTF-8");
-			HashMap entitiesMap = (HashMap)fromJsonString(entities, HashMap.class);
+			HashMap entitiesMap = (HashMap) fromJsonString(entities, HashMap.class);
 			accessToken = (String) entitiesMap.get("access_token");
 		}
 
 		//第三步：获取登陆用户uid
 		String contentType2 = "application/x-www-form-urlencoded";
 		String authorization2 = "***"; //请求头的计算⽅式为：Bearer + 空格 + 将 access_token 进⾏ base64 后的字符串
-		HttpGet httpGet2= getHttpGet(URL_GET_AUTHORIZATION_USER_INFO);
+		HttpGet httpGet2 = getHttpGet(URL_GET_AUTHORIZATION_USER_INFO);
 		httpGet2.setHeader("Content-Type", contentType2);
 		httpGet2.setHeader("Authorization", authorization2);
 		CloseableHttpResponse response2 = httpclient.execute(httpGet2);
@@ -81,7 +81,7 @@ public class SSODemo {
 			//响应处理
 			HttpEntity entity = response.getEntity();
 			String entities = EntityUtils.toString(entity, "UTF-8");
-			HashMap entitiesMap = (HashMap)fromJsonString(entities, HashMap.class);
+			HashMap entitiesMap = (HashMap) fromJsonString(entities, HashMap.class);
 			String userInfoString = (String) entitiesMap.get("response");
 			UserInfo userInfo = (SSODemo.UserInfo) fromJsonString(userInfoString, UserInfo.getClass());
 			userId = userInfo.getId();
@@ -90,7 +90,7 @@ public class SSODemo {
 		//....
 	}
 
-	class UserInfo{
+	class UserInfo {
 		private Long id;
 		private String phone;
 		private String regionCode;
@@ -99,6 +99,7 @@ public class SSODemo {
 		private String avatarUrl;
 		private String birthday;
 		private String gender;
+
 		public Long getId() {
 			return id;
 		}
@@ -126,7 +127,7 @@ public class SSODemo {
 	/**
 	 * <p>请求客户端</p>
 	 */
-	private static CloseableHttpClient getHttplient(){
+	private static CloseableHttpClient getHttplient() {
 		//请求构造
 		CloseableHttpClient httpclient = HttpUtils.getHttpClient(10000);
 		return httpclient;

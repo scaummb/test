@@ -24,7 +24,7 @@ public class TestStringURLEncodeAndDecode {
 
 		System.out.println(decodeString);
 
-		String substring = decodeString.substring(decodeString.indexOf("{") , decodeString.lastIndexOf("}")+ 1);
+		String substring = decodeString.substring(decodeString.indexOf("{"), decodeString.lastIndexOf("}") + 1);
 
 		System.out.println(substring);
 

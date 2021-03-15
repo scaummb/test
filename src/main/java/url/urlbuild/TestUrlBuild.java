@@ -54,6 +54,7 @@ public class TestUrlBuild {
 
 	/**
 	 * <p>初始化 StringEntity，补充请求业务参数与签名</p>
+	 *
 	 * @param userId
 	 * @param appKey
 	 * @param secreatKey
@@ -68,7 +69,7 @@ public class TestUrlBuild {
 		MultipartEntityBuilder builder = MultipartEntityBuilder.create();
 		builder.setContentType(ContentType.MULTIPART_FORM_DATA);
 		builder.setCharset(Charset.forName("UTF-8"));
-		builder.addTextBody("userId",  userId.toString());
+		builder.addTextBody("userId", userId.toString());
 		builder.addTextBody("appKey", appKey);
 		builder.addTextBody("timestamp", String.valueOf(timeMillis));
 		builder.addTextBody("nonce", String.valueOf(nonce));

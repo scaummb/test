@@ -7,6 +7,7 @@ package final_test;
 
 public class FinalClassTest {
 	private static String a = "a";
+
 	public static void main(String[] args) {
 		System.out.println("a.hashCode() = " + a.hashCode());
 		a = "1434";

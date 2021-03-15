@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class TestStreamGroupBy {
 	public static void main(String[] args) {
-		List<Female> females = new ArrayList(){{
+		List<Female> females = new ArrayList() {{
 			add(new Female(1, "1"));
 			add(new Female(5, "3"));
 			add(new Female(3, "3"));

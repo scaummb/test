@@ -1,14 +1,14 @@
 package shizhanthread.chapter3;
 
 /**
-* <p>可见性测试</p>
+ * <p>可见性测试</p>
  */
 public class NoVisibility {
 	//非线程安全的状态变量
 	private static boolean ready;
 	private static int number;
 
-	private static class ReaderThread extends Thread{
+	private static class ReaderThread extends Thread {
 		@Override
 		public void run() {
 			while (!ready)
@@ -20,7 +20,7 @@ public class NoVisibility {
 
 	public static void main(String[] args) throws InterruptedException {
 		new ReaderThread().start();
-		number=43;
-		ready=true;
+		number = 43;
+		ready = true;
 	}
 }

@@ -5,7 +5,7 @@ package object;
  * @date: 2021/2/1 20:26
  */
 
-public class Z extends X{
+public class Z extends X {
 	Y y = new Y();
 
 	public Z() {
@@ -16,14 +16,16 @@ public class Z extends X{
 		new Z();
 	}
 }
-class X{
+
+class X {
 	Y y = new Y();
 
 	public X() {
 		System.out.println("X");
 	}
 }
-class Y{
+
+class Y {
 	public Y() {
 		System.out.println("Y");
 	}

@@ -22,7 +22,7 @@ public class TestOverlimit {
 		ehConfigurations.setValue("1231");
 		List<EhConfigurations> boList = new ArrayList();
 		boList.add(ehConfigurations);
-		List<ConfigurationsIdAdminDTO> list2 = boList.stream().map(r->{
+		List<ConfigurationsIdAdminDTO> list2 = boList.stream().map(r -> {
 			//copy 相同属性下的值
 			ConfigurationsIdAdminDTO dto = ConvertHelper.convert(r, ConfigurationsIdAdminDTO.class);
 			return dto;

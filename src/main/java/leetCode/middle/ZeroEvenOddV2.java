@@ -4,6 +4,7 @@ import java.util.function.IntConsumer;
 
 /**
  * 使用线程休眠与唤醒解决线程执行调度
+ *
  * @author moubin.mo
  * @date: 2019/11/21 20:43
  */
@@ -19,13 +20,14 @@ public class ZeroEvenOddV2 {
 
 	// printNumber.accept(x) outputs "x", where x is an integer.
 	public void zero(IntConsumer printNumber) throws InterruptedException {
-		synchronized (this){
-			for (int i=1; i<=n; i++){
-				while (zeroFlag){
+		synchronized (this) {
+			for (int i = 1; i <= n; i++) {
+				while (zeroFlag) {
 					this.wait();
-				};
+				}
+				;
 				printNumber.accept(0);
-				if (n%2 == 0){
+				if (n % 2 == 0) {
 					flag = true;
 				} else {
 					flag = false;
@@ -40,9 +42,9 @@ public class ZeroEvenOddV2 {
 	 * 输出偶数
 	 */
 	public void even(IntConsumer printNumber) throws InterruptedException {
-		synchronized (this){
-			for (int i=2; i<=n; i+=2){
-				while (!flag){
+		synchronized (this) {
+			for (int i = 2; i <= n; i += 2) {
+				while (!flag) {
 					this.wait();
 				}
 				printNumber.accept(i);
@@ -57,9 +59,9 @@ public class ZeroEvenOddV2 {
 	 * 输出奇数
 	 */
 	public void odd(IntConsumer printNumber) throws InterruptedException {
-		synchronized (this){
-			for (int i=1; i<=n; i+=2){
-				while (flag){
+		synchronized (this) {
+			for (int i = 1; i <= n; i += 2) {
+				while (flag) {
 					this.wait();
 				}
 				printNumber.accept(i);
@@ -87,7 +89,7 @@ public class ZeroEvenOddV2 {
 			@Override
 			public void run() {
 				try {
-					zeroEvenOdd.even(num ->{
+					zeroEvenOdd.even(num -> {
 						System.out.print(num);
 					});
 				} catch (InterruptedException e) {
@@ -99,8 +101,8 @@ public class ZeroEvenOddV2 {
 			@Override
 			public void run() {
 				try {
-					zeroEvenOdd.even(num ->{
-							System.out.print(num);
+					zeroEvenOdd.even(num -> {
+						System.out.print(num);
 					});
 				} catch (InterruptedException e) {
 					e.printStackTrace();

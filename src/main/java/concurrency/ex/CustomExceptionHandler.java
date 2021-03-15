@@ -8,8 +8,8 @@ package concurrency.ex;
  */
 public class CustomExceptionHandler implements Thread.UncaughtExceptionHandler {
 
-    @Override
-    public void uncaughtException(Thread t, Throwable e) {
-        System.out.println("subThread exception, id = " + t.getId() + " , name = " + t.getName()  +"，e = " + e.toString());
-    }
+	@Override
+	public void uncaughtException(Thread t, Throwable e) {
+		System.out.println("subThread exception, id = " + t.getId() + " , name = " + t.getName() + "，e = " + e.toString());
+	}
 }

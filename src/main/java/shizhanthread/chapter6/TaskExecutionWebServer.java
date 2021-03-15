@@ -8,8 +8,8 @@ import java.util.concurrent.Executors;
 
 /**
  * <p>
- *     通过使用Executor，将请求提交 和 请求处理 解耦。
- *     考虑用Executor代替Thread。
+ * 通过使用Executor，将请求提交 和 请求处理 解耦。
+ * 考虑用Executor代替Thread。
  * </p>
  */
 
@@ -20,7 +20,7 @@ public class TaskExecutionWebServer {
 
 	public static void main(String[] args) throws IOException {
 		ServerSocket socket = new ServerSocket(8080);
-		while (true){
+		while (true) {
 			Socket connection = socket.accept();
 			//创建新的线程
 			Runnable task = new Runnable() {

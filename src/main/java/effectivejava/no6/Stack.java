@@ -22,7 +22,7 @@ public class Stack {
 	/**
 	 * 设置栈顶元素
 	 */
-	public void push(Object e){
+	public void push(Object e) {
 		ensureCapacity();
 		elements[size++] = e;
 	}
@@ -30,8 +30,8 @@ public class Stack {
 	/**
 	 * 弹出栈顶元素
 	 */
-	public Object pop(){
-		if (size == 0){
+	public Object pop() {
+		if (size == 0) {
 			throw new EmptyStackException();
 		}
 		Object result = elements[--size];
@@ -44,7 +44,7 @@ public class Stack {
 	 * <p>扩容</p>
 	 */
 	private void ensureCapacity() {
-		if (elements.length == size){
+		if (elements.length == size) {
 			elements = Arrays.copyOf(elements, 2 * size + 1);
 		}
 	}

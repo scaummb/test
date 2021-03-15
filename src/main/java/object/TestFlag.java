@@ -8,7 +8,7 @@ package object;
 public class TestFlag {
 	public static void main(String[] args) {
 		Integer wxNamespaceFlag = 1;
-		if (wxNamespaceFlag == null || TrueOrFalseCode.TRUE.getCode().equals(wxNamespaceFlag.byteValue())){
+		if (wxNamespaceFlag == null || TrueOrFalseCode.TRUE.getCode().equals(wxNamespaceFlag.byteValue())) {
 			System.out.print("ok");
 		}
 	}

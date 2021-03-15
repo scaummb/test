@@ -6,7 +6,7 @@ package design_module.AdapterPattern.demo1;
  */
 
 public class Adaptee {
-	public void method1(){
+	public void method1() {
 		System.out.println("Adaptee - method 1");
 	}
 }

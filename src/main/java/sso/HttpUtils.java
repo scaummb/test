@@ -55,7 +55,7 @@ import java.util.Map;
 
 /**
  * http请求
- * 
+ *
  * @author tangtong
  */
 @SuppressWarnings("deprecation")
@@ -64,7 +64,7 @@ public class HttpUtils {
 
 	/**
 	 * post请求 ，超时默认30秒
-	 * 
+	 *
 	 * @param url
 	 * @param params
 	 * @return
@@ -76,7 +76,7 @@ public class HttpUtils {
 
 	/**
 	 * 带签名的post请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
 	 * @return
@@ -88,11 +88,10 @@ public class HttpUtils {
 
 	/**
 	 * post请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
-	 * @param timeout
-	 *            超时时间，秒
+	 * @param timeout 超时时间，秒
 	 * @return
 	 * @throws IOException
 	 */
@@ -125,13 +124,11 @@ public class HttpUtils {
 
 	/**
 	 * post请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
-	 * @param timeout
-	 *            超时时间，秒
-	 * @param isParseReturn
-	 *            是否转码返回值
+	 * @param timeout       超时时间，秒
+	 * @param isParseReturn 是否转码返回值
 	 * @return
 	 * @throws IOException
 	 */
@@ -177,7 +174,7 @@ public class HttpUtils {
 
 	/**
 	 * 设置头信息
-	 * 
+	 *
 	 * @param httppost
 	 */
 	private static void setHeaderInfo(HttpPost httppost) {
@@ -205,7 +202,7 @@ public class HttpUtils {
 				retVal = new String(httpclient.execute(httppost, responseHandler).getBytes(HTTP.ISO_8859_1),
 						HTTP.UTF_8);
 			} else if (objects != null && objects[0].equals(HTTP.UTF_8)) {
-				retVal = httpclient.execute(httppost,responseHandler);
+				retVal = httpclient.execute(httppost, responseHandler);
 			} else if (objects != null && objects[0].equals("gb2312")) {
 				retVal = new String(httpclient.execute(httppost, responseHandler).getBytes("iso-8859-1"), "gb2312");
 			} else {
@@ -235,14 +232,14 @@ public class HttpUtils {
 			setHeaderInfo(httppost);
 			response = httpclient.execute(httppost);
 
-            int status = response.getStatusLine().getStatusCode();
-            if(status == HttpStatus.SC_OK) {
-                HttpEntity entity = response.getEntity();
+			int status = response.getStatusLine().getStatusCode();
+			if (status == HttpStatus.SC_OK) {
+				HttpEntity entity = response.getEntity();
 
-                if (entity != null) {
+				if (entity != null) {
 					retVal = EntityUtils.toString(entity, "utf8");
-                }
-            }
+				}
+			}
 		} catch (IOException e) {
 			logger.error(", response={}", JSON.toJSONString(response));
 			throw e;
@@ -254,10 +251,7 @@ public class HttpUtils {
 	}
 
 
-
-
-
-	public static String postJsonWithHeader(String url, String json, int timeout,Map<String,String> map, Object... objects) throws IOException {
+	public static String postJsonWithHeader(String url, String json, int timeout, Map<String, String> map, Object... objects) throws IOException {
 		HttpClient httpclient = getHttpClient(timeout);
 //		httpclient.getParams().setIntParameter("http.socket.timeout", timeout * 1000);
 //		httpclient.getParams().setBooleanParameter("http.protocol.expect-continue", false);
@@ -270,8 +264,8 @@ public class HttpUtils {
 			HttpPost httppost = new HttpPost(url);
 			StringEntity params = new StringEntity(json, encoding);
 			httppost.addHeader("Content-Type", "application/json");
-			for(Map.Entry<String, String> entry:map.entrySet()){
-				httppost.setHeader(entry.getKey(),entry.getValue());
+			for (Map.Entry<String, String> entry : map.entrySet()) {
+				httppost.setHeader(entry.getKey(), entry.getValue());
 			}
 			httppost.setEntity(params);
 			setHeaderInfo(httppost);
@@ -295,43 +289,43 @@ public class HttpUtils {
 		return retVal;
 	}
 
-    @SuppressWarnings("resource")
-    public static String postForm(String url, String json, int timeout, Object... objects) throws IOException {
-        HttpClient httpclient = getHttpClient(timeout);
-        String retVal = "";
-        try {
-            String encoding = HTTP.UTF_8;
-            if (objects != null && objects.length > 0) {
-                encoding = objects[0].toString();
-            }
-            HttpPost httppost = new HttpPost(url);
-            StringEntity params = new StringEntity(json, encoding);
-            httppost.addHeader("Content-Type", "application/x-www-form-urlencoded");
-            httppost.setEntity(params);
-            setHeaderInfo(httppost);
-            ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            if (objects == null || objects.length == 0) {
-                retVal = new String(httpclient.execute(httppost, responseHandler).getBytes(HTTP.ISO_8859_1),
-                        HTTP.UTF_8);
-            } else if (objects != null && objects[0].equals(HTTP.UTF_8)) {
-                retVal = httpclient.execute(httppost, responseHandler);
-            } else if (objects != null && objects[0].equals("gb2312")) {
-                retVal = new String(httpclient.execute(httppost, responseHandler).getBytes("iso-8859-1"), "gb2312");
-            } else {
-                retVal = new String(httpclient.execute(httppost, responseHandler).getBytes(), HTTP.UTF_8);
-            }
-        } catch (IOException e) {
-            throw e;
-        } finally {
-            httpclient.getConnectionManager().shutdown();
-        }
-        logger.debug(retVal);
-        return retVal;
-    }
+	@SuppressWarnings("resource")
+	public static String postForm(String url, String json, int timeout, Object... objects) throws IOException {
+		HttpClient httpclient = getHttpClient(timeout);
+		String retVal = "";
+		try {
+			String encoding = HTTP.UTF_8;
+			if (objects != null && objects.length > 0) {
+				encoding = objects[0].toString();
+			}
+			HttpPost httppost = new HttpPost(url);
+			StringEntity params = new StringEntity(json, encoding);
+			httppost.addHeader("Content-Type", "application/x-www-form-urlencoded");
+			httppost.setEntity(params);
+			setHeaderInfo(httppost);
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			if (objects == null || objects.length == 0) {
+				retVal = new String(httpclient.execute(httppost, responseHandler).getBytes(HTTP.ISO_8859_1),
+						HTTP.UTF_8);
+			} else if (objects != null && objects[0].equals(HTTP.UTF_8)) {
+				retVal = httpclient.execute(httppost, responseHandler);
+			} else if (objects != null && objects[0].equals("gb2312")) {
+				retVal = new String(httpclient.execute(httppost, responseHandler).getBytes("iso-8859-1"), "gb2312");
+			} else {
+				retVal = new String(httpclient.execute(httppost, responseHandler).getBytes(), HTTP.UTF_8);
+			}
+		} catch (IOException e) {
+			throw e;
+		} finally {
+			httpclient.getConnectionManager().shutdown();
+		}
+		logger.debug(retVal);
+		return retVal;
+	}
 
 	/**
 	 * get请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
 	 * @return
@@ -480,7 +474,7 @@ public class HttpUtils {
 
 	/**
 	 * get请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
 	 * @return
@@ -515,47 +509,47 @@ public class HttpUtils {
 		return retVal;
 	}
 
-    /**
-     * get请求
-     *
-     * @param url
-     * @param params
-     * @return
-     * @throws IOException
-     */
-    @SuppressWarnings("resource")
-    public static String getDecodeWithoutISO8859(String url, Map<String, String> params, Header[] headers) throws IOException {
-        HttpClient httpclient = new DefaultHttpClient();
-        httpclient.getParams().setIntParameter("http.socket.timeout", 100000);
-        String retVal = "";
-        try {
-            List<NameValuePair> qparams = new ArrayList<NameValuePair>();
-            if (params != null) {
-                for (Map.Entry<String, String> param : params.entrySet()) {
-                    qparams.add(new BasicNameValuePair(param.getKey(), param.getValue()));
-                }
-            }
-            String paramstr = URLEncodedUtils.format(qparams, HTTP.UTF_8);
-            if (StringUtils.isNotEmpty(paramstr)) {
-                url = url + "?" + paramstr;
-            }
-            logger.info("The request info, geturl={}", url);
-            HttpGet httpget = new HttpGet(url);
-            httpget.setHeaders(headers);
-            ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            retVal = httpclient.execute(httpget, responseHandler);
-            retVal = new String(retVal.getBytes(HTTP.UTF_8));
-            logger.info("SendResult from third, url={}, result={}", url, retVal);
-        } catch (IOException e) {
-            logger.error("The request error, geturl={}", url, e);
-            httpclient.getConnectionManager().shutdown();
-        }
-        return retVal;
-    }
+	/**
+	 * get请求
+	 *
+	 * @param url
+	 * @param params
+	 * @return
+	 * @throws IOException
+	 */
+	@SuppressWarnings("resource")
+	public static String getDecodeWithoutISO8859(String url, Map<String, String> params, Header[] headers) throws IOException {
+		HttpClient httpclient = new DefaultHttpClient();
+		httpclient.getParams().setIntParameter("http.socket.timeout", 100000);
+		String retVal = "";
+		try {
+			List<NameValuePair> qparams = new ArrayList<NameValuePair>();
+			if (params != null) {
+				for (Map.Entry<String, String> param : params.entrySet()) {
+					qparams.add(new BasicNameValuePair(param.getKey(), param.getValue()));
+				}
+			}
+			String paramstr = URLEncodedUtils.format(qparams, HTTP.UTF_8);
+			if (StringUtils.isNotEmpty(paramstr)) {
+				url = url + "?" + paramstr;
+			}
+			logger.info("The request info, geturl={}", url);
+			HttpGet httpget = new HttpGet(url);
+			httpget.setHeaders(headers);
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			retVal = httpclient.execute(httpget, responseHandler);
+			retVal = new String(retVal.getBytes(HTTP.UTF_8));
+			logger.info("SendResult from third, url={}, result={}", url, retVal);
+		} catch (IOException e) {
+			logger.error("The request error, geturl={}", url, e);
+			httpclient.getConnectionManager().shutdown();
+		}
+		return retVal;
+	}
 
 	/**
 	 * get请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
 	 * @return
@@ -591,11 +585,9 @@ public class HttpUtils {
 
 	/**
 	 * 得到访问url的返回状态(200正常)
-	 * 
-	 * @param url
-	 *            :访问地址
-	 * @param timeOut
-	 *            :设置超时时间秒
+	 *
+	 * @param url     :访问地址
+	 * @param timeOut :设置超时时间秒
 	 * @return
 	 * @throws IOException
 	 * @throws ClientProtocolException
@@ -620,9 +612,9 @@ public class HttpUtils {
 	}
 
 	/**
-	 * @Description:获取参数路径
 	 * @param params
 	 * @return
+	 * @Description:获取参数路径
 	 * @author Alvin.zengqi
 	 * @date 2011-6-27 下午08:55:16
 	 */
@@ -643,13 +635,11 @@ public class HttpUtils {
 
 	/**
 	 * get请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
-	 * @param timeout
-	 *            超时时间，秒
-	 * @param charset
-	 *            编码方式
+	 * @param timeout 超时时间，秒
+	 * @param charset 编码方式
 	 * @return
 	 * @throws Exception
 	 */
@@ -684,11 +674,10 @@ public class HttpUtils {
 
 	/**
 	 * post请求
-	 * 
+	 *
 	 * @param url
 	 * @param params
-	 * @param timeout
-	 *            超时时间，秒
+	 * @param timeout 超时时间，秒
 	 * @return
 	 * @throws IOException
 	 */
@@ -720,7 +709,7 @@ public class HttpUtils {
 
 	/**
 	 * put请求
-	 * 
+	 *
 	 * @param url
 	 * @param json
 	 * @param timeout
@@ -763,7 +752,7 @@ public class HttpUtils {
 
 	/**
 	 * delete请求
-	 * 
+	 *
 	 * @param url
 	 * @param timeout
 	 * @param charset
@@ -790,7 +779,7 @@ public class HttpUtils {
 
 	/**
 	 * delete请求
-	 * 
+	 *
 	 * @param url
 	 * @param json
 	 * @param timeout
@@ -800,7 +789,7 @@ public class HttpUtils {
 	 */
 	@SuppressWarnings("resource")
 	public static String deleteJson(String url, String json, int timeout, Object... objects) throws IOException {
-		
+
 		/**
 		 * 没有现成的delete可以带json的，自己实现一个，参考HttpPost的实现
 		 */
@@ -822,18 +811,18 @@ public class HttpUtils {
 			}
 
 			@Override
-            public String getMethod() {
+			public String getMethod() {
 				return METHOD_NAME;
 			}
 		}
-		
+
 		HttpClient httpclient = new DefaultHttpClient();
 		httpclient.getParams().setIntParameter("http.socket.timeout", timeout * 1000);
 		httpclient.getParams().setBooleanParameter("http.protocol.expect-continue", false);
 		String retVal = "";
 		try {
 			String encoding = HTTP.UTF_8;
-			if (objects != null && objects.length > 0) { 
+			if (objects != null && objects.length > 0) {
 				encoding = objects[0].toString();
 			}
 			HttpDeleteWithBody httpdelete = new HttpDeleteWithBody(url);
@@ -858,8 +847,8 @@ public class HttpUtils {
 		}
 		logger.debug(retVal);
 		return retVal;
-		
-		
+
+
 	}
 
 	/**
@@ -897,10 +886,12 @@ public class HttpUtils {
 		// 不做任何检查的X509TrustManager匿名类
 		X509TrustManager x509mgr = new X509TrustManager() {
 			@Override
-			public void checkClientTrusted(X509Certificate[] xcs, String string) { }
+			public void checkClientTrusted(X509Certificate[] xcs, String string) {
+			}
 
 			@Override
-			public void checkServerTrusted(X509Certificate[] xcs, String string) { }
+			public void checkServerTrusted(X509Certificate[] xcs, String string) {
+			}
 
 			@Override
 			public X509Certificate[] getAcceptedIssuers() {
@@ -909,7 +900,7 @@ public class HttpUtils {
 		};
 
 		SSLContext sslContext = SSLContext.getInstance("TLS");
-		sslContext.init(null, new TrustManager[] { x509mgr }, new java.security.SecureRandom());
+		sslContext.init(null, new TrustManager[]{x509mgr}, new java.security.SecureRandom());
 		SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslContext, SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
 		return null;
 	}
@@ -923,7 +914,7 @@ public class HttpUtils {
 		JSONObject resultJson = JSONObject.parseObject(resultStr);
 		if (null != resultJson) {
 			int errorCode = resultJson.getIntValue("errorCode");
-			if (errorCode != 200){
+			if (errorCode != 200) {
 				throw new Exception("remote server inner error with errorCode " + errorCode);
 			}
 			String responseStr = resultJson.getString("response");
@@ -933,7 +924,7 @@ public class HttpUtils {
 	}
 
 
-	public static CloseableHttpClient getHttpClient(int timeout){
+	public static CloseableHttpClient getHttpClient(int timeout) {
 		int connectionRequestTimeout = 5000; // 申请连接超时时间，单位毫秒
 		int connectTimeout = 5000; // 连接目标主机超时时间，单位毫秒
 		int socketTimeout = 60000; // 读取数据超时时间，单位毫秒
@@ -958,7 +949,7 @@ public class HttpUtils {
 
 			SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslContext, NoopHostnameVerifier.INSTANCE);
 			Registry<ConnectionSocketFactory> socketFactoryRegistry =
-					RegistryBuilder.<ConnectionSocketFactory> create()
+					RegistryBuilder.<ConnectionSocketFactory>create()
 							.register("https", sslsf)
 							.register("http", PlainConnectionSocketFactory.getSocketFactory())
 							.build();

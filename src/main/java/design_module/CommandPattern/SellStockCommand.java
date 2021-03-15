@@ -8,7 +8,7 @@ package design_module.CommandPattern;
 public class SellStockCommand implements Command {
 	private Stock abcStock;
 
-	public SellStockCommand(Stock abcStock){
+	public SellStockCommand(Stock abcStock) {
 		this.abcStock = abcStock;
 	}
 

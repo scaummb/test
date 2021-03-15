@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * <p> 测试用例：ArrayList.subList</p>
+ *
  * @author moubin.mo
  * @date: 2020/6/23 11:36
  */
@@ -26,8 +27,8 @@ public class TestSublist {
 //		System.out.println(Arrays.toString(c.toArray()));
 
 		int size = 3;
-		for (int round = 0; round <= (a.size()/size); round++) {
-			int endAnchor = (a.size() <=  (round+1)*size)? a.size(): (round+1)*size;
+		for (int round = 0; round <= (a.size() / size); round++) {
+			int endAnchor = (a.size() <= (round + 1) * size) ? a.size() : (round + 1) * size;
 			List<Integer> subList = a.subList(round * size, endAnchor);
 			System.out.println(Arrays.toString(subList.toArray()));
 		}

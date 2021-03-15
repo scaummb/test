@@ -15,7 +15,7 @@ public abstract class Shape implements Cloneable {
 		this.type = type;
 	}
 
-	public String getType(){
+	public String getType() {
 		return type;
 	}
 

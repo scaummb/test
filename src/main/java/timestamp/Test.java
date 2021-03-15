@@ -24,7 +24,7 @@ public class Test {
 
 	/**
 	 * <p>
-	 *     获取当前时间所在月份的开始结束时间
+	 * 获取当前时间所在月份的开始结束时间
 	 * </p>
 	 */
 	private static MonthDTO getOneMonthTimestamp(long currentTime) {
@@ -54,16 +54,18 @@ public class Test {
 		long time2 = cal.getTimeInMillis();
 		return new DayDTO(time2, time1);
 	}
+
 	/**
 	 * <p>字符串转TimeStamp</p>
 	 */
 	public static Timestamp parseTimeStamp(String time) {
-		if (!StringUtils.isEmpty(time)){
+		if (!StringUtils.isEmpty(time)) {
 			return Timestamp.valueOf(time);
 		}
 		return null;
 	}
 }
+
 /**
  * <ul>
  * <li>onedayBeforeTimestamp: onedayBeforeTimestamp</li>

@@ -21,6 +21,7 @@ class Circle extends AbstractFigure {
 		return Math.PI * (radius * radius);
 	}
 }
+
 //矩形
 class Rectangle extends AbstractFigure {
 	final double length;
@@ -30,6 +31,7 @@ class Rectangle extends AbstractFigure {
 		this.length = length;
 		this.width = width;
 	}
+
 	double area() {
 		return length * width;
 	}

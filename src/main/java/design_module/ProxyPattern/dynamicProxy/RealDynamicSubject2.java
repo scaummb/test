@@ -8,15 +8,15 @@ package design_module.ProxyPattern.dynamicProxy;
 
 public class RealDynamicSubject2 implements DynamicSubject {
 
-    private String name = "mmb2";
+	private String name = "mmb2";
 
-    @Override
-    public void visit() {
-        System.out.println("my dynamic name is "+ name);
-    }
+	@Override
+	public void visit() {
+		System.out.println("my dynamic name is " + name);
+	}
 
-    @Override
-    public void gohome() {
-        System.out.println("i am dynamic "+ name + ",i don not want to go home.");
-    }
+	@Override
+	public void gohome() {
+		System.out.println("i am dynamic " + name + ",i don not want to go home.");
+	}
 }

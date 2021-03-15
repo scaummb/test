@@ -25,7 +25,7 @@ public class SingletonCase6 {
 	private SingletonCase6() {
 	}
 
-	public static SingletonCase6 getInstance(){
+	public static SingletonCase6 getInstance() {
 		System.out.println("-----3 getInstance -----");
 		return SingletonEnum.INSTANCE.getSingleton();
 	}

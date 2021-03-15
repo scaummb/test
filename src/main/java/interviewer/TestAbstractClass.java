@@ -5,7 +5,7 @@ package interviewer;
  * @date: 2019/10/28 15:31
  */
 
-public class TestAbstractClass extends AbstractClass{
+public class TestAbstractClass extends AbstractClass {
 	void test() {
 
 	}

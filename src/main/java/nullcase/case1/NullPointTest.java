@@ -13,7 +13,7 @@ public class NullPointTest {
 		try {
 			Organization org = new Organization();
 			org.setParentId(null);
-			if (org.getParentId() == 0L){
+			if (org.getParentId() == 0L) {
 
 			}
 		} catch (Exception ex) {
@@ -24,13 +24,14 @@ public class NullPointTest {
 			Organization org = new Organization();
 			org.setParentId(null);
 			Long zero = 0L;
-			if (org.getParentId() == zero){
+			if (org.getParentId() == zero) {
 
 			}
 		} catch (Exception ex) {
 			System.out.println("2 ex" + ex.getStackTrace());
 		}
 	}
+
 	static class Organization {
 		private static final long serialVersionUID = 8428338216022084922L;
 		private Long id;

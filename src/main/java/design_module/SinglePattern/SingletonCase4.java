@@ -9,7 +9,9 @@ package design_module.SinglePattern;
 
 public class SingletonCase4 {
 
-	/**volatile防止指令重排*/
+	/**
+	 * volatile防止指令重排
+	 */
 	private static volatile SingletonCase4 singleton;
 
 	public SingletonCase4() {
@@ -24,11 +26,11 @@ public class SingletonCase4 {
 	 * 然后A线程优先进入了同步代码块2中（B线程也进入了），然后创建了实例
 	 * 此时，如果没有3处的判断，那么A线程创建实例同时，B线程也会创建一个实例
 	 * 所以，还需要做2次判断
-	 * */
-	public static SingletonCase4 getInstance(){
-		if (singleton == null){
-			synchronized (SingletonCase4.class){
-				if (singleton == null){
+	 */
+	public static SingletonCase4 getInstance() {
+		if (singleton == null) {
+			synchronized (SingletonCase4.class) {
+				if (singleton == null) {
 					singleton = new SingletonCase4();
 				}
 			}

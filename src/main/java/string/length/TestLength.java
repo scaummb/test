@@ -21,7 +21,7 @@ public class TestLength {
 
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(a);
-		while (m.find()){
+		while (m.find()) {
 			System.out.println("Match " + m.group() + " , at positions " + m.start() + " - " + (m.end() - 1));
 		}
 	}

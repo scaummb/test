@@ -9,8 +9,11 @@ import shizhanthread.annotations.NotThreadSafe;
 @NotThreadSafe
 public class UnsafeSequence {
 	private int value;
-	/** 返回唯一值**/
-	public int getNext(){
+
+	/**
+	 * 返回唯一值
+	 **/
+	public int getNext() {
 		return value++;
 	}
 }

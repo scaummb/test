@@ -6,7 +6,7 @@ package design_module.ChainOfResponsibilityPattern;
  */
 //控制台打印，标准输出
 public class ConsoleLogger extends AbstractLogger {
-	public ConsoleLogger(int level){
+	public ConsoleLogger(int level) {
 		this.level = level;
 	}
 

@@ -9,8 +9,11 @@ import shizhanthread.annotations.ThreadSafe;
 @ThreadSafe
 public class SafeSequence {
 	private int value;
-	/** 返回唯一值**/
-	public synchronized int getNext(){
+
+	/**
+	 * 返回唯一值
+	 **/
+	public synchronized int getNext() {
 		return value++;
 	}
 }

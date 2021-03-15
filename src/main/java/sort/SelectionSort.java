@@ -7,7 +7,7 @@ package sort;
 
 public class SelectionSort {
 	public static void main(String[] args) {
-		int[] a = {9,8,7,6,5,4,3,2,1,0};
+		int[] a = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
 		selectionSort(a);
 	}
 
@@ -28,8 +28,8 @@ public class SelectionSort {
 			}
 		}
 
-		for (int a=0; a<arr.length; a++){
-			System.out.println("序列的第"+a+"元素是："+arr[a]);
+		for (int a = 0; a < arr.length; a++) {
+			System.out.println("序列的第" + a + "元素是：" + arr[a]);
 		}
 	}
 }

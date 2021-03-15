@@ -9,16 +9,18 @@ import java.util.Arrays;
 
 public class MergeSort {
 	public static void main(String[] args) {
-		int[] arrays = {90,80,70,30,40};
+		int[] arrays = {90, 80, 70, 30, 40};
 		mergeSort(arrays);
 		System.out.println(Arrays.toString(arrays));
 	}
+
 	public static void mergeSort(int[] array) {
 		if (array == null || array.length == 0)
 			return;
 		int[] temp = new int[array.length];
 		mergeSort(array, 0, array.length - 1, temp);
 	}
+
 	// 归并
 	private static void mergeSort(int array[], int first, int last, int temp[]) {
 		if (first < last) {
@@ -43,8 +45,7 @@ public class MergeSort {
 		while (i <= m && j <= n) {
 			if (array[i] <= array[j]) {
 				temp[k++] = array[i++];
-			}
-			else
+			} else
 				temp[k++] = array[j++];
 		}
 		// 如果比较完毕, 第一组还有数剩下, 则全部填入temp

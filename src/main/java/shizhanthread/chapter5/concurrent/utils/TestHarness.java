@@ -4,24 +4,25 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * <p>
- *     闭锁实现之一：CountDownLatch
+ * 闭锁实现之一：CountDownLatch
  * </p>
  */
 
 public class TestHarness {
 	public static void main(String[] args) throws InterruptedException {
-		timeTasks(10, new Runnable(){
+		timeTasks(10, new Runnable() {
 			@Override
-			public void run(){
+			public void run() {
 				System.out.println("hhhhha..");
 			}
 		});
 	}
+
 	public static long timeTasks(int nThreads, final Runnable task) throws InterruptedException {
 		final CountDownLatch startGate = new CountDownLatch(1);
 		final CountDownLatch endGate = new CountDownLatch(nThreads);
 
-		for (int i=0; i<nThreads; i++){
+		for (int i = 0; i < nThreads; i++) {
 			//启动多个异步线程
 			Thread thread = new Thread() {
 				public void run() {

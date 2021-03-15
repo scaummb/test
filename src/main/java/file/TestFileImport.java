@@ -20,17 +20,17 @@ public class TestFileImport {
 	public static void main(String[] args) {
 		File file = new File(PATH);
 		ArrayList<AppidSecretObject> list = new ArrayList<>();
-		try{
+		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String line = null;
-			while((line = br.readLine())!=null){
+			while ((line = br.readLine()) != null) {
 				String[] appidSecretObjectAttributes = line.split(",");
-				AppidSecretObject appidSecretObject = new AppidSecretObject(appidSecretObjectAttributes[0],appidSecretObjectAttributes[1],appidSecretObjectAttributes[2]);
+				AppidSecretObject appidSecretObject = new AppidSecretObject(appidSecretObjectAttributes[0], appidSecretObjectAttributes[1], appidSecretObjectAttributes[2]);
 				list.add(appidSecretObject);
 //				System.out.println(appidSecretObject.toString());
 			}
 			br.close();
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			outOutAsSql(list);

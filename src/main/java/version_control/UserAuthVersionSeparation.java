@@ -3,7 +3,6 @@ package version_control;
 /**
  * 用户认证版本控制
  *
- *
  * @author moubin.mo
  * @date: 2019/10/19 10:21
  */

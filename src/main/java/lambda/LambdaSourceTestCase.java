@@ -8,7 +8,9 @@ package lambda;
 public class LambdaSourceTestCase {
 	public static void main(String[] args) {
 		String a = "a"; //定义局部变量
-		MyFunction myFunction = (s)-> {return s;}; //定义匿名函数实现
+		MyFunction myFunction = (s) -> {
+			return s;
+		}; //定义匿名函数实现
 		myFunction.print(a); //调用lambda
 	}
 }

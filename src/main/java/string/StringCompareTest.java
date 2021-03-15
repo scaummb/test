@@ -15,7 +15,7 @@ public class StringCompareTest {
 //		List<String> dateList = RemindUtils.getDateList(date1, date2);
 		Timestamp timestamp1 = Timestamp.valueOf(date1 + END_PREFIX);
 		Timestamp timestamp2 = Timestamp.valueOf(date2 + END_PREFIX);
-		if (timestamp1.equals(timestamp2)){
+		if (timestamp1.equals(timestamp2)) {
 			System.out.println("yes");
 		} else {
 			System.out.println("no");

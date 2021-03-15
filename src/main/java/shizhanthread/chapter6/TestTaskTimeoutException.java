@@ -12,7 +12,7 @@ public class TestTaskTimeoutException {
 	private static final ExecutorService exec = Executors.newSingleThreadExecutor();
 	private static final Ad DEFAULT_AD = new Ad("default ad");
 
-	Page renderPageWithAd(){
+	Page renderPageWithAd() {
 		long endNanos = System.nanoTime() + TIME_BUDGET;
 		Future<Ad> future = exec.submit(new FetchAdTask());
 		Page page = renderPageBody();
@@ -36,22 +36,28 @@ public class TestTaskTimeoutException {
 	private Page renderPageBody() {
 		return new Page();
 	}
-	class Page{
+
+	class Page {
 		private Ad ad;
+
 		public Ad getAd() {
 			return this.ad;
 		}
+
 		public void setAd(final Ad ad) {
 			this.ad = ad;
 		}
 	}
-	static class Ad{
+
+	static class Ad {
 		private String name;
+
 		public Ad(final String name) {
 			this.name = name;
 		}
 	}
-	class FetchAdTask implements Callable{
+
+	class FetchAdTask implements Callable {
 		@Override
 		public Ad call() throws Exception {
 			return new Ad("finish");

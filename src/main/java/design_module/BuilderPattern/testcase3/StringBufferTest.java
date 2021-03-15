@@ -2,9 +2,10 @@ package design_module.BuilderPattern.testcase3;
 
 /**
  * <p>
- *     这两个类最主要的区别就是StringBuilder线程不安全，StringBuffer线程安全。
+ * 这两个类最主要的区别就是StringBuilder线程不安全，StringBuffer线程安全。
  * AbstractStringBuilder 实现了 Appendable 接口方法所有append()方法，俨然AbstractStringBuilder 已经是就建造者，只是是一个抽象类AbstractStringBuilder ，不能实例化。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2021/1/16 16:22
  */

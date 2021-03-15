@@ -16,7 +16,8 @@ public class TestMethodParameters {
 
 
 	}
-	private A test1(A a){
+
+	private A test1(A a) {
 		A a1 = new A();
 		a1.setNum(110L);
 		a = a1;
@@ -29,7 +30,7 @@ public class TestMethodParameters {
 }
 
 
-class A{
+class A {
 	private Long num;
 
 	public Long getNum() {

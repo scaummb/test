@@ -4,16 +4,17 @@ import java.lang.ref.SoftReference;
 
 /**
  * <p>
- *     软引用：当内存不足时，才会触发JVM进行GC回收。
- *     	适合做缓存。
+ * 软引用：当内存不足时，才会触发JVM进行GC回收。
+ * 适合做缓存。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/8/18 00:18
  */
 
 public class SoftReferenceObject {
 	public static void main(String[] args) {
-		SoftReference<byte[]> softReference = new SoftReference<byte[]>(new byte[1024*1024*10]);
+		SoftReference<byte[]> softReference = new SoftReference<byte[]>(new byte[1024 * 1024 * 10]);
 		System.out.println(softReference.get());
 		System.gc();
 		System.out.println("一次GC后，内存充足，" + softReference);

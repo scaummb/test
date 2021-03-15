@@ -7,10 +7,11 @@ import java.lang.reflect.Field;
 
 /**
  * <p>
- *     继承了父类的对象，通过Object.getDeclaredFields()无法获取属性
- *     		class.getDeclaredMethods() 获取类的所有方法（public、protected、default、private），但不包括继承的方法；
- * 			class.getMethods() 获取当前类和父类的public方法。
+ * 继承了父类的对象，通过Object.getDeclaredFields()无法获取属性
+ * class.getDeclaredMethods() 获取类的所有方法（public、protected、default、private），但不包括继承的方法；
+ * class.getMethods() 获取当前类和父类的public方法。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/6/6 16:22
  */
@@ -19,8 +20,9 @@ public class PrivateFieldsTest {
 	public static void main(String[] args) {
 		getFields(new SubBus());
 	}
-	private static Field[] getFields(Object obj){
-		if (!ObjectUtils.isEmpty(obj)){
+
+	private static Field[] getFields(Object obj) {
+		if (!ObjectUtils.isEmpty(obj)) {
 			Field[] fields = obj.getClass().getFields();
 			Field[] declaredFields = obj.getClass().getDeclaredFields();
 //			System.out.println(fields);

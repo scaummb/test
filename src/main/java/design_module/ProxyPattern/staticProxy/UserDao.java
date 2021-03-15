@@ -7,9 +7,10 @@ package design_module.ProxyPattern.staticProxy;
  */
 
 public class UserDao implements Subject {
-    private String name = "name-1";
-    @Override
-    public void visit() {
-        System.out.println("my name is "+name);
-    }
+	private String name = "name-1";
+
+	@Override
+	public void visit() {
+		System.out.println("my name is " + name);
+	}
 }

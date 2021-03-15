@@ -20,7 +20,7 @@ public class LifecycleWebServer {
 
 	public void start() throws IOException {
 		ServerSocket socket = new ServerSocket(8800);
-		while (!exec.isShutdown()){
+		while (!exec.isShutdown()) {
 			try {
 				Socket connection = socket.accept();
 				exec.execute(new Runnable() {
@@ -30,21 +30,21 @@ public class LifecycleWebServer {
 					}
 				});
 			} catch (RejectedExecutionException e) {
-				if (exec.isShutdown()){
+				if (exec.isShutdown()) {
 					System.out.println("task submission rejected" + e);
 				}
 			}
 		}
 	}
 
-	public void stop(){
+	public void stop() {
 		exec.shutdown();
 	}
 
 	private static void handleRequest(Socket connection) {
 		//..
 		Request req = readRequest(connection);
-		if (isshutdownRequest(req)){
+		if (isshutdownRequest(req)) {
 
 		}
 	}

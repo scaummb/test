@@ -8,21 +8,21 @@ package design_module.MementoPattern;
 public class Originator {
 	private String state;
 
-	public void setState(String state){
+	public void setState(String state) {
 		this.state = state;
 	}
 
-	public String getState(){
+	public String getState() {
 		return state;
 	}
 
 	//保存到备忘录
-	public Memento saveToStateMemento(){
+	public Memento saveToStateMemento() {
 		return new Memento(state);
 	}
 
 	//从备忘录查找备份数据
-	public void getStateFromMemento(Memento memento){
+	public void getStateFromMemento(Memento memento) {
 		state = memento.getState();
 	}
 }

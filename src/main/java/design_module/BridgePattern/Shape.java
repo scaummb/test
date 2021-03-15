@@ -7,9 +7,11 @@ package design_module.BridgePattern;
 //Shape：定义形状
 public abstract class Shape {
 	protected DrawAPI drawAPI;
+
 	// 传入功能对象
-	protected Shape(DrawAPI drawAPI){
+	protected Shape(DrawAPI drawAPI) {
 		this.drawAPI = drawAPI;
 	}
+
 	public abstract void draw();
 }

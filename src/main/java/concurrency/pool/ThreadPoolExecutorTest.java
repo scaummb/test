@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
- *		1.阿里规约：创建一个 ThreadPoolExecutor 更利于同时知道其中的运行规则
+ * 1.阿里规约：创建一个 ThreadPoolExecutor 更利于同时知道其中的运行规则
  * </p>
  */
 

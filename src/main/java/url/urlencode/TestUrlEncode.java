@@ -6,9 +6,10 @@ import java.net.URLEncoder;
 
 /**
  * <p>
- *     URLENCODE：　　
- *     对于非ASCII字符，需要使用ASCII字符集的超集进行编码得到相应的字节，然后对每个字节执行百分号编码。对于Unicode字符，RFC文档建议使用utf-8对其进行编码得到相应的字节，然后对每个字节执行百分号编码。如"中文"使用UTF-8字符集得到的字节为0xE4 0xB8 0xAD 0xE6 0x96 0x87，经过Url编码之后得到"%E4%B8%AD%E6%96%87"。
+ * URLENCODE：
+ * 对于非ASCII字符，需要使用ASCII字符集的超集进行编码得到相应的字节，然后对每个字节执行百分号编码。对于Unicode字符，RFC文档建议使用utf-8对其进行编码得到相应的字节，然后对每个字节执行百分号编码。如"中文"使用UTF-8字符集得到的字节为0xE4 0xB8 0xAD 0xE6 0x96 0x87，经过Url编码之后得到"%E4%B8%AD%E6%96%87"。
  * </p>
+ *
  * @author moubin.mo
  * @date: 2020/10/21 12:21
  */
@@ -28,7 +29,7 @@ public class TestUrlEncode {
 		String url = "https://m.baidu.com"; //第三方链接
 		String encodeUrl = URLEncoder.encode(url, "utf-8");
 		String getUrl = "zl://browser/i?"
-				+ "url=https://evh/oauth2/authorize?response_type=code&client_id=6d00f9de-06c4-417d-9c5f-923dcb52ae09&redirect_uri="+encodeUrl+"&scope=basic&state=zhiwei#oauth2_redirect"
+				+ "url=https://evh/oauth2/authorize?response_type=code&client_id=6d00f9de-06c4-417d-9c5f-923dcb52ae09&redirect_uri=" + encodeUrl + "&scope=basic&state=zhiwei#oauth2_redirect"
 				+ "#sign_suffix";
 	}
 

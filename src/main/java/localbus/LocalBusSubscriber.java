@@ -8,7 +8,7 @@ package localbus;
 public interface LocalBusSubscriber {
 	LocalBusSubscriber.Action onLocalBusMessage(Object var1, String var2, Object var3, String var4);
 
-	public static enum Action{
+	public static enum Action {
 		none,
 		cancelSubscription;
 

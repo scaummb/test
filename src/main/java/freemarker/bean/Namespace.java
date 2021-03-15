@@ -6,6 +6,7 @@ package freemarker.bean;
  * • 文件中转站域名 #值变更内容#
  * • OP运营后台域名 #值变更内容#
  * • 短信签名抬头 #值变更内容#
+ *
  * @author moubin.mo
  * @date: 2020/5/28 17:15
  */

@@ -82,20 +82,20 @@ public class KeyGeneratorUtil {
 
 		Date date = new Date();
 		long time = date.getTime();
-		long timeStamp = time/1000 + 1*stepInSecond;
+		long timeStamp = time / 1000 + 1 * stepInSecond;
 
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		java.util.Date date1 = df.parse("2019-10-17 15:40:00");
 		long time22 = date1.getTime();
-		long timeStamp22 = time22/1000 + 1*stepInSecond;
+		long timeStamp22 = time22 / 1000 + 1 * stepInSecond;
 
 		TimeBasedOneTimePasswordGenerator totp;
 		totp = getTotp();
 		int code = generateTotp(totp, cardKey, timeStamp);
-		if(code == totpCodeInt) {
-			System.out.println(" [success] timeStamp = " + timeStamp22 + ", totp = " + totp +", uid = " + uid + ", code = " + code +", frontTotpCode = " + frontTotpCode);
+		if (code == totpCodeInt) {
+			System.out.println(" [success] timeStamp = " + timeStamp22 + ", totp = " + totp + ", uid = " + uid + ", code = " + code + ", frontTotpCode = " + frontTotpCode);
 		} else {
-			System.out.println(" [fail] timeStamp = " + timeStamp22 + ", totp = " + totp +", uid = " + uid + ", code = " + code +", frontTotpCode = " + frontTotpCode);
+			System.out.println(" [fail] timeStamp = " + timeStamp22 + ", totp = " + totp + ", uid = " + uid + ", code = " + code + ", frontTotpCode = " + frontTotpCode);
 		}
 
 		String strCode = String.valueOf(code);
@@ -130,7 +130,7 @@ public class KeyGeneratorUtil {
 
 		int code = generateTotp(totp, cardKey, nowInSec + stepInSecond);
 		System.out.println("code = " + code);
-		if(code == totpCodeInt) {
+		if (code == totpCodeInt) {
 			ok = uid;
 		}
 		return ok;
@@ -139,7 +139,7 @@ public class KeyGeneratorUtil {
 
 	private static TimeBasedOneTimePasswordGenerator getTotp() throws NoSuchAlgorithmException {
 		TimeBasedOneTimePasswordGenerator totp = new TimeBasedOneTimePasswordGenerator();
-		if(totp == null) {
+		if (totp == null) {
 			totp = new TimeBasedOneTimePasswordGenerator(stepInSecond, TimeUnit.SECONDS, 8);
 		}
 		return totp;

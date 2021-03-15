@@ -12,13 +12,14 @@ import java.util.List;
 public class ReturnNullValue {
 	private final List<Cheese> cheeseList = new ArrayList<>();
 	private static final Cheese[] EMPTY_CHEESE_ARRAY = new Cheese[0];
-	public Cheese[] getCheese(){
+
+	public Cheese[] getCheese() {
 		// 返回空数组
 		return cheeseList.toArray(EMPTY_CHEESE_ARRAY);
 	}
 
 	public List<Cheese> getCheeseList() {
-		if (cheeseList.isEmpty()){
+		if (cheeseList.isEmpty()) {
 			// 返回一个不可变的空集合:emptySet/emptyMap/emptyList，这三个
 			return Collections.emptyList();
 		} else {
@@ -27,4 +28,6 @@ public class ReturnNullValue {
 	}
 
 }
-class Cheese{}
+
+class Cheese {
+}

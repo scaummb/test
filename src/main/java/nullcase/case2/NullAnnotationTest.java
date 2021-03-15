@@ -16,7 +16,7 @@ public class NullAnnotationTest {
 		if (ObjectUtils.isEmpty(templateData.getCode()) ||
 				ObjectUtils.isEmpty(templateData.getLocale()) ||
 				ObjectUtils.isEmpty(templateData.getScope())
-				){
+		) {
 			throw new Exception("ex");
 		}
 

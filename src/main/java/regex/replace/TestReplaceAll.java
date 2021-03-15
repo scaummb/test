@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 /**
  * <p>转义字符处理工具类：StringEscapeUtils</p>
+ *
  * @author moubin.mo
  * @date: 2020/7/4 13:27
  */
@@ -33,12 +34,12 @@ public class TestReplaceAll {
 	}
 
 	private static String handleKey(String key) {
-		key = key.replaceAll("\\!","\\\\\\!");
-		key = key.replaceAll("\\[","\\\\\\[");
-		key = key.replaceAll("\\]","\\\\\\]");
-		key = key.replaceAll("\\(","\\\\\\(");
-		key = key.replaceAll("\\/","\\\\\\/");
-		key = key.replaceAll("\\)","\\\\\\)");
+		key = key.replaceAll("\\!", "\\\\\\!");
+		key = key.replaceAll("\\[", "\\\\\\[");
+		key = key.replaceAll("\\]", "\\\\\\]");
+		key = key.replaceAll("\\(", "\\\\\\(");
+		key = key.replaceAll("\\/", "\\\\\\/");
+		key = key.replaceAll("\\)", "\\\\\\)");
 		return key;
 	}
 

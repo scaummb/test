@@ -7,6 +7,8 @@ package interface_test;
 
 public interface InterfaceThree extends InterfaceOne {
 	public void testThreeA();
+
 	void testThreeB();
+
 	public void testThreeC();
 }

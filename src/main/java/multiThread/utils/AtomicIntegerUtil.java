@@ -4,10 +4,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * <p>
- *      private volatile int value; //内部维护了一个value，可见性，禁止重排序
- *      CAS，确保操作原子性
+ * private volatile int value; //内部维护了一个value，可见性，禁止重排序
+ * CAS，确保操作原子性
  *
  * </p>
+ *
  * @author moubin.mo
  * @date: 2021/3/1 12:05
  */

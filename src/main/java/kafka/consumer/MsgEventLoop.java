@@ -21,13 +21,13 @@ public class MsgEventLoop implements Callable, ApplicationRunner {
 	// 4.批次+成员
 
 	private final static ConcurrentHashMap<String, List<SyncData>> map = new ConcurrentHashMap();
-	
+
 	// 1/2/3的时间范围内操作去重 与 批量同步(成员数据-50，)
 	@Override
 	public Object call() throws Exception {
-		for (;;){
+		for (; ; ) {
 			for (String key : map.keySet()) {
-				switch (key){
+				switch (key) {
 					case "1-2":
 						//todo post now  单次+成员
 						//4：POST right now
@@ -43,12 +43,12 @@ public class MsgEventLoop implements Callable, ApplicationRunner {
 					default:
 				}
 			}
-			System.out.println("test... "+ System.currentTimeMillis());
+			System.out.println("test... " + System.currentTimeMillis());
 			Thread.sleep(5000);
 		}
 	}
 
-	public final static void accept(KafkaMessage kafkaMessage){
+	public final static void accept(KafkaMessage kafkaMessage) {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(kafkaMessage.getMsgType()).append("-").append(kafkaMessage.getMsgDataType());
 		List<SyncData> list = (List<SyncData>) map.getOrDefault(buffer.toString(), new ArrayList<SyncData>());

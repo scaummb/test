@@ -7,11 +7,11 @@ package design_module.ProxyPattern.dynamicProxy;
  */
 public interface DynamicSubject {
 
-    //需求一
-    void visit();
+	//需求一
+	void visit();
 
-    //需求二
-    void gohome();
+	//需求二
+	void gohome();
 
-    //需求三四五六...
+	//需求三四五六...
 }

@@ -32,7 +32,9 @@ public class TestJsonConvert {
 
 	private static void test2() {
 		//描述
-		HashMap<String, Object> map = new HashMap<String, Object>(){{put("userName", "root");}};
+		HashMap<String, Object> map = new HashMap<String, Object>() {{
+			put("userName", "root");
+		}};
 		Gson gson = new Gson();
 		String s = gson.toJson(map);
 		System.out.println(s);
@@ -53,6 +55,7 @@ public class TestJsonConvert {
 		System.out.println(template);
 	}
 }
+
 class LogTemplate2 {
 	private String description;
 	private LogTemplateObject2 dataObject;
@@ -85,7 +88,6 @@ class LogTemplateObject2 {
 		this.fields = fields;
 	}
 }
-
 
 
 class LogTemplateObjectField2 {

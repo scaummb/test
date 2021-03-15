@@ -7,22 +7,22 @@ package exception;
  */
 
 public class ParentException extends Exception {
-    private String message;
-    private int statusCode;
+	private String message;
+	private int statusCode;
 
-    public ParentException(String message,int statusCode) {
-        super(message);
-        this.message = message;
-        this.statusCode = statusCode;
-    }
+	public ParentException(String message, int statusCode) {
+		super(message);
+		this.message = message;
+		this.statusCode = statusCode;
+	}
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
+	@Override
+	public String getMessage() {
+		return super.getMessage();
+	}
 
-    public int getStatusCode() {
-        return statusCode;
-    }
+	public int getStatusCode() {
+		return statusCode;
+	}
 
 }

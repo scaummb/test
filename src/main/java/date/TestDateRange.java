@@ -15,10 +15,15 @@ import java.util.List;
  */
 
 public class TestDateRange {
-	/** DATE日期格式化 **/
+	/**
+	 * DATE日期格式化
+	 **/
 	public final static String SIMPLE_DATE_FORMATTER = "yyyy-MM-dd";
-	/** 一天毫秒数值 **/
+	/**
+	 * 一天毫秒数值
+	 **/
 	public final static Long ONE_DAY_MILLIS_TIME_COUNT = 86400000L;
+
 	public static void main(String[] args) {
 		String dateStartTime = "2020-1-1";
 		String dateEndTime = "2020-1-5";
@@ -37,7 +42,7 @@ public class TestDateRange {
 
 			System.out.println(days);
 			List<String> dateStringList = new ArrayList<>(days);
-			for (int day=0; day<=days; day++){
+			for (int day = 0; day <= days; day++) {
 				String dateString = simpleDateFormat.format(new Date(startDate.getTime() + day * ONE_DAY_MILLIS_TIME_COUNT));
 				dateStringList.add(dateString);
 			}

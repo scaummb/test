@@ -9,6 +9,7 @@ package design_module.ObserverPattern;
 
 //观察者
 public abstract class Observer {
-    protected Subject subject;
-    public abstract void update();
+	protected Subject subject;
+
+	public abstract void update();
 }

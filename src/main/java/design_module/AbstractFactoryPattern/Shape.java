@@ -8,6 +8,7 @@ package design_module.AbstractFactoryPattern;
 public interface Shape {
 	void draw();
 }
+
 class Rectangle implements Shape {
 
 	@Override
@@ -15,6 +16,7 @@ class Rectangle implements Shape {
 		System.out.println("Inside Rectangle::draw() method.");
 	}
 }
+
 class Square implements Shape {
 
 	@Override
@@ -22,6 +24,7 @@ class Square implements Shape {
 		System.out.println("Inside Square::draw() method.");
 	}
 }
+
 class Circle implements Shape {
 
 	@Override
